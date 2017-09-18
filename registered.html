@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>EBC</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/unlock.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tooltipster.bundle.min.css" />
+    <link rel="stylesheet" href="css/tooltipster-sideTip-shadow.min.css" />
+
+     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+	<header class="indexHeader">
+		<div class="container">
+					<div class="containerHeader">
+						<div class="box1 table-cell">
+							<h1 class="logo"></h1>
+							<h4>云文件管理系统</h4>
+						</div>
+						<div class="box2">
+							<a href="">首页</a>
+							<a href="">En <span> </span></a>
+						</div>
+					</div>
+		</div>
+	</header>
+	<main class="indexBackground">
+		<div class="indexBackground">
+			<img src="images/background.png" width="100%" height="100%">
+		</div>
+		<div class="containerWrapLogin">
+			<div class="leftBox">
+				<h1 class="mainTitle"><img src="images/change.png" alt=""></h1>
+			</div>
+			<div class="rightBox">
+				<div class="tabtn">
+					<ul >
+						<li><a href="login.html" id="loginBtn">登录</a><div class="underline2"></div></li>
+						<li><a href="registered.html" >注册</a><div class="underline1"></div></li>
+					</ul>
+				</div>
+				<div class="tabcon">
+					<div class="login">
+					</div>
+					<div class="registered">
+						<form action="" class="loginForm">
+							<input type="text" name="username" id="userEmail" class="loginText tooltiper" maxlength="32" tabindex="1" placeholder="请输入您的常用邮箱" title="请确保输入正确的邮箱地址。" >
+							<input type="password" name="password" id="password" class="loginText tooltiper" maxlength="32" tabindex="2" placeholder="设置密码" title="密码不少于6个字符。数字，字母或常用符号，字母区分大小写。" >
+							<input type="password" name="password" id="confirmPassword" class="loginText tooltiper" maxlength="32" tabindex="3" placeholder="确认密码" title="请再次输入密码">
+							<input type="text" name="username" id="userName" class="loginText tooltiper" maxlength="32" tabindex="4" placeholder="用户名" name="">
+							<input type="text" name="confirm" class="loginTextHalf loginBg loginTextHalf1 " maxlength="6" tabindex="5" placeholder="验证码">
+							 <button class="loginTextHalf loginTextHalf2 ">获取验证码</button>
+							<button type="submit" class="submit btn btn-lg" tabindex="3" id="submit">同意协议并提交</button>
+							<a href="" class="agree">《元讯科技服务协议》</a>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer></footer>
+	<script src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/unlock.js"></script>
+	<script type="text/javascript">
+		var $container = $('#slide-to-unlock'); 
+		$container.slideToUnlock({ 
+			text: '请按住滑块，拖动到最右边', 
+    		succText: '解锁成功！',
+    		progressColor:'#0fd600',
+    		progressColor:'#d3d3d3',
+    		succColor:'#0fd600'
+    	}); 
+	</script>
+		<!-- 小提示 -->
+	<script type="text/javascript" src="js/tooltipster.bundle.min.js"></script>
+    <script>
+		$('.tooltiper').tooltipster({
+		   animation: 'fade',
+		   delay: 200,
+		   theme: 'tooltipster-Shadow',
+		   trigger: 'click'
+		});
+    </script>
+</body>
+</html>
+
