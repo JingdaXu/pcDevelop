@@ -338,7 +338,6 @@
 	}
 	.form-company{
 		background: #ffffff;
-		padding: 32px 24px;
 		width: 100%;
 	}
 	.form-company0{
@@ -351,7 +350,13 @@
 		min-height: 282px;
 	}
 	.form-company-save{
+		position: fixed;
+		width:100%;
+		left:248px;
+		right: 15px;
+		bottom:0px ;
 		margin-top: 34px;
+		padding: 32px 24px;
 	}
 	.form-company-bottom{
 		text-align: center;;
@@ -436,7 +441,58 @@
 		box-shadow: none;
 		-webikit-box-shadow: none;
 	}
+	/*安全设置主页面*/
+	.countSafe-Main{
+		width:100%;
+	}
+	.countSafe-Main-Content{
+		padding-left:0;
+		padding-right: 0;
+	}
+	.countSafe-Main-Content-p1{
+		margin-bottom:0;
+		padding-bottom: 20px;
+	}
+	.countSafe-Main-Content-p2{
+		margin-bottom:0;
+		padding-bottom: 100px;
+	}
+	.countSafe-Main-Content li{
+		width: 100%;
+		height: 80px;
+		background: #fff;
+		border-bottom:1px solid #ebeced;
+		padding: 28px 24px 23px 24px;
+		font-size:18px;
+		color:#181b20;
+	}
+	.countSafe-Main-Content li:nth-child(4){
+		height: 120px;
+	}
+	.countSafe-Main-Content>li:nth-child(4)>span:nth-child(2){
+		position: relative;
+		top: 12px;
+		padding-right:100px;
+	}
+	.countSafe-Main-Content li span:first-child{
+		display: inline-block;
+		width: 158px;
+		text-align: left;
+	}
+	.countSafe-Main-Content li span:nth-child(2){
+		display: inline-block;
+		width:598px;
+		text-align: left;
 
+	}
+	.countSafe-Main-Content-Second li>span:nth-child(2){
+		display: inline-block;
+		width:298px;
+	}
+	.countSafe-Main-Content-Second li>span:nth-child(3){
+		display: inline-block;
+		width:319px;
+	}
 	/*忘记密码*/
 	.countSafe-Nav{
 		width: 898px;
@@ -574,10 +630,7 @@
 		top: 210px;
 	}
 	/*安全设置*/
-	.agree-bottom{
-		width: 100%;
-		text-align: center;
-	}
+
 	/*批次管理*/
 	.contentWrap{
 		width:98%;
@@ -645,6 +698,15 @@
 
 
 	/*批次管理*/
+	.form-company-batch .btn-save,
+	.form-company-batch .btn-back
+	{
+		width: 120px;
+		height:40px;
+		background-color: #0099ff;
+		border-color: #0099ff;
+		margin:0 auto;
+	}
 	.manageBatchContent{
 		background-color: #f7f7f7;
 		width:96%;
@@ -716,11 +778,15 @@
 		text-align: center;
 	}
 	.form-company-batch{
-		width:83.5%;
 		position: fixed;
-		left:263px;
+		width:100%;
+		left:248px;
 		right: 15px;
 		bottom:0px ;
+		height: 58px;
+		line-height: 58px;
+		background-color: #ffffff;
+		padding-right: 16%;
 	}
 	.manageList table tbody tr .op{
 		text-align: left;
