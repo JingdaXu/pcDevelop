@@ -1,4 +1,5 @@
 $.validator.setDefaults({
+    debug:true,
     submitHandler: function() {
         alert("提交事件!");
     }
@@ -79,7 +80,43 @@ $().ready(function() {
     //登录表单
     $("#login-form").validate({
         errorPlacement: function(error, element) {
+            // Append error within linked label
+            $( element )
+                .closest( "form" )
+                .find( "label[for='" + element.attr( "id" ) + "']" )
+                .append( error )
+                .append( "</br>" );
+        },
+        errorElement: "span",
+        rules: {
+            username: {
+                required: true,
+                minlength: 2
+            },
+            password: {
+                required:true,
+                minlength:2
+            }
+        },
+        messages: {
+            username: "请输入账号",
+            password: "请输入密码"
+        }
+    });
+    //注册表单
+    $("#registered-form").validate({
+        errorPlacement: function(error, element) {
             error.appendTo(element.parent());
+        },
+        messages: {
+            usermail: "请确保输入正确的邮箱地址",
+            username: "请输入用户名",
+            registeredPassword: "请输入登录密码",
+            passwordConfirm: {
+                required:"请再次输入登录密码",
+                equalTo:"密码与确认密码不一致"
+            },
+            confirm: "请输入验证码"
         },
         rules: {
             usermail:{
@@ -100,18 +137,7 @@ $().ready(function() {
                 equalTo:"#registeredPassword"
             },
             confirm: "required"
-        },
-        messages: {
-            usermail: "请确保输入正确的邮箱地址",
-            username: "请输入用户名",
-            registeredPassword: "请输入登录密码",
-            passwordConfirm: {
-                required:"请再次输入登录密码",
-                equalTo:"密码与确认密码不一致"
-            },
-            confirm: "请输入验证码"
-        }
-    })
+        }})
 
 
 });

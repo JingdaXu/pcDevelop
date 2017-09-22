@@ -1,0 +1,82 @@
+.invitationContent {
+    margin: 0 auto;
+    margin-top: 16px;
+    border-top: 1px solid #ebeced;
+    overflow: hidden;
+    background-color: #ffffff;
+    padding-top: 34px;
+    padding-bottom: 34px;
+}
+
+.invitationContent .form-group {
+    margin: 0px;
+}
+
+.invitationContent .companyName,
+.invitationContent .invitationName,
+.invitationContent .batchName {
+    margin-left: 14px;
+    display: inline-block;
+}
+
+.invitationContent .companyName,
+.invitationContent .invitationName {
+    margin-bottom: 34px;
+}
+
+.dataUpload .checkUpData {
+    text-decoration: underline;
+}
+
+/*邀请详情*/
+.manageList table tbody tr td a.downLoad {
+    margin-left: 50%;
+}
+
+/*弹窗*/
+.success_Wrap {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1000;
+    left: 40%;
+    top: 35%;
+    display: none;
+}
+
+.success {
+    width: 35%;
+    height: 50%;
+    background-color: #ffffff;
+    border-radius: 8px 8px;
+    position: absolute;
+    z-index: 999;
+    text-align: center;
+    display: table;
+}
+
+.success .btn_Close {
+    float: left;
+    margin: 14px 0 0 14px;
+    cursor: pointer;
+    position: absolute;
+    z-index: 100;
+}
+
+.success .sucContaier {
+    margin: 0 auto;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.sucContaier .suc_Icon img {
+
+    margin-bottom: 40px;
+
+}
+
+.suc_font {
+    font-size: 22px;
+    margin-bottom: 40px;
+}

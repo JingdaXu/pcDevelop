@@ -14,9 +14,9 @@
      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+      <!--<script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>-->
+      <!--<script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>-->
+    <!--[endif]-->
 </head>
 <body>
 	<header class="indexHeader">
@@ -52,13 +52,13 @@
 				</div>
 				<div class="tabcon">
 					<div class="login">
-						<form action="" class="loginForm">
+						<form action="" class="loginForm"  id="login-form">
 							<div class="username-field">
-								<span class="login-label-count">手机号码/邮箱</span>
-								<input type="text" name="username" id="username" class="loginText tooltiper" maxlength="32" tabindex="1"   title="请确保输入正确的邮箱地址或者手机号码">
+								<!--<span class="login-label-count">手机号码/邮箱</span>-->
+								<input type="text" name="username" id="username" class="loginText tooltiper" maxlength="32" tabindex="1" title="请确保输入正确的邮箱地址或者手机号码" value="手机号码/邮箱">
 							</div>
 							<div class="password-field">
-								<input type="password" name="password" id="loginPassword" class="loginText tooltiper" maxlength="32" tabindex="2"  title="密码不少于6个字符。数字，字母或常用符号，字母区分大小写。">
+								<input type="password" name="password" id="loginPassword" class="loginText tooltiper" maxlength="32" tabindex="2"  title="密码不少于6个字符。数字，字母或常用符号，字母区分大小写。" >
 							</div>
 							<div id="slide-to-unlock"></div>
 							<button type="submit" class="submit btn btn-lg" tabindex="3" id="submit" onclick="location.href='manageCompany.html'">登录</button>
@@ -80,9 +80,9 @@
 						</form>
 					</div>
 					<div class="registered">
-						<form action="" class="loginForm" id="login-form">
+						<form action="" class="loginForm" id="registered-form">
 							<div class="username-field">
-								<input type="mail" name="usermail" id="userEmail" class="loginText tooltiper"  required minlength="6"  maxlength="32" tabindex="1" placeholder="请输入您的常用邮箱" title="请确保输入正确的邮箱地址。" >
+								<input type="mail" name="usermail" id="userEmail" class="loginText tooltiper"  required minlength="6"  maxlength="32" tabindex="1" placeholder="请输入您的常用邮箱" title="请确保输入正确的邮箱地址。"value="邮箱/电话" >
 							</div>
 							<div class="username-field">
 								<input type="password" name="password" id="registeredPassword" class="loginText tooltiper"  required minlength="6"  maxlength="32" tabindex="2" placeholder="设置密码" title="密码不少于6个字符。数字，字母或常用符号，字母区分大小写。" >
@@ -105,13 +105,8 @@
 		</div>
 	</main>
 	<footer></footer>
-	<!--<script>-->
-	<!--html5表单自定义验证-->
-		<!--var user = document.getElementById("userEmail");-->
-		<!--user.setCustomValidity("大哥，用户名必须填啊！")-->
-	<!--</script>-->
-<!-- 	    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
- -->	<script src="js/jquery-1.9.1.min.js"></script>
+
+	<script src="js/jquery-1.9.1.min.js"></script>
 	<script src="js/bootstrap.js"></script>
 	<script src="js/unlock.js"></script>
 	<!-- 滑块解锁 -->
@@ -141,7 +136,7 @@
 		$(function(){
 			$(".tabtn .underline").click(function(){
 				$(this).addClass("active").siblings().removeClass("active"); //切换选中的按钮高亮状态
-				var index=$(this).index(); //获取被按下按钮的索引值，需要注意index是从0开始的
+				var index = $(this).index(); //获取被按下按钮的索引值，需要注意index是从0开始的
 				$(".tabcon > div").eq(index).show().siblings().hide(); //在按钮选中时在下面显示相应的内容，同时隐藏不需要的框架内容
 			});
 		});
@@ -149,21 +144,30 @@
 	<!--登陆时文字消失-->
 	<script>
 		$(function(){
-			$(".login-label-count").mouseenter(function(){
-				$(".login-label-count").hide();
-				return false;
-				});
-//			$(".login-label-count").mouseleave(function(){
-//				$(".login-label-count").show();
-//				return false;
-//			});
-
+			$("#username").focus(function(){
+				var txt_value = $(this).val();
+				if(txt_value == "手机号码/邮箱"){
+					$(this).val("");
+				}
+			});
+			$("#username").blur(function(){
+				var txt_value = $(this).val();
+				if(txt_value == ""){
+					$(this).val("手机号码/邮箱");
+				}
+			});
+			$("error").appendTo("<br>");
 		})
 	</script>
 	<!--提交后的按钮-->
 	<script src="js/jquery.validate.min.js"></script>
+	<scrtip>
+
+	</scrtip>
+	<!--表单校验-->
 	<script src="js/validate.js"></script>
 	<script src="js/messages_zh.js"></script>
 </body>
 </html>
+
 
