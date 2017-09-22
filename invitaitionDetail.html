@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>邀请详情</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/subStyle.css">
+    <link rel="stylesheet" href="css/NewCss.css">
+    <link rel="stylesheet" href="css/tooltipster.bundle.min.css"/>
+    <link rel="stylesheet" href="css/tooltipster-sideTip-shadow.min.css"/>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body id="body">
+<header class="indexHeader2">
+    <a href="login.html" class="mainLogo">
+        <ul>
+            <li class="logo2"></li>
+            <h4>云文件管理系统</h4>
+        </ul>
+    </a>
+    <nav class="navbar">
+        <div class="containerWrapNav">
+            <div class="navbar-left">
+                <a href="main.html">首页</a>
+            </div>
+            <div class="navbar-right">
+                <ul class="nav nav-tabs">
+                    <li><a href="#"><span class="verified"></span></a></li>
+                    <li><a href="">这是一个用户名</a></li>
+                    <li class="nav-icon">
+                        <a href="">
+                            <i class="notice"></i>
+                        </a>
+                    </li>
+                    <li class="nav-icon">
+                        <a href="">
+                            <i class="message"></i>
+                        </a>
+                    </li>
+                    <li class="nav-icon">
+                        <a href="">
+                            <i class="help"></i>
+                        </a>
+                    </li>
+                    <li class="nav-icon">
+                        <a href="">
+                            <i class="setting"></i>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">EN<span><img
+                                src="images/languageA.png" alt=""></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="">EN</a></li>
+                            <li><a href="">中文</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<main>
+    <nav class="leftNavbar">
+        <ul class="leftMenu">
+            <li class="leftNav"><a href=""><span class="home navLeftIcon"><img src="images/home.png"
+                                                                               alt=""></span>首页</a></li>
+            <li class="leftNav"><a href="manageCompany.html"><span class="company navLeftIcon"><img
+                    src="images/company.png" alt=""></span>公司管理</a></li>
+            <li class="leftNav"><a href=""><span class="contract navLeftIcon"><img src="images/contract.png"
+                                                                                   alt=""></span>合同管理<span
+                    class="navLeftIcon2"></span></a></li>
+            <li class="leftNav"><a href="manageBatch.html"><span class="batch navLeftIcon"><img src="images/batch.png"
+                                                                                                alt=""></span>批次管理<span
+                    class="navLeftIcon2"></span></a></li>
+        </ul>
+        <div class="exit"><span><img src="images/exit.png" alt=""></span><a href="">退出</a></div>
+    </nav>
+    <section class="mainContaier">
+        <div class="containerWrap">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4 class="companyTitle">合同管理 | 邀请详情
+                        <a href="newInvitation.html">
+                            <div class="fl addCompany addCompany0"><span><img src="images/add.png" alt=""></span>新建邀请
+                            </div>
+                        </a>
+                    </h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class=" manageBatchContent">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h4 class="companyBg"><span class="basicTitle"><img src="images/list.png" alt=""></span>列表管理
+                            </h4>
+                            <div class="manageList">
+                                <table class="table-bordered table-striped">
+                                    <thead>
+                                    <tr>
+                                        <th class="State">状态</th>
+                                        <th class="sendTime">发送时间</th>
+                                        <th class="allPerson">总人数</th>
+                                        <th class="sendPer">成功收到人数</th>
+                                        <th class="rufesePer">拒绝人数</th>
+                                        <th class="agreenPer">同意人数</th>
+                                        <th class="unSuccess">未成功</th>
+                                        <th class="operate">操作</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td class="sent">已发送</td>
+                                        <td>2017/08/01/11:11</td>
+                                        <td>168</td>
+                                        <td>168</td>
+                                        <td>8</td>
+                                        <td>158</td>
+                                        <td>2</td>
+                                        <td class="op">
+                                            <a href="" class="resend">重发</a>
+                                            <a href="" class="downLoad">下载文档</a>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="unsent ">未发送</td>
+                                        <td>2017/08/01/11:11</td>
+                                        <td>168</td>
+                                        <td>168</td>
+                                        <td>-</td>
+                                        <td>158</td>
+                                        <td>-</td>
+                                        <td class="op">
+                                            <a href="" class="send">发送</a>
+                                            <a href="" class="downLoad">下载文档</a>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-company-batch form-company-bottom ">
+            <button class="btn btn-success btn-save">保存</button>
+            <button class="btn btn-success btn-back">返回</button>
+        </div>
+        <div class="success_Wrap">
+            <div class="success">
+                <a href="" class="btn_Close"><img src="images/btn_close.png"></a>
+                <div class="sucContaier">
+                    <p class="suc_Icon"><img src="images/success_icon.png"></p>
+                    <p class="suc_font">恭喜你。160个用户已发送成功</p>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+</main>
+<footer></footer>
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+
+<!-- 小提示 -->
+<script type="text/javascript" src="js/tooltipster.bundle.min.js"></script>
+<script>
+    $('.tooltiper').tooltipster({
+        animation: 'fade',
+        delay: 200,
+        theme: 'tooltipster-Shadow',
+        trigger: 'click'
+    });
+</script>
+
+</body>
+</html>
+
