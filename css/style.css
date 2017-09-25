@@ -790,6 +790,11 @@
 		margin: 0 auto;
 	}
 
+	.form-company-batch .btn-save,
+	.form-company-batch .btn-back {
+		background-color: #0099ff;
+		border-color: #0099ff;
+	}
 	.form-company-batch .btn-save {
 		margin-right: 34px;
 	}
