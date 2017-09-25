@@ -820,7 +820,8 @@
 	.manageList table tbody tr td.unapproved ,.planning{
 		color:#ff5500;
 	}
-	.manageList table tbody tr td.unfinished{
+
+	.manageList table tbody tr td.unfinished, .unsent {
 		color:#ff003c;
 	}
 	.manageList table tbody tr td.canceled,.underway{
