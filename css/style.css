@@ -619,6 +619,24 @@
 		width: 100%;
 		text-align: center;
 	}
+
+	/*背景颜色*/
+	.contentWrap,
+	.batchContentBg,
+	.contractContentBg,
+	.manageBatchContent {
+		background-color: #f7f7f7;
+	}
+
+	.batchContent,
+	.contractContent,
+	.dataUpload,
+	.batchFilter,
+	.manageList,
+	.form-company-batch,
+	.CompanyStateWrap {
+		background-color: #ffffff;
+	}
 	/*批次管理*/
 	.contentWrap{
 		width:98%;
@@ -633,26 +651,23 @@
 		margin-right: 14px;
 
 	}
-	.contentWrap{
-		background-color: #f7f7f7;
-	}
-	.batchContent{
+
+	.batchContent {
 		margin:0 auto;
 		margin-top: 16px;
 		border-top:1px solid #ebeced;
 		overflow: hidden;
 		height:281px;
-		background-color: #ffffff;
 		padding-top:34px ;
 		padding-bottom: 34px;
 	}
 	.batchContent .form-group{
 		margin:0px;
 	}
+
 	.batchContentBg {
 		width:396px;
 		height:48px;
-		background-color: #f7f7f7;
 		margin-bottom: 34px;
 		border:1px solid #ebeced;
 	}
@@ -665,13 +680,13 @@
 	.dataUpload
 	{
 		height: 116px;
-		background-color: #ffffff;
 		padding-bottom: 34px;
 		padding-top: 34px;
 		margin-top: 16px;
 	}
 
-	.dataUpload .btn-upload {
+	.dataUpload .btn-upload,
+	.btn-select {
 		font-size: 14px;
 		margin-right: 40px;
 		background-color: #9fafc1;
@@ -681,7 +696,8 @@
 
 	}
 
-	.dataUpload .btn-success.btn-upload:hover {
+	.dataUpload .btn-success.btn-upload:hover,
+	.btn-select:hover {
 		background-color:#9fafc1;
 		border-color: #9fafc1;
 	}
@@ -689,7 +705,6 @@
 
 	/*批次管理*/
 	.manageBatchContent{
-		background-color: #f7f7f7;
 		width:96%;
 		margin: 0 auto;
 		margin-bottom: 83px;
@@ -703,7 +718,6 @@
 	}
 	.batchFilter{
 		overflow: hidden;
-		background-color: #ffffff;
 		padding:33px 0px 34px 24px;
 	}
 	.batchFilter .col-lg-3{
@@ -754,7 +768,6 @@
 		border-color: #9fafc1;
 	}
 	.manageList{
-		background-color: #ffffff;
 		overflow: hidden;
 		padding: 34px 24px 34px 24px;
 	}
@@ -782,7 +795,6 @@
 		line-height: 58px;
 		position: fixed;
 		bottom:0px ;
-		background-color: #ffffff;
 		padding-right: 16%;
 	}
 

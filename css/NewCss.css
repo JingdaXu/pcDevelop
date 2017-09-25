@@ -80,3 +80,63 @@
     font-size: 22px;
     margin-bottom: 40px;
 }
+
+/*合同管理*/
+.CompanyStateWrap {
+    height: 80px;
+    line-height: 80px;
+    margin-top: 16px;
+    border-top: 1px solid #ebeced;
+    border-bottom: 1px solid #ebeced;
+    text-align: center;
+}
+
+.CompanyStateWrap h4 {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    float: left;
+    line-height: 80px;
+    padding-left: 24px;
+}
+
+.CompanyStateWrap .companyState1 {
+    color: #ff3300;
+    margin-right: 24px;
+}
+
+.contractContent {
+    overflow: hidden;
+    padding-top: 24px;
+}
+
+.contractContent .contractContentBg {
+    margin: 0px;
+}
+
+.contractContent .form-group,
+.contractContent .col-lg-12,
+.contractContent .col-lg-6 {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 24px;
+}
+
+.contractFrequencyWrap {
+    height: 48px;
+    line-height: 48px;
+}
+
+.contractFrequencyWrap .startDate,
+.contractFrequencyWrap .endDate {
+    width: 168px;
+    padding-right: 14px;
+    background-image: url(../images/languageA.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-x: 142px;
+}
+
+.contractFrequencyWrap input {
+    margin-right: 10px;
+}
