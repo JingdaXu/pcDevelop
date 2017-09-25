@@ -748,7 +748,8 @@
 		border:1px solid #9fafc1;
 	}
 
-	.btnFilter .btn-success.btn-filter, .btn-reset:hover {
+	.btnFilter .btn-success.btn-filter:hover,
+	.btnFilter .btn-success.btn-reset:hover {
 		background-color:#9fafc1;
 		border-color: #9fafc1;
 	}
@@ -794,8 +795,8 @@
 		margin: 0 auto;
 	}
 
-	.form-company-batch .btn-save,
-	.form-company-batch .btn-back {
+	.form-company-batch .btn-save:hover,
+	.form-company-batch .btn-back:hover {
 		background-color: #0099ff;
 		border-color: #0099ff;
 	}
