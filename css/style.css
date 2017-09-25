@@ -767,6 +767,10 @@
 		height: 48px;
 		vertical-align: middle;;
 	}
+
+	.manageList table thead {
+		font-size: 18px;
+	}
 	.manageList table thead th,tbody tr td{
 		text-align: center;
 		vertical-align: middle;
