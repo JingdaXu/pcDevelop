@@ -34,16 +34,6 @@
 }
 
 /*弹窗*/
-.success_Wrap {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 1000;
-    left: 40%;
-    top: 35%;
-    display: none;
-}
-
 .success {
     width: 35%;
     height: 50%;
@@ -53,6 +43,8 @@
     z-index: 999;
     text-align: center;
     display: table;
+    left: 40%;
+    top: 35%;
 }
 
 .success .btn_Close {
@@ -114,14 +106,25 @@
     margin: 0px;
 }
 
-.contractContent .form-group,
+.contractContent .form-inline,
 .contractContent .col-lg-12,
-.contractContent .col-lg-6 {
+.contractContent .col-lg-5,
+.contractContent .col-lg-7,
+.contractContent .col-lg-3,
+.contractContent .col-lg-9 {
     margin: 0;
     padding: 0;
     margin-bottom: 24px;
 }
 
+.contractContent .contractDes {
+    vertical-align: top;
+    margin-top: 16px;
+}
+
+.contractContent textarea {
+    height: 100px;
+}
 .contractFrequencyWrap {
     height: 48px;
     line-height: 48px;
@@ -138,5 +141,125 @@
 }
 
 .contractFrequencyWrap input {
-    margin-right: 10px;
+    margin-right: 5px;
+}
+
+.contractFrequencyWrap .time {
+    margin: 0;
+    padding: 0;
+    margin-right: 14px;
+}
+
+.Mes_invitationWrap {
+    width: 50%;
+    border-radius: 4px 4px;
+    position: absolute;
+    z-index: 1000;
+    left: 30%;
+    top: 20%;
+    display: none;
+}
+
+.Mes_invitationWrap h4 {
+    display: inline-block;
+    padding-left: 18px;
+}
+
+.Mes_invitationWrap .invitationTitle {
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.Mes_invitationFont {
+    margin-left: 18px;
+    font-size: 12px;
+    color: #989898;
+}
+
+.Mes_invitationFont img {
+    margin-right: 8px;
+    vertical-align: text-bottom;
+}
+
+.Mes_invitationContent {
+    padding-left: 18px;
+
+}
+
+.Mes_invitationContent textarea {
+    border: 1px solid #c4c5c6;
+    margin: 14px 18px 16px 0;
+    width: 95%;
+    background-color: #efefef;
+}
+
+.Mes_invitationContent p {
+    font-size: 12px;
+    color: #989898;
+    margin-bottom: 36px;
+}
+
+.btnWrap {
+    text-align: center;
+}
+
+.btnWrap .btn-confirm,
+.btnWrap .btn-cancel {
+    width: 168px;
+    height: 40px;
+    background-color: #0099ff;
+    border-color: #0099ff;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.btnWrap .btn-confirm {
+
+    margin-right: 80px;
+}
+
+.btnWrap .btn-cancel {
+    margin-left: 80px;
+}
+
+/*合同管理*/
+.tableContract {
+    margin: 0;
+    padding: 0;
+    margin-top: 16px;
+    width: 100%;
+    font-size: 14px;
+}
+
+.tableContract tr {
+    vertical-align: middle;
+    height: 58px;
+}
+
+.tableContract tr td {
+    display: table-cell;
+    width: 20%;
+}
+
+.tableContract a {
+    text-decoration: underline;
+}
+
+.tableContract .Invitationtemplate_Install {
+    margin-right: 9%;
+}
+
+.tableContract .InvitationDetail {
+    margin-left: 9%;
+}
+
+.tableContract .Modify {
+    float: left;
+    margin-left: 65px;
+}
+
+.tableContract .Delete {
+    float: right;
+    margin-right: 65px;
 }

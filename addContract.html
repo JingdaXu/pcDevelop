@@ -71,14 +71,41 @@
     </nav>
 </header>
 <main>
+    <div class="Mes_invitationWrap">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="invitationTitle">
+                    <h4>短信邀请函模板</h4><span class="Mes_invitationFont"><img src="images/add1.png" width="18" height="18"
+                                                                          alt="">修改仅限10个字符</span>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="Mes_invitationContent">
+                            <textarea name="" rows="10" class="form-control" placeholder="请在此输入您将要发送的内容"></textarea>
+                            <p>详细规则说明：邀请一个用户加入云EBC，是指一个手机号/身份证号/一台设备。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="btnWrap">
+                            <button class="btn btn-success btn-confirm">确认</button>
+                            <button class="btn btn-success btn-cancel">取消</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <nav class="leftNavbar">
         <ul class="leftMenu">
             <li class="leftNav"><a href=""><span class="home navLeftIcon"><img src="images/home.png" alt=""></span>首页
             </a></li>
             <li class="leftNav"><a href="manageCompany.html"><span class="company navLeftIcon"><img
                     src="images/company.png" alt=""></span>公司管理</a></li>
-            <li class="leftNav"><a href=""><span class="contract navLeftIcon"><img src="images/contract.png"
-                                                                                   alt=""></span>合同管理<span
+            <li class="leftNav"><a href="addContract.html"><span class="contract navLeftIcon"><img
+                    src="images/contract.png"
+                    alt=""></span>合同管理<span
                     class="navLeftIcon2"></span></a></li>
             <li class="leftNav"><a href="manageBatch.html"><span class="batch navLeftIcon"><img src="images/batch.png"
                                                                                                 alt=""></span>批次管理<span
@@ -109,37 +136,37 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="contractContent">
-                                <div class="col-lg-6">
-                                    <div class="form-group">
+                                <div class="col-lg-5">
+                                    <div class="form-inline">
+
                                         <lable for="companyName">公司简称</lable>
                                         <input type="text" class="contractContentBg batchContentBg" maxlength="50"
                                                minlength="5">
                                     </div>
-                                    <div class="form-group">
+                                    <div class="form-inline">
                                         <lable for=" contractName">合同名称</lable>
                                         <input type="text" class="contractContentBg batchContentBg" maxlength="50"
                                                minlength="5">
                                     </div>
-                                    <div class="form-group">
-                                        <lable for="batchName">合同描述</lable>
-                                        <input type="textarea" class="contractContentBg bname batchContentBg"
-                                               maxlength="50" minlength="5">
+                                    <div class="form-inline">
+                                        <lable for="batchName" class="contractDes">合同描述</lable>
+                                        <textarea class=" contractContentBg bname batchContentBg " rows="10"
+                                                  maxlength="50" minlength="5"></textarea>
                                     </div>
-
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-lg-7">
                                     <div class="contractFrequencyWrap form-group  ">
                                         <lable for="companyName">合同频率</lable>
                                         <input type="radio">
-                                        <lable>一次</lable>
+                                        <lable class="time">一次</lable>
                                         <input type="radio">
-                                        <lable>每周一次</lable>
+                                        <lable class="time">每周一次</lable>
                                         <input type="radio">
-                                        <lable>每月一次</lable>
+                                        <lable class="time">每月一次</lable>
                                         <input type="radio">
-                                        <lable>每季度一次</lable>
+                                        <lable class="time">每季度一次</lable>
                                         <input type="radio">
-                                        <lable>每年一次</lable>
+                                        <lable class="time">每年一次</lable>
                                     </div>
                                     <div class="contractFrequencyWrap form-group">
                                         <lable for=" contractName">合同模板</lable>
@@ -164,6 +191,7 @@
             <button class="btn btn-success btn-save">保存</button>
             <button class="btn btn-success btn-back" onclick="location.href='manageBatch.html'">返回</button>
         </div>
+
     </section>
 </main>
 <footer></footer>

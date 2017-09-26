@@ -634,7 +634,9 @@
 	.batchFilter,
 	.manageList,
 	.form-company-batch,
-	.CompanyStateWrap {
+	.CompanyStateWrap,
+	.Mes_invitationWrap,
+	.ManagecontractContent {
 		background-color: #ffffff;
 	}
 	/*批次管理*/
@@ -643,6 +645,7 @@
 		margin:0 auto;
 		overflow: hidden;
 		border-top:1px solid #ebeced;
+		margin-bottom: 58px;
 	}
 	.contentWrap  lable {
 		color:#181b20;
@@ -666,7 +669,7 @@
 	}
 
 	.batchContentBg {
-		width:396px;
+		width: 390px;
 		height:48px;
 		margin-bottom: 34px;
 		border:1px solid #ebeced;
@@ -779,7 +782,7 @@
 
 	.manageList table tr {
 		height: 48px;
-		vertical-align: middle;;
+		vertical-align: middle;
 	}
 
 	.manageList table thead {
@@ -808,7 +811,9 @@
 	}
 
 	.form-company-batch .btn-save:hover,
-	.form-company-batch .btn-back:hover {
+	.form-company-batch .btn-back:hover,
+	.btnWrap .btn-confirm,
+	.btnWrap .btn-cancel {
 		background-color: #0099ff;
 		border-color: #0099ff;
 	}
@@ -827,21 +832,24 @@
 		margin-left: 43%;
 		margin-right: 1px;
 	}
-	.manageList table tbody tr td.approved ,.finish{
+
+	.approved, .finish {
 		color: #00ff37;
 	}
 
-	.manageList table tbody tr td.producing, .sendable, .sent {
+	.producing, .sendable, .sent {
 		color: #0099ff;
 	}
-	.manageList table tbody tr td.unapproved ,.planning{
+
+	.unapproved, .planning {
 		color:#ff5500;
 	}
 
-	.manageList table tbody tr td.unfinished, .unsent {
+	.unsent, .freeze {
 		color:#ff003c;
 	}
-	.manageList table tbody tr td.canceled,.underway{
+
+	.unfinished, .canceled, .underway {
 		color:#ff00cc;
 	}
 	/*错误提示表单*/
