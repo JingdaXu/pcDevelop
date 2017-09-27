@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>合同管理|新增/修改</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/NewCss.css">
+    <link rel="stylesheet" href="css/tooltipster.bundle.min.css"/>
+    <link rel="stylesheet" href="css/tooltipster-sideTip-shadow.min.css"/>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body id="body">
+<header class="indexHeader2">
+    <a href="login.html" class="mainLogo">
+        <ul>
+            <li class="logo2"></li>
+            <h4>云文件管理系统</h4>
+        </ul>
+    </a>
+    <nav class="navbar">
+        <div class="containerWrapNav">
+            <div class="navbar-left">
+                <a href="main.html">首页</a>
+            </div>
+            <div class="navbar-right">
+                <ul class="nav nav-tabs">
+                    <li><a href="#"><span class="verified"></span></a></li>
+                    <li><a href="">这是一个用户名</a></li>
+                    <li class="nav-icon">
+                        <a href="">
+                            <i class="notice"></i>
+                        </a>
+                    </li>
+                    <li class="nav-icon">
+                        <a href="">
+                            <i class="message"></i>
+                        </a>
+                    </li>
+                    <li class="nav-icon">
+                        <a href="">
+                            <i class="help"></i>
+                        </a>
+                    </li>
+                    <li class="nav-icon">
+                        <a href="">
+                            <i class="setting"></i>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">EN<span><img
+                                src="images/languageA.png" alt=""></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="">EN</a></li>
+                            <li><a href="">中文</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<main>
+    <div class="Mes_invitationWrap">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="invitationTitle">
+                    <h4>短信邀请函模板</h4><span class="Mes_invitationFont"><img src="images/add1.png" width="18" height="18"
+                                                                          alt="">修改仅限10个字符</span>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="Mes_invitationContent">
+                            <textarea name="" rows="10" class="form-control" placeholder="请在此输入您将要发送的内容"></textarea>
+                            <p>详细规则说明：邀请一个用户加入云EBC，是指一个手机号/身份证号/一台设备。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="btnWrap">
+                            <button class="btn btn-success btn-confirm">确认</button>
+                            <button class="btn btn-success btn-cancel">取消</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="leftNavbar">
+        <ul class="leftMenu">
+            <li class="leftNav"><a href=""><span class="home navLeftIcon"><img src="images/home.png" alt=""></span>首页
+            </a></li>
+            <li class="leftNav"><a href="manageCompany.html"><span class="company navLeftIcon"><img
+                    src="images/company.png" alt=""></span>公司管理</a></li>
+            <li class="leftNav"><a href="addContract.html"><span class="contract navLeftIcon"><img
+                    src="images/contract.png"
+                    alt=""></span>合同管理<span
+                    class="navLeftIcon2"></span></a></li>
+            <li class="leftNav"><a href="manageBatch.html"><span class="batch navLeftIcon"><img src="images/batch.png"
+                                                                                                alt=""></span>批次管理<span
+                    class="navLeftIcon2"></span></a></li>
+        </ul>
+        <div class="exit"><span><img src="images/exit.png" alt=""></span><a href="">退出</a></div>
+    </nav>
+    <section class="mainContaier">
+        <div class="containerWrap">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4 class="companyTitle">合同管理 | 新增 / 修改
+                        <div class="fl addCompany1 addCompany"><a href="">修改合同</a></div>
+                        <div class="fl addCompany2 addCompany"><a href="">新增合同</a></div>
+                    </h4>
+                </div>
+            </div>
+            <div class="contentWrap">
+                <form role="form">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="CompanyStateWrap">
+                                <h4>公司状态</h4>
+                                <lable class="companyState1">待审核</lable>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="contractContent">
+                                <div class="col-lg-5">
+                                    <div class="form-inline">
+
+                                        <lable for="companyName">公司简称</lable>
+                                        <input type="text" class="contractContentBg batchContentBg" maxlength="50"
+                                               minlength="5">
+                                    </div>
+                                    <div class="form-inline">
+                                        <lable for=" contractName">合同名称</lable>
+                                        <input type="text" class="contractContentBg batchContentBg" maxlength="50"
+                                               minlength="5">
+                                    </div>
+                                    <div class="form-inline">
+                                        <lable for="batchName" class="contractDes">合同描述</lable>
+                                        <textarea class=" contractContentBg bname batchContentBg " rows="10"
+                                                  maxlength="50" minlength="5"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-lg-7">
+                                    <div class="contractFrequencyWrap form-group  ">
+                                        <lable for="companyName">合同频率</lable>
+                                        <input type="radio">
+                                        <lable class="time">一次</lable>
+                                        <input type="radio">
+                                        <lable class="time">每周一次</lable>
+                                        <input type="radio">
+                                        <lable class="time">每月一次</lable>
+                                        <input type="radio">
+                                        <lable class="time">每季度一次</lable>
+                                        <input type="radio">
+                                        <lable class="time">每年一次</lable>
+                                    </div>
+                                    <div class="contractFrequencyWrap form-group">
+                                        <lable for=" contractName">合同模板</lable>
+                                        <button class="btn btn-success btn-select">选择系统模板</button>
+                                    </div>
+                                    <div class="contractFrequencyWrap form-group">
+                                        <lable for="batchName">开始日期</lable>
+                                        <input type="text" class="startDate batchContentBg" maxlength="50"
+                                               minlength="5">
+                                        <lable for="batchName">结束日期</lable>
+                                        <input type="text" class="endDate batchContentBg" maxlength="50" minlength="5">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="form-company-batch form-company-bottom ">
+            <button class="btn btn-success btn-save">保存</button>
+            <button class="btn btn-success btn-back" onclick="location.href='manageBatch.html'">返回</button>
+        </div>
+
+    </section>
+</main>
+<footer></footer>
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+
+<!-- 小提示 -->
+<script type="text/javascript" src="js/tooltipster.bundle.min.js"></script>
+<script>
+    $('.tooltiper').tooltipster({
+        animation: 'fade',
+        delay: 200,
+        theme: 'tooltipster-Shadow',
+        trigger: 'click'
+    });
+</script>
+
+</body>
+</html>
+

@@ -637,12 +637,33 @@
 		width: 100%;
 		text-align: center;
 	}
+
+	/*背景颜色*/
+	.contentWrap,
+	.batchContentBg,
+	.contractContentBg,
+	.manageBatchContent {
+		background-color: #f7f7f7;
+	}
+
+	.batchContent,
+	.contractContent,
+	.dataUpload,
+	.batchFilter,
+	.manageList,
+	.form-company-batch,
+	.CompanyStateWrap,
+	.Mes_invitationWrap,
+	.ManagecontractContent {
+		background-color: #ffffff;
+	}
 	/*批次管理*/
 	.contentWrap{
 		width:98%;
 		margin:0 auto;
 		overflow: hidden;
 		border-top:1px solid #ebeced;
+		margin-bottom: 58px;
 	}
 	.contentWrap  lable {
 		color:#181b20;
@@ -651,26 +672,23 @@
 		margin-right: 14px;
 
 	}
-	.contentWrap{
-		background-color: #f7f7f7;
-	}
-	.batchContent{
+
+	.batchContent {
 		margin:0 auto;
 		margin-top: 16px;
 		border-top:1px solid #ebeced;
 		overflow: hidden;
 		height:281px;
-		background-color: #ffffff;
 		padding-top:34px ;
 		padding-bottom: 34px;
 	}
 	.batchContent .form-group{
 		margin:0px;
 	}
+
 	.batchContentBg {
-		width:396px;
+		width: 390px;
 		height:48px;
-		background-color: #f7f7f7;
 		margin-bottom: 34px;
 		border:1px solid #ebeced;
 	}
@@ -683,12 +701,13 @@
 	.dataUpload
 	{
 		height: 116px;
-		background-color: #ffffff;
 		padding-bottom: 34px;
 		padding-top: 34px;
 		margin-top: 16px;
 	}
-	.btn-upload{
+
+	.dataUpload .btn-upload,
+	.btn-select {
 		font-size: 14px;
 		margin-right: 40px;
 		background-color: #9fafc1;
@@ -697,7 +716,9 @@
 		height:48px;
 
 	}
-	.batchContent .btn-success.btn-upload:hover{
+
+	.dataUpload .btn-success.btn-upload:hover,
+	.btn-select:hover {
 		background-color:#9fafc1;
 		border-color: #9fafc1;
 	}
@@ -705,7 +726,6 @@
 
 	/*批次管理*/
 	.manageBatchContent{
-		background-color: #f7f7f7;
 		width:96%;
 		margin: 0 auto;
 		margin-bottom: 83px;
@@ -719,10 +739,11 @@
 	}
 	.batchFilter{
 		overflow: hidden;
-		background-color: #ffffff;
 		padding:33px 0px 34px 24px;
 	}
 	.batchFilter .col-lg-3{
+		margin: 0;
+		padding: 0;
 		float: left;
 		margin:0;
 		width: 25%;
@@ -736,6 +757,7 @@
 	.manageBatchContent .state,
 	.manageBatchContent .date {
 		width: 100%;
+		background-image: url(../images/languageA.png);
 		background-repeat:no-repeat;
 		background-position: right;
 		background-position-x:96%;
@@ -747,10 +769,12 @@
 		margin-top: 66px;
 
 	}
-	.btn-filter{
+
+	.btnFilter .btn-filter {
 		margin-right: 34px;
 	}
-	.btn-filter, .btn-reset{
+
+	.btnFilter .btn-filter, .btn-reset {
 		width:198px;
 		height:48px;
 		color: #ffffff;
@@ -758,28 +782,61 @@
 		font-size: 14px;
 		border:1px solid #9fafc1;
 	}
-	.btn-success.btn-filter, .btn-reset:hover{
+
+	.btnFilter .btn-success.btn-filter:hover,
+	.btnFilter .btn-success.btn-reset:hover {
 		background-color:#9fafc1;
 		border-color: #9fafc1;
 	}
 	.manageList{
-		background-color: #ffffff;
 		overflow: hidden;
-		padding:34px 24px 0 24px ;
+		padding: 34px 24px 34px 24px;
 	}
 	.manageList table{
 		width:100%;
 		background-color: #f7f7f7;
+		text-align: center;
+	}
+
+	.manageList table tr {
+		height: 48px;
+		vertical-align: middle;
+	}
+
+	.manageList table thead {
+		font-size: 18px;
 	}
 	.manageList table thead th,tbody tr td{
 		text-align: center;
+		vertical-align: middle;
 	}
 	.form-company-batch{
-		width:83.5%;
+		width: 100%;
+		height: 58px;
+		line-height: 58px;
 		position: fixed;
-		left:263px;
-		right: 15px;
 		bottom:0px ;
+		padding-right: 16%;
+	}
+
+	.form-company-batch .btn-save,
+	.form-company-batch .btn-back {
+		width: 120px;
+		height: 40px;
+		background-color: #0099ff;
+		border-color: #0099ff;
+		margin: 0 auto;
+	}
+
+	.form-company-batch .btn-save:hover,
+	.form-company-batch .btn-back:hover,
+	.btnWrap .btn-confirm,
+	.btnWrap .btn-cancel {
+		background-color: #0099ff;
+		border-color: #0099ff;
+	}
+	.form-company-batch .btn-save {
+		margin-right: 34px;
 	}
 	.manageList table tbody tr .op{
 		text-align: left;
@@ -790,22 +847,27 @@
 		text-decoration: underline;
 	}
 	.manageList table tbody tr td .cancel{
-		margin-left: 56%;
+		margin-left: 43%;
 		margin-right: 1px;
 	}
-	.manageList table tbody tr td.approved ,.finish{
+
+	.approved, .finish {
 		color: #00ff37;
 	}
-	.manageList table tbody tr td.producing,.sendable{
+
+	.producing, .sendable, .sent {
 		color: #0099ff;
 	}
-	.manageList table tbody tr td.unapproved ,.planning{
+
+	.unapproved, .planning {
 		color:#ff5500;
 	}
-	.manageList table tbody tr td.unfinished{
+
+	.unsent, .freeze {
 		color:#ff003c;
 	}
-	.manageList table tbody tr td.canceled,.underway{
+
+	.unfinished, .canceled, .underway {
 		color:#ff00cc;
 	}
 	/*错误提示表单*/
