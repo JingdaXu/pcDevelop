@@ -92,11 +92,12 @@
 		z-index: 1000;
 	}
     .mainLogo{
-        position: relative;
+        position: fixed;
         display: inline-block;
         width: 248px;
         height: 98px;
         background-color:#535f6b;
+		z-index:999;
     }
     .mainLogo ul{
         width:248px;
@@ -119,33 +120,45 @@
     /*上部导航*/
     .navbar{
         display: inline-block;
-        position: absolute;
+        position: fixed;
         top:0;
-        right:0;
+        left:-248px;
         width:100%;
         margin-left:248px;
+		background: green;
     }
 	.dropdown-toggle span {
 		padding-left:13px;
 	}
 	.containerWrapNav{
-		width: 1600px;
+		width: 1199px;
 		height: 98px;
 		position: relative;
-		z-index: 999;}
+		z-index: 999;
+		margin:0 auto;
+		background-color: yellow;
+	}
 	.navbar-left {
-        position: absolute;
-        top:38px;
-        left:272px;
+        /*position: absolute;*/
+        /*top:38px;*/
+        /*left:0px;*/
     }
 	.navbar-left a{
 		color: #000;
 		text-decoration: none;
 	}
 	.navbar-right{
-		position: absolute;
-		top: 28px;
-		right:-186px;
+		/*position: absolute;*/
+		/*top: 28px;*/
+		/*right:-186px;*/
+	}
+	.navbar-left a,
+	.navbar-right li>a{
+		height: 100px;
+		line-height: 100px;
+		padding: 0px 20px 0px 20px;
+		margin: 0px;
+		border: 0px;
 	}
     .navbar i{
 		width: 24px;
@@ -153,7 +166,7 @@
 		display: inline-block;
     }
     .verified{
-		background: url(../images/verified.png) 50% 50% no-repeat;
+		background: url(../images/verified2.png) 50% 50% no-repeat;
 		width: 78px;
 		height: 24px;
 		display: block;
@@ -307,7 +320,11 @@
 		line-height:58px;
 	}
 	.mainContaier .companyContent .table tr:hover{
-		background-color: #e3e6e8;
+		background-color: #dfdfdf;
+		color:#484848
+	}
+	.mainContaier  .companyContent  .table tr td:last-child :hover{
+		color:#ff0000;
 	}
 	.tableCompany{
 		margin-top: 14px;
@@ -435,6 +452,7 @@
 	.companyContent .form-control:focus{
 		box-shadow: none;
 		-webikit-box-shadow: none;
+		background: #ededed;
 	}
 	/*安全设置主页面*/
 	.countSafe-Main{
@@ -798,4 +816,59 @@
 		color: red;
 		font-size: 12px;
 		font-weight:500;
+	}
+	/*安全设置交互——*/
+	.navbar-left a:hover{
+		color:#535f6b;
+	}
+	.countSafe-Main-Content li span a:hover{
+		color:#0099ff
+	}
+	.countSafe-Nav .rightBox a:hover{
+		color: #0099ff;
+	}
+	.countSafe-Content > button:hover{
+		background-color:#30373f;
+		border-color:#30373f;
+	}
+	.form-company .btn-company:hover{
+		background-color:#30373f;
+		border-color:#30373f;
+	}
+	.marketingInfo td:last-child :hover{
+		color:#1451a5;
+	}
+	/*表单页面交互*/
+	.op .check:hover{
+		color: #ff0000;
+	}
+	.op .cancel:hover{
+		color: #00ff37;
+	}
+	.op .send:hover{
+		color:#0099ff;
+	}
+	.op .resend:hover{
+		color:#ff0000;
+	}
+	.op .downLoad:hover{
+		color:#0099ff;
+	}
+	/*导航交互*/
+	.nav-icon .notice:hover{
+		background:url("../images/notice-hover.png") 50% 50% no-repeat;
+	}
+	.nav-icon .message:hover{
+		background:url("../images/message-hover.png") 50% 50% no-repeat;
+	}
+	.nav-icon .help:hover{
+		background:url("../images/help-hover.png") 50% 50% no-repeat;
+	}
+	.nav-icon .setting:hover{
+		 background:url("../images/setting-hover.png") 50% 50% no-repeat;
+	}
+	.nav > li > a:hover,
+	.nav > li > a:focus{
+		background-color:transparent ;
+		border-color: transparent;
 	}
