@@ -7,6 +7,7 @@
 	  color: #222;
 	  -webkit-text-size-adjust: none;
 	  -webkit-font-smoothing: antialiased;
+		overflow-x:hidden;
 	}
 	li{list-style: none}
 	/*垂直居中*/
@@ -95,14 +96,16 @@
         position: fixed;
         display: inline-block;
         width: 248px;
-        height: 98px;
+        height: 100px;
         background-color:#535f6b;
 		z-index:999;
     }
     .mainLogo ul{
         width:248px;
         height: 24px;
-        line-height: 24px;}
+        line-height: 24px;
+		margin-left: 40px;
+	}
     .mainLogo li{
         display: inline-block;
         margin-top:35px;
@@ -122,21 +125,18 @@
         display: inline-block;
         position: fixed;
         top:0;
-        left:-248px;
         width:100%;
-        margin-left:248px;
-		background: green;
+		background: #fff;
+	}
+	.content-container .navbar-top {
+		padding-left: 250px;
     }
 	.dropdown-toggle span {
 		padding-left:13px;
 	}
 	.containerWrapNav{
-		width: 1199px;
-		height: 98px;
-		position: relative;
 		z-index: 999;
-		margin:0 auto;
-		background-color: yellow;
+		background-color: #fff;
 	}
 	.navbar-left {
         /*position: absolute;*/
@@ -153,7 +153,7 @@
 		/*right:-186px;*/
 	}
 	.navbar-left a,
-	.navbar-right li>a{
+	.navbar-right>ul>li>a{
 		height: 100px;
 		line-height: 100px;
 		padding: 0px 20px 0px 20px;
@@ -184,6 +184,7 @@
 		height:100%;
 		position: fixed;
 		background: #30373f;
+		z-index: 10000;
 	}
 	.leftMenu{
 		margin-top: 98px;
@@ -933,4 +934,21 @@
 	.nav > li > a:focus{
 		background-color:transparent ;
 		border-color: transparent;
+	}
+	.nav .open > a,
+	.nav .open > a:hover,
+	.nav .open > a:focus{
+		background-color:transparent ;
+		border-color: transparent;
+	}
+	.dropdown-menu > li > a{
+		color:#181b20;
+	}
+	.dropdown-menu > li > a:hover,
+	.dropdown-menu > li > a:focus{
+		background:#0099ff;
+		color:#fff;
+	}
+	.nav-tabs .dropdown-menu{
+		margin-top: -30px;
 	}
