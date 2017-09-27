@@ -81,6 +81,7 @@
     border-top: 1px solid #ebeced;
     border-bottom: 1px solid #ebeced;
     text-align: center;
+    position: relative;
 }
 
 .CompanyStateWrap h4 {
@@ -92,6 +93,27 @@
     padding-left: 24px;
 }
 
+.CompanyStateWrap span {
+    position: absolute;
+    z-index: 999;
+    right: 2%;
+    top: 25%;
+    float: right;
+}
+
+.CompanyStateWrap .btn-liftFreeze {
+    float: right;
+    display: inline-block;
+    width: 120px;
+    height: 36px;
+    background-color: #ff0033;
+    border-color: #ff0033;
+}
+
+.CompanyStateWrap .btn-liftFreeze:hover {
+    background-color: #ff0033;
+    border-color: #ff0033;
+}
 .CompanyStateWrap .companyState1 {
     color: #ff3300;
     margin-right: 24px;
@@ -109,17 +131,11 @@
 .contractContent .form-inline,
 .contractContent .col-lg-12,
 .contractContent .col-lg-5,
-.contractContent .col-lg-7,
+.contractContent .col-lg-8,
 .contractContent .col-lg-3,
 .contractContent .col-lg-9 {
-    margin: 0;
-    padding: 0;
-    margin-bottom: 24px;
-}
 
-.contractContent .contractDes {
-    vertical-align: top;
-    margin-top: 16px;
+    margin-bottom: 24px;
 }
 
 .contractContent textarea {
@@ -130,16 +146,34 @@
     line-height: 48px;
 }
 
+.contractFrequencyWrap .contractName {
+    float: left;
+    margin: 0;
+    margin-left: 24px;
+}
+
+.contractTemplate,
+.downloadTemplate {
+    text-decoration: underline;
+    font-size: 18px;
+}
+
+.contractTemplate {
+    margin-left: 112px;
+}
+
+.downloadTemplate {
+    float: right;
+}
 .contractFrequencyWrap .startDate,
 .contractFrequencyWrap .endDate {
-    width: 168px;
+    width: 25%;
     padding-right: 14px;
     background-image: url(../images/languageA.png);
     background-repeat: no-repeat;
     background-position: right;
-    background-position-x: 142px;
+    background-position-x: 95%;
 }
-
 .contractFrequencyWrap input {
     margin-right: 5px;
 }
@@ -262,4 +296,10 @@
 .tableContract .Delete {
     float: right;
     margin-right: 65px;
+}
+
+/*选择系统模板*/
+.Template {
+    width: 100%;
+
 }
