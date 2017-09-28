@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/subStyle.css">
-    <link rel="stylesheet" href="css/tooltipster.bundle.min.css"/>
-    <link rel="stylesheet" href="css/tooltipster-sideTip-shadow.min.css"/>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -20,21 +18,17 @@
     <![endif]-->
 </head>
 <body id="body">
+<div class="app-container">
+    <div class="row content-container">
         <header class="indexHeader2">
-    <a href="login.html" class="mainLogo">
-        <ul>
-            <li class="logo2"></li>
-            <h4>云文件管理系统</h4>
-        </ul>
-    </a>
-    <nav class="navbar">
-        <div class="containerWrapNav">
+            <nav class="navbar navbar-fixed-top navbar-top">
+                <div class="containerWrapNav conainer-fluid">
                     <div class="navbar-left">
-                <a href="main.html">首页</a>
+                        <a href="manageCompany.html">首页</a>
                     </div>
-            <div class="navbar-right">
+                    <div class="nav navbar-nav navbar-right">
                         <ul class="nav nav-tabs">
-                    <li><a href="#"><span class="verified"></span></a></li>
+                            <li><a href="#"></a></li>
                             <li><a href="">这是一个用户名</a></li>
                             <li class="nav-icon">
                                 <a href="">
@@ -52,40 +46,39 @@
                                 </a>
                             </li>
                             <li class="nav-icon">
-                        <a href="">
+                                <a href="safeSetting.html">
                                     <i class="setting"></i>
                                 </a>
                             </li>
                             <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">EN<span><img
-                                src="images/languageA.png" alt=""></span>
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">简体中文<span ><img src="images/languageA.png" alt=""></span>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li><a href="">EN</a></li>
-                            <li><a href="">中文</a></li>
+                                    <li><a href="">繁体中文</a></li>
                                 </ul>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
-</header>
-<main>
-    <nav class="leftNavbar">
+            <nav class="leftNavbar side-menu sidebar-inverse">
+                <a href="login.html" class="mainLogo">
+                    <ul>
+                        <li class="logo2"></li>
+                        <h4>云文件管理系统</h4>
+                    </ul>
+                </a>
                 <ul class="leftMenu">
-            <li class="leftNav"><a href=""><span class="home navLeftIcon"><img src="images/home.png" alt=""></span>首页
-            </a></li>
-            <li class="leftNav"><a href="manageCompany.html"><span class="company navLeftIcon"><img
-                    src="images/company.png" alt=""></span>公司管理</a></li>
-            <li class="leftNav"><a href=""><span class="contract navLeftIcon"><img src="images/contract.png"
-                                                                                   alt=""></span>合同管理<span
-                    class="navLeftIcon2"></span></a></li>
-            <li class="leftNav"><a href="manageBatch.html"><span class="batch navLeftIcon"><img src="images/batch.png"
-                                                                                                alt=""></span>批次管理<span
-                    class="navLeftIcon2"></span></a></li>
+                    <li class="leftNav"><a href=""><span class="home navLeftIcon"><img src="images/home.png" alt=""></span>首页 </a></li>
+                    <li class="leftNav"><a href="manageCompany.html"><span class="company navLeftIcon"><img src="images/company.png" alt=""></span>公司管理</a></li>
+                    <li class="leftNav"><a href=""><span class="contract navLeftIcon"><img src="images/contract.png" alt=""></span>合同管理<span class="navLeftIcon2"></span></a></li>
+                    <li class="leftNav"><a href=""><span class="batch navLeftIcon"><img src="images/batch.png" alt=""></span>批次管理<span class="navLeftIcon2"></span></a></li>
                 </ul>
                 <div class="exit"><span><img src="images/exit.png" alt=""></span><a href="">退出</a></div>
             </nav>
+        </header>
+        <main>
             <section class="mainContaier">
                 <div class="containerWrap">
                     <div class="row">
@@ -98,38 +91,17 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="batchContent">
-                                <div class="row">
-                                    <div class="col-lg-7 col-md-7">
                                         <div class="form-group">
                                             <lable for="companyName">公司简称</lable>
-                                            <div class="col-lg-7 col-md-7">
-                                                <input type="text" class="name batchContentBg" maxlength="50"
-                                                       minlength="5">
+                                            <input type="text" class="name batchContentBg" maxlength="50" minlength="5">
                                         </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-7 col-md-7">
                                         <div class="form-group">
                                             <lable for=" contractName">合同名称</lable>
-                                            <div class="col-lg-7 col-md-7">
-                                                <input type="text" class="name batchContentBg" maxlength="50"
-                                                       minlength="5">
+                                            <input type="text" class="name batchContentBg" maxlength="50" minlength="5">
                                         </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-7 col-md-7">
                                         <div class="form-group">
                                             <lable for="batchName">批次名称</lable>
-                                            <div class="col-lg-7 col-md-7">
-                                                <input type="text" class="bname batchContentBg" maxlength="50"
-                                                       minlength="5">
-                                            </div>
-                                        </div>
-                                    </div>
+                                            <input type="text" class="bname batchContentBg" maxlength="50" minlength="5">
                                         </div>
                                     </div>
                                 </div>
@@ -137,18 +109,14 @@
                         </form>
                         <form class="dataUpload form-inline" role="form">
                             <div class="row">
-                        <div class="col-lg-10">
-                            <div class=" form-group">
+                                <div class="col-lg-12">
+                                    <div class="form-group">
                                         <lable>数据上传</lable>
-                                <div class="col-lg-5">
                                         <button class="btn btn-success btn-upload">下载数据模板</button>
-                                </div>
-                                <div class="col-lg-5">
                                         <button class="btn btn-success btn-upload">上传数据</button>
                                     </div>
                                 </div>
                             </div>
-                    </div>
                         </form>
                     </div>
                 </div>
@@ -158,21 +126,12 @@
                 </div>
             </section>
         </main>
-<footer></footer>
-<script src="js/jquery-1.9.1.min.js"></script>
-<script src="js/bootstrap.js"></script>
-
-<!-- 小提示 -->
-<script type="text/javascript" src="js/tooltipster.bundle.min.js"></script>
-<script>
-    $('.tooltiper').tooltipster({
-        animation: 'fade',
-        delay: 200,
-        theme: 'tooltipster-Shadow',
-        trigger: 'click'
-    });
-</script>
+    </div>
+</div>
 
 </body>
 </html>
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+
 

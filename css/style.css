@@ -93,11 +93,12 @@
 		z-index: 1000;
 	}
     .mainLogo{
-        position: relative;
+        position: fixed;
         display: inline-block;
         width: 248px;
-        height: 98px;
+        height: 100px;
         background-color:#535f6b;
+		z-index:999;
     }
     .mainLogo ul{
         width:248px;
