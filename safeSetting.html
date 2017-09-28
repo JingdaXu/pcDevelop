@@ -14,134 +14,137 @@
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <!--<script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>-->
+    <!--<script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>-->
+    <!--[endif]-->
 </head>
 <body id="body">
-<header class="indexHeader2">
-    <a href="login.html" class="mainLogo">
-        <ul>
-            <li class="logo2"></li>
-            <h4>云文件管理系统</h4>
-        </ul>
-    </a>
-    <nav class="navbar">
-        <div class="containerWrapNav">
-            <div class="navbar-left">
-                <a href="manageCompany.html">首页</a>
-            </div>
-            <div class="navbar-right">
-                <ul class="nav nav-tabs">
-                    <li><a href="#"></a></li>
-                    <li><a href="">这是一个用户名</a></li>
-                    <li class="nav-icon">
-                        <a href="">
-                            <i class="notice"></i>
-                        </a>
-                    </li>
-                    <li class="nav-icon">
-                        <a href="">
-                            <i class="message"></i>
-                        </a>
-                    </li>
-                    <li class="nav-icon">
-                        <a href="">
-                            <i class="help"></i>
-                        </a>
-                    </li>
-                    <li class="nav-icon">
-                        <a href="">
-                            <i class="setting"></i>
-                        </a>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">EN<span ><img src="images/languageA.png" alt=""></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="">EN</a></li>
-                            <li><a href="">中文</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>
-<main>
-    <nav class="leftNavbar">
-        <ul class="leftMenu">
-            <li class="leftNav"><a href=""><span class="home navLeftIcon"><img src="images/home.png" alt=""></span>首页 </a></li>
-            <li class="leftNav"><a href="manageCompany.html"><span class="company navLeftIcon"><img src="images/company.png" alt=""></span>公司管理</a></li>
-            <li class="leftNav"><a href=""><span class="contract navLeftIcon"><img src="images/contract.png" alt=""></span>合同管理<span class="navLeftIcon2"></span></a></li>
-            <li class="leftNav"><a href=""><span class="batch navLeftIcon"><img src="images/batch.png" alt=""></span>批次管理<span class="navLeftIcon2"></span></a></li>
-        </ul>
-        <div class="exit"><span><img src="images/exit.png" alt=""></span><a href="">退出</a></div>
-    </nav>
-    <section class="mainContaier">
-        <div class="containerWrap">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h4 class="companyTitle">安全设置
-                    </h4>
-                </div>
-            </div>
-        </div>
-        <div class="countSafe-Main">
-            <div class="row">
-                <div class="companyContent">
-                    <div class="row">
-                        <ul class="countSafe-Main-Content col-lg-12 ">
-                            <li>
-                                <span>用户名</span>
-                                <span>这是一个用户名</span>
+<div class="app-container">
+    <div class="row content-container">
+        <header class="indexHeader2">
+            <nav class="navbar navbar-fixed-top navbar-top">
+                <div class="containerWrapNav conainer-fluid">
+                    <div class="navbar-left">
+                        <a href="manageCompany.html">首页</a>
+                    </div>
+                    <div class="nav navbar-nav navbar-right">
+                        <ul class="nav nav-tabs">
+                            <li><a href="#"></a></li>
+                            <li><a href="">这是一个用户名</a></li>
+                            <li class="nav-icon">
+                                <a href="">
+                                    <i class="notice"></i>
+                                </a>
                             </li>
-                            <li>
-                                <span>登录邮箱</span>
-                                <span>angelinayou@toplux.com</span>
-                                <span><a href="changeMail.html">修改邮箱</a></span>
+                            <li class="nav-icon">
+                                <a href="">
+                                    <i class="message"></i>
+                                </a>
                             </li>
-                            <li>
-                                <span>绑定手机</span>
-                                <span>1324371582</span>
-                                <span><a href="changePhone.html">修改手机</a></span>
+                            <li class="nav-icon">
+                                <a href="">
+                                    <i class="help"></i>
+                                </a>
                             </li>
-                            <li>
-                                <span>原密码</span>
-                                <span>密码要求最好包含字母，符号或者数字钟的两项，且长度必须超过6位。建议您经常修改密码以保证账户安全</span>
-                                <span><a href="changePassword.html">修改密码</a></span>
+                            <li class="nav-icon">
+                                <a href="safeSetting.html">
+                                    <i class="setting"></i>
+                                </a>
                             </li>
-                        </ul>
-                        <ul  class="countSafe-Main-Content countSafe-Main-Content-Second col-lg-12">
-                            <li>
-                                <span><img src="images/Messenger.png" alt=""></span>
-                                <span>Messenger</span>
-                                <span>已绑定</span>
-                                <span><a href="">解绑</a></span>
-                            </li>
-                            <li>
-                                <span><img src="images/Twitter.png" alt=""></span>
-                                <span>Twitter</span>
-                                <span>未绑定</span>
-                                <span><a href="">绑定</a></span>
-                            </li>
-                            <li>
-                                <span><img src="images/Google+.png" alt=""></span>
-                                <span>Google+</span>
-                                <span>未绑定</span>
-                                <span><a href="">绑定</a></span>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">简体中文<span ><img src="images/languageA.png" alt=""></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="">EN</a></li>
+                                    <li><a href="">繁体中文</a></li>
+                                </ul>
                             </li>
                         </ul>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="form-company agree-bottom">
-            <a href="manageCompany.html"><button class="btn-company btn-success btn">返回</button></a>
-        </div>
-    </section>
-</main>
-<footer></footer>
+            </nav>
+            <nav class="leftNavbar side-menu sidebar-inverse">
+                <a href="login.html" class="mainLogo">
+                    <ul>
+                        <li class="logo2"></li>
+                        <h4>云文件管理系统</h4>
+                    </ul>
+                </a>
+                <ul class="leftMenu">
+                    <li class="leftNav"><a href=""><span class="home navLeftIcon"><img src="images/home.png" alt=""></span>首页 </a></li>
+                    <li class="leftNav"><a href="manageCompany.html"><span class="company navLeftIcon"><img src="images/company.png" alt=""></span>公司管理</a></li>
+                    <li class="leftNav"><a href=""><span class="contract navLeftIcon"><img src="images/contract.png" alt=""></span>合同管理<span class="navLeftIcon2"></span></a></li>
+                    <li class="leftNav"><a href=""><span class="batch navLeftIcon"><img src="images/batch.png" alt=""></span>批次管理<span class="navLeftIcon2"></span></a></li>
+                </ul>
+                <div class="exit"><span><img src="images/exit.png" alt=""></span><a href="">退出</a></div>
+            </nav>
+        </header>
+        <main>
+            <section class="mainContaier">
+                <div class="containerWrap">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h4 class="companyTitle">安全设置
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="countSafe-Main">
+                    <div class="row">
+                        <div class="companyContent">
+                            <div class="row">
+                                <ul class="countSafe-Main-Content col-lg-12 ">
+                                    <li>
+                                        <span>用户名</span>
+                                        <span>这是一个用户名</span>
+                                    </li>
+                                    <li>
+                                        <span>登录邮箱</span>
+                                        <span>angelinayou@toplux.com</span>
+                                        <span><a href="changeMail.html">修改邮箱</a></span>
+                                    </li>
+                                    <li>
+                                        <span>绑定手机</span>
+                                        <span>1324371582</span>
+                                        <span><a href="changePhone.html">修改手机</a></span>
+                                    </li>
+                                    <li>
+                                        <span>原密码</span>
+                                        <span>密码要求最好包含字母，符号或者数字钟的两项，且长度必须超过6位。建议您经常修改密码以保证账户安全</span>
+                                        <span><a href="changePassword.html">修改密码</a></span>
+                                    </li>
+                                </ul>
+                                <ul  class="countSafe-Main-Content countSafe-Main-Content-Second col-lg-12">
+                                    <li>
+                                        <span><img src="images/Messenger.png" alt=""></span>
+                                        <span>Messenger</span>
+                                        <span>已绑定</span>
+                                        <span><a href="">解绑</a></span>
+                                    </li>
+                                    <li>
+                                        <span><img src="images/Twitter-hover.png" alt=""></span>
+                                        <span style="color: #c8c8c8;">Twitter</span>
+                                        <span style="color: #c8c8c8;">未绑定</span>
+                                        <span><a href="">绑定</a></span>
+                                    </li>
+                                    <li>
+                                        <span><img src="images/Google-hover.png" alt=""></span>
+                                        <span style="color: #c8c8c8;">Google+</span>
+                                        <span style="color: #c8c8c8;">未绑定</span>
+                                        <span><a href="">绑定</a></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-company agree-bottom">
+                    <a href="manageCompany.html"><button class="btn-company btn-success btn">返回</button></a>
+                </div>
+            </section>
+        </main>
+    </div>
+</div>
 <script src="js/jquery-1.9.1.min.js"></script>
 <script src="js/bootstrap.js"></script>
 

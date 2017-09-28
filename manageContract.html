@@ -20,162 +20,146 @@
     <![endif]-->
 </head>
 <body id="body">
-<header class="indexHeader2">
-    <a href="login.html" class="mainLogo">
-        <ul>
-            <li class="logo2"></li>
-            <h4>云文件管理系统</h4>
-        </ul>
-    </a>
-    <nav class="navbar">
-        <div class="containerWrapNav">
-            <div class="navbar-left">
-                <a href="main.html">首页</a>
-            </div>
-            <div class="navbar-right">
-                <ul class="nav nav-tabs">
-                    <li><a href="#"><span class="verified"></span></a></li>
-                    <li><a href="">这是一个用户名</a></li>
-                    <li class="nav-icon">
-                        <a href="">
-                            <i class="notice"></i>
-                        </a>
-                    </li>
-                    <li class="nav-icon">
-                        <a href="">
-                            <i class="message"></i>
-                        </a>
-                    </li>
-                    <li class="nav-icon">
-                        <a href="">
-                            <i class="help"></i>
-                        </a>
-                    </li>
-                    <li class="nav-icon">
-                        <a href="">
-                            <i class="setting"></i>
-                        </a>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">EN<span><img
-                                src="images/languageA.png" alt=""></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="">EN</a></li>
-                            <li><a href="">中文</a></li>
+<div class="app-container">
+    <div class="row content-container">
+        <header class="indexHeader2">
+            <nav class="navbar navbar-fixed-top navbar-top">
+                <div class="containerWrapNav conainer-fluid">
+                    <div class="navbar-left">
+                        <a href="manageCompany.html">首页</a>
+                    </div>
+                    <div class="nav navbar-nav navbar-right">
+                        <ul class="nav nav-tabs">
+                            <li><a href="#"></a></li>
+                            <li><a href="">这是一个用户名</a></li>
+                            <li class="nav-icon">
+                                <a href="">
+                                    <i class="notice"></i>
+                                </a>
+                            </li>
+                            <li class="nav-icon">
+                                <a href="">
+                                    <i class="message"></i>
+                                </a>
+                            </li>
+                            <li class="nav-icon">
+                                <a href="">
+                                    <i class="help"></i>
+                                </a>
+                            </li>
+                            <li class="nav-icon">
+                                <a href="safeSetting.html">
+                                    <i class="setting"></i>
+                                </a>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">简体中文<span ><img src="images/languageA.png" alt=""></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="">EN</a></li>
+                                    <li><a href="">繁体中文</a></li>
+                                </ul>
+                            </li>
                         </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>
-<main>
-    <nav class="leftNavbar">
-        <ul class="leftMenu">
-            <li class="leftNav"><a href=""><span class="home navLeftIcon"><img src="images/home.png" alt=""></span>首页
-            </a></li>
-            <li class="leftNav"><a href="manageCompany.html"><span class="company navLeftIcon"><img
-                    src="images/company.png" alt=""></span>公司管理</a></li>
-            <li class="leftNav"><a href="addContract.html"><span class="contract navLeftIcon"><img
-                    src="images/contract.png"
-                    alt=""></span>合同管理<span
-                    class="navLeftIcon2"></span></a></li>
-            <li class="leftNav"><a href="manageBatch.html"><span class="batch navLeftIcon"><img src="images/batch.png"
-                                                                                                alt=""></span>批次管理<span
-                    class="navLeftIcon2"></span></a></li>
-        </ul>
-        <div class="exit"><span><img src="images/exit.png" alt=""></span><a href="">退出</a></div>
-    </nav>
-    <section class="mainContaier">
-        <div class="containerWrap">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h4 class="companyTitle">合同管理
-                        <a href="addContract.html">
-                            <div class="fl addCompany addCompany0"><span><img src="images/add.png" alt=""></span>新增合同
-                            </div>
-                        </a>
-                    </h4>
+                    </div>
                 </div>
-            </div>
-            <div class="contentWrap">
-                <table class=" tableContract table table-bordered table-hover table-striped ">
-                    <tr>
-                        <td>公司简称</td>
-                        <td>合同名称</td>
-                        <td>合同状态</td>
-                        <td>邀请管理</td>
-                        <td>操作</td>
-                    </tr>
-                    <tr>
-                        <td>元讯科技</td>
-                        <td>电信合同</td>
-                        <td class="approved">已审核</td>
-                        <td><a href="" class="Invitationtemplate_Install">邀请函模板设置</a> <a href=""
-                                                                                         class="InvitationDetail">邀请详情</a>
-                        </td>
-                        <td><a href="" class="Modify">修改</a> <a href="" class="Delete">删除</a></td>
-                    </tr>
-                    <tr>
-                        <td>隐形科技</td>
-                        <td>通讯合同</td>
-                        <td class="unapproved ">未审核</td>
-                        <td><a href="" class="Invitationtemplate_Install">邀请函模板设置</a> <a href=""
-                                                                                         class="InvitationDetail">邀请详情</a>
-                        </td>
-                        <td><a href="" class="Modify">修改</a> <a href="" class="Delete">删除</a></td>
-                    </tr>
-                    <tr>
-                        <td>泛讯科技</td>
-                        <td>通讯合同</td>
-                        <td class="unfinished">未完成</td>
-                        <td><a href="" class="Invitationtemplate_Install">邀请函模板设置</a> <a href=""
-                                                                                         class="InvitationDetail">邀请详情</a>
-                        </td>
-                        <td><a href="" class="Modify">修改</a> <a href="" class="Delete">删除</a></td>
-                    </tr>
-                    <tr>
-                        <td>隐形科技</td>
-                        <td>通讯合同</td>
-                        <td class=" freeze">冻结</td>
-                        <td><a href="" class="Invitationtemplate_Install">邀请函模板设置</a> <a href=""
-                                                                                         class="InvitationDetail">邀请详情</a>
-                        </td>
-                        <td><a href="" class="Modify">修改</a> <a href="" class="Delete">删除</a></td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="form-company-batch form-company-bottom ">
-                    <ul class="navigation">
-                        <li><a href=""><img src="images/leftEndpage.png" alt=""></a></li>
-                        <li><a href=""><img src="images/leftPage.png" alt=""></a></li>
-                        <li><a href=""><img src="images/rightPage.png" alt=""></a></li>
-                        <li><a href=""><img src="images/rightEndpage.png" alt=""></a></li>
+            </nav>
+            <nav class="leftNavbar side-menu sidebar-inverse">
+                <a href="login.html" class="mainLogo">
+                    <ul>
+                        <li class="logo2"></li>
+                        <h4>云文件管理系统</h4>
                     </ul>
+                </a>
+                <ul class="leftMenu">
+                    <li class="leftNav"><a href=""><span class="home navLeftIcon"><img src="images/home.png" alt=""></span>首页 </a></li>
+                    <li class="leftNav"><a href="manageCompany.html"><span class="company navLeftIcon"><img src="images/company.png" alt=""></span>公司管理</a></li>
+                    <li class="leftNav"><a href=""><span class="contract navLeftIcon"><img src="images/contract.png" alt=""></span>合同管理<span class="navLeftIcon2"></span></a></li>
+                    <li class="leftNav"><a href=""><span class="batch navLeftIcon"><img src="images/batch.png" alt=""></span>批次管理<span class="navLeftIcon2"></span></a></li>
+                </ul>
+                <div class="exit"><span><img src="images/exit.png" alt=""></span><a href="">退出</a></div>
+            </nav>
+        </header>
+        <main>
+             <section class="mainContaier">
+                <div class="containerWrap">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h4 class="companyTitle">合同管理
+                                <a href="addContract.html">
+                                    <div class="fl addCompany addCompany0"><span><img src="images/add.png" alt=""></span>新增合同
+                                    </div>
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="contentWrap">
+                        <table class=" tableContract table table-bordered table-hover table-striped ">
+                            <tr>
+                                <td>公司简称</td>
+                                <td>合同名称</td>
+                                <td>合同状态</td>
+                                <td>邀请管理</td>
+                                <td>操作</td>
+                            </tr>
+                            <tr>
+                                <td>元讯科技</td>
+                                <td>电信合同</td>
+                                <td class="approved">已审核</td>
+                                <td><a href="" class="Invitationtemplate_Install">邀请函模板设置</a> <a href=""
+                                                                                                 class="InvitationDetail">邀请详情</a>
+                                </td>
+                                <td><a href="" class="Modify">修改</a> <a href="" class="Delete">删除</a></td>
+                            </tr>
+                            <tr>
+                                <td>隐形科技</td>
+                                <td>通讯合同</td>
+                                <td class="unapproved ">未审核</td>
+                                <td><a href="" class="Invitationtemplate_Install">邀请函模板设置</a> <a href=""
+                                                                                                 class="InvitationDetail">邀请详情</a>
+                                </td>
+                                <td><a href="" class="Modify">修改</a> <a href="" class="Delete">删除</a></td>
+                            </tr>
+                            <tr>
+                                <td>泛讯科技</td>
+                                <td>通讯合同</td>
+                                <td class="unfinished">未完成</td>
+                                <td><a href="" class="Invitationtemplate_Install">邀请函模板设置</a> <a href=""
+                                                                                                 class="InvitationDetail">邀请详情</a>
+                                </td>
+                                <td><a href="" class="Modify">修改</a> <a href="" class="Delete">删除</a></td>
+                            </tr>
+                            <tr>
+                                <td>隐形科技</td>
+                                <td>通讯合同</td>
+                                <td class=" freeze">冻结</td>
+                                <td><a href="" class="Invitationtemplate_Install">邀请函模板设置</a> <a href=""
+                                                                                                 class="InvitationDetail">邀请详情</a>
+                                </td>
+                                <td><a href="" class="Modify">修改</a> <a href="" class="Delete">删除</a></td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
-            </div>
-        </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="form-company-batch form-company-bottom ">
+                            <ul class="navigation">
+                                <li><a href=""><img src="images/leftEndpage.png" alt=""></a></li>
+                                <li><a href=""><img src="images/leftPage.png" alt=""></a></li>
+                                <li><a href=""><img src="images/rightPage.png" alt=""></a></li>
+                                <li><a href=""><img src="images/rightEndpage.png" alt=""></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-    </section>
-</main>
-<footer></footer>
+            </section>
+        </main>
+    </div>
+</div>
 <script src="js/jquery-1.9.1.min.js"></script>
 <script src="js/bootstrap.js"></script>
-
-<!-- 小提示 -->
-<script type="text/javascript" src="js/tooltipster.bundle.min.js"></script>
-<script>
-    $('.tooltiper').tooltipster({
-        animation: 'fade',
-        delay: 200,
-        theme: 'tooltipster-Shadow',
-        trigger: 'click'
-    });
-</script>
 
 </body>
 </html>

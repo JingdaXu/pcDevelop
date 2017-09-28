@@ -7,6 +7,7 @@
 	  color: #222;
 	  -webkit-text-size-adjust: none;
 	  -webkit-font-smoothing: antialiased;
+		overflow-x:hidden;
 	}
 	li{list-style: none}
 	/*垂直居中*/
@@ -101,7 +102,9 @@
     .mainLogo ul{
         width:248px;
         height: 24px;
-        line-height: 24px;}
+        line-height: 24px;
+		margin-left: 40px;
+	}
     .mainLogo li{
         display: inline-block;
         margin-top:35px;
@@ -119,33 +122,42 @@
     /*上部导航*/
     .navbar{
         display: inline-block;
-        position: absolute;
+        position: fixed;
         top:0;
-        right:0;
         width:100%;
-        margin-left:248px;
+		background: #fff;
+	}
+	.content-container .navbar-top {
+		padding-left: 250px;
     }
 	.dropdown-toggle span {
 		padding-left:13px;
 	}
 	.containerWrapNav{
-		width: 1600px;
-		height: 98px;
-		position: relative;
-		z-index: 999;}
+		z-index: 999;
+		background-color: #fff;
+	}
 	.navbar-left {
-        position: absolute;
-        top:38px;
-        left:272px;
+        /*position: absolute;*/
+        /*top:38px;*/
+        /*left:0px;*/
     }
 	.navbar-left a{
 		color: #000;
 		text-decoration: none;
 	}
 	.navbar-right{
-		position: absolute;
-		top: 28px;
-		right:-186px;
+		/*position: absolute;*/
+		/*top: 28px;*/
+		/*right:-186px;*/
+	}
+	.navbar-left a,
+	.navbar-right>ul>li>a{
+		height: 100px;
+		line-height: 100px;
+		padding: 0px 20px 0px 20px;
+		margin: 0px;
+		border: 0px;
 	}
     .navbar i{
 		width: 24px;
@@ -153,7 +165,7 @@
 		display: inline-block;
     }
     .verified{
-		background: url(../images/verified.png) 50% 50% no-repeat;
+		background: url(../images/verified2.png) 50% 50% no-repeat;
 		width: 78px;
 		height: 24px;
 		display: block;
@@ -171,6 +183,7 @@
 		height:100%;
 		position: fixed;
 		background: #30373f;
+		z-index: 10000;
 	}
 	.leftMenu{
 		margin-top: 98px;
@@ -307,7 +320,11 @@
 		line-height:58px;
 	}
 	.mainContaier .companyContent .table tr:hover{
-		background-color: #e3e6e8;
+		background-color: #dfdfdf;
+		color:#484848
+	}
+	.mainContaier  .companyContent  .table tr td:last-child :hover{
+		color:#ff0000;
 	}
 	.tableCompany{
 		margin-top: 14px;
@@ -435,6 +452,7 @@
 	.companyContent .form-control:focus{
 		box-shadow: none;
 		-webikit-box-shadow: none;
+		background: #ededed;
 	}
 	/*安全设置主页面*/
 	.countSafe-Main{
@@ -636,8 +654,7 @@
 	.form-company-batch,
 	.CompanyStateWrap,
 	.Mes_invitationWrap,
-	.ManagecontractContent,
-	.Template {
+	.ManagecontractContent {
 		background-color: #ffffff;
 	}
 	/*批次管理*/
@@ -670,7 +687,7 @@
 	}
 
 	.batchContentBg {
-		width: 100%;
+		width: 390px;
 		height:48px;
 		margin-bottom: 34px;
 		border:1px solid #ebeced;
@@ -679,49 +696,27 @@
 		background-image:url(../images/languageA.png) ;
 		background-repeat:no-repeat;
 		background-position: right;
-		background-position-x: 95%;
+		background-position-x:368px;
 	}
 	.dataUpload
 	{
+		height: 116px;
 		padding-bottom: 34px;
 		padding-top: 34px;
 		margin-top: 16px;
 	}
 
-	.dataUpload .col-lg-2,
-	.dataUpload .col-lg-4 {
-		margin: 0;
-		padding: 0;
-
-	}
-
-	.dataUpload .col-lg-2 {
-		text-align: right;
-	}
-
-	.dataUpload .col-lg-4 {
-		margin-right: 40px;
-	}
-
-	.dataUpload .form-group {
-		width: 100%;
-	}
-
-	.dataUpload lable,
-	.batchContent lable,
-	.contractContent .col-lg-5 lable {
-		float: left;
-		hight: 48px;
-		line-height: 48px;
-	}
 	.dataUpload .btn-upload,
 	.btn-select {
-		width: 100%;
-		height: 48px;
 		font-size: 14px;
+		margin-right: 40px;
 		background-color: #9fafc1;
 		border:1px solid #9fafc1;
+		width:394px;
+		height:48px;
+
 	}
+
 	.dataUpload .btn-success.btn-upload:hover,
 	.btn-select:hover {
 		background-color:#9fafc1;
@@ -883,4 +878,76 @@
 		color: red;
 		font-size: 12px;
 		font-weight:500;
+	}
+	/*安全设置交互——*/
+	.navbar-left a:hover{
+		color:#535f6b;
+	}
+	.countSafe-Main-Content li span a:hover{
+		color:#0099ff
+	}
+	.countSafe-Nav .rightBox a:hover{
+		color: #0099ff;
+	}
+	.countSafe-Content > button:hover{
+		background-color:#30373f;
+		border-color:#30373f;
+	}
+	.form-company .btn-company:hover{
+		background-color:#30373f;
+		border-color:#30373f;
+	}
+	.marketingInfo td:last-child :hover{
+		color:#1451a5;
+	}
+	/*表单页面交互*/
+	.op .check:hover{
+		color: #ff0000;
+	}
+	.op .cancel:hover{
+		color: #00ff37;
+	}
+	.op .send:hover{
+		color:#0099ff;
+	}
+	.op .resend:hover{
+		color:#ff0000;
+	}
+	.op .downLoad:hover{
+		color:#0099ff;
+	}
+	/*导航交互*/
+	.nav-icon .notice:hover{
+		background:url("../images/notice-hover.png") 50% 50% no-repeat;
+	}
+	.nav-icon .message:hover{
+		background:url("../images/message-hover.png") 50% 50% no-repeat;
+	}
+	.nav-icon .help:hover{
+		background:url("../images/help-hover.png") 50% 50% no-repeat;
+	}
+	.nav-icon .setting:hover{
+		 background:url("../images/setting-hover.png") 50% 50% no-repeat;
+	}
+	.nav > li > a:hover,
+	.nav > li > a:focus{
+		background-color:transparent ;
+		border-color: transparent;
+	}
+	.nav .open > a,
+	.nav .open > a:hover,
+	.nav .open > a:focus{
+		background-color:transparent ;
+		border-color: transparent;
+	}
+	.dropdown-menu > li > a{
+		color:#181b20;
+	}
+	.dropdown-menu > li > a:hover,
+	.dropdown-menu > li > a:focus{
+		background:#0099ff;
+		color:#fff;
+	}
+	.nav-tabs .dropdown-menu{
+		margin-top: -30px;
 	}
