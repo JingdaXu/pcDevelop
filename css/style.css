@@ -655,7 +655,9 @@
 	.form-company-batch,
 	.CompanyStateWrap,
 	.Mes_invitationWrap,
-	.ManagecontractContent {
+	.ManagecontractContent,
+	.Template
+	{
 		background-color: #ffffff;
 	}
 	/*批次管理*/
@@ -706,14 +708,34 @@
 		padding-top: 34px;
 		margin-top: 16px;
 	}
+	.dataUpload .col-lg-2,
+	.dataUpload .col-lg-4{
+		margin:0;
+		padding:0;
+	}
+	.dataUpload .col-lg-2 {
+		text-align: right;
+	}
+	.dataUpload .col-lg-4{
+		margin-right: 40px;
+	}
+	.dataUpload .form-group {
+		width: 100%;
+	}
 
+	.dataUpload lable,
+	.batchContent lable,
+	.contractContent .col-lg-5 lable {
+		float: left;
+		hight: 48px;
+		line-height: 48px;
+	}
 	.dataUpload .btn-upload,
 	.btn-select {
+		width: 100%;
 		font-size: 14px;
-		margin-right: 40px;
 		background-color: #9fafc1;
 		border:1px solid #9fafc1;
-		width:394px;
 		height:48px;
 
 	}
