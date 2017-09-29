@@ -44,22 +44,22 @@
     text-align: center;
     display: table;
     left: 40%;
-    top: 35%;
+    top: 30%;
+    background-image: url("../images/popStyle.png");
+    background-repeat: no-repeat;
 }
 
 .success .btn_Close {
-    float: left;
-    margin: 14px 0 0 14px;
     cursor: pointer;
     position: absolute;
-    z-index: 100;
+    right:3%;
+    top:0;
 }
 
 .success .sucContaier {
     margin: 0 auto;
     text-align: center;
-    display: table-cell;
-    vertical-align: middle;
+    margin-top: 5%;
 }
 
 .sucContaier .suc_Icon img {
@@ -71,7 +71,22 @@
     font-size: 22px;
     margin-bottom: 40px;
 }
-
+.btn_confirm{
+    background-color: #ffffff;
+    border-color: #dd0000;
+    color: #ff0000;
+    width:25%;
+    border-radius: 20px 20px ;
+}
+.confirmWrap .btn_confirm:hover{
+    border-color: #dd0000;
+    color: #ff0000;
+    background-color: transparent;
+}
+.icon_confirm{
+    vertical-align: text-bottom;
+    margin-left: -3%;
+}
 /*合同管理*/
 .CompanyStateWrap {
     height: 80px;
@@ -298,27 +313,43 @@
 }
 
 /*选择系统模板*/
+.TemplateContaier{
+    height: 100%;
+}
 .TemplateWrap{
     margin: 0 40px 58px 40px ;
     overflow: hidden;
     text-align: center;
     height: 100%;
+    background-color: #f7f7f7;
 }
 .minTemplate {
-    width:31.9%;
+    display: table;
+    text-align: center;
+    width:31.8%;
+    height:250px;
     margin-top:16px;
-    margin-right: 16px;
+    margin-right: 1.5%;
 }
-.minTemplate.col-lg-3{
-    position: fixed;
-    height:30%;
+.minTemplate p{
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
 }
-.minTemplate img{
-   width:30%;
-    height:29%;
+.imgWrap{
+    line-height: 200px;
+}
+.imgWrap img{
+    width:33%;
+}
+.minTemplate input{
+    position: absolute;
+    right:2%;
+    bottom:2%;
 }
 .form-company-batchWrap{
     background-color: transparent;
+    height:15%;
 }
 .containerWrap0 {
     height: 100%;
@@ -329,9 +360,9 @@
     display: table;
     left:0;
     right:0;
-    height:50%;
-    width:50%;
-    margin:5% 60% 0 30%;
+    height:45%;
+    width:37%;
+    margin:5% 50% 0 35%;
     text-align: center;
    vertical-align: middle;
 
@@ -349,4 +380,5 @@
     right:-4%;
     top:40%;
     bottom: 0;
+    cursor: pointer;
 }
