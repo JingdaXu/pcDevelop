@@ -124,6 +124,7 @@
                                     <div class="CompanyStateWrap">
                                         <h4>公司状态</h4>
                                         <lable class="companyState1">待审核</lable>
+                                <span><button class="btn btn-success btn-liftFreeze">解除冻结</button></span>
                                     </div>
                                 </div>
                             </div>
@@ -131,23 +132,34 @@
                                 <div class="col-lg-12">
                                     <div class="contractContent">
                                         <div class="col-lg-5">
-                                            <div class="form-inline">
-
+                                    <div class="row">
+                                        <div class="form-group">
                                                 <lable for="companyName">公司简称</lable>
-                                                <input type="text" class="contractContentBg batchContentBg" maxlength="50"
-                                                       minlength="5">
+                                            <div class="col-lg-8 col-md-8">
+                                                <input type="text" class=" contractContentBg batchContentBg"
+                                                       maxlength="50" minlength="5">
                                             </div>
-                                            <div class="form-inline">
-                                                <lable for=" contractName">合同名称</lable>
-                                                <input type="text" class="contractContentBg batchContentBg" maxlength="50"
-                                                       minlength="5">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <lable for="contractName">合同名称</lable>
+                                            <div class="col-lg-8 col-md-8">
+                                                <input type="text" class=" contractContentBg batchContentBg"
+                                                       maxlength="50" minlength="5">
                                             </div>
-                                            <div class="form-inline">
-                                                <lable for="batchName" class="contractDes">合同描述</lable>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <lable for="companyName">合同描述</lable>
+                                            <div class="col-lg-8 col-md-8">
                                         <textarea class=" contractContentBg bname batchContentBg " rows="10"
                                                   maxlength="50" minlength="5"></textarea>
                                             </div>
                                         </div>
+                                    </div>
+                                </div>
                                         <div class="col-lg-7">
                                             <div class="contractFrequencyWrap form-group  ">
                                                 <lable for="companyName">合同频率</lable>
@@ -163,9 +175,15 @@
                                                 <lable class="time">每年一次</lable>
                                             </div>
                                             <div class="contractFrequencyWrap form-group">
-                                                <lable for=" contractName">合同模板</lable>
+                                        <lable for="contractName" class="contractName">合同模板</lable>
+                                        <div class="col-lg-6 col-md-6">
                                                 <button class="btn btn-success btn-select">选择系统模板</button>
                                             </div>
+                                    </div>
+                                    <div class="contractFrequencyWrap form-group">
+                                        <a href="" class="contractTemplate">通讯合同模板1</a>
+                                        <a href="" class="downloadTemplate">下载模板</a>
+                                    </div>
                                             <div class="contractFrequencyWrap form-group">
                                                 <lable for="batchName">开始日期</lable>
                                                 <input type="text" class="startDate batchContentBg" maxlength="50"
@@ -176,7 +194,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                         </form>
                     </div>
@@ -193,6 +210,17 @@
 
 <script src="js/jquery-1.9.1.min.js"></script>
 <script src="js/bootstrap.js"></script>
+
+<!-- 小提示 -->
+<script type="text/javascript" src="js/tooltipster.bundle.min.js"></script>
+<script>
+    $('.tooltiper').tooltipster({
+        animation: 'fade',
+        delay: 200,
+        theme: 'tooltipster-Shadow',
+        trigger: 'click'
+    });
+</script>
 
 </body>
 </html>
