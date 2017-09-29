@@ -8,7 +8,7 @@ $('#formAddHandlingFee').submit(function() {
             url: AjaxURL + '?Action=' + 'SubmitHandlingFee' + '&OrderNumber=' + $.trim($("#<%=this.txtOrderNumber.ClientID %>").val()),
             data: $('#formAddHandlingFee').serialize(),
             success: function (data) {
-                var strresult=data;
+                var strresult = data;
                 alert(strresult);
                 //加载最大可退金额
                 $("#spanMaxAmount").html(strresult);
