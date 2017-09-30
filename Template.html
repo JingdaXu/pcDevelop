@@ -75,9 +75,23 @@
                 </a>
                 <ul class="leftMenu">
                     <li class="leftNav"><a href=""><span class="home navLeftIcon"><img src="images/home.png" alt=""></span>首页 </a></li>
-                    <li class="leftNav"><a href="manageCompany.html"><span class="company navLeftIcon"><img src="images/company.png" alt=""></span>公司管理</a></li>
-                    <li class="leftNav"><a href="manageContract.html"><span class="contract navLeftIcon"><img src="images/contract.png" alt=""></span>合同管理<span class="navLeftIcon2"></span></a></li>
-                    <li class="leftNav"><a href="manageBatch.html"><span class="batch navLeftIcon"><img src="images/batch.png" alt=""></span>批次管理<span class="navLeftIcon2"></span></a></li>
+                    <li class="leftNav"><a href="manageCompany.html"><span class="company navLeftIcon"><img src="images/company.png" alt=""></span>公司管理</a>
+                    <ul class="leftNavSubWrap">
+                        <li class="leftNav leftNavSub" ><a href="">新增修改</a></li>
+                    </ul>
+                    </li>
+                    <li class="leftNav"><a href="manageContract.html"><span class="contract navLeftIcon"><img src="images/contract.png" alt=""></span>合同管理<span class="navLeftIcon2"></span></a>
+                    <ul class="leftNavSubWrap">
+                        <li class="leftNav leftNavSub" ><a href="">新增 / 修改</a></li>
+                        <li class="leftNav leftNavSub" ><a href="">邀请详情</a></li>
+                    </ul>
+                    </li>
+                    <li class="leftNav"><a href=""><span class="batch navLeftIcon"><img src="images/batch.png" alt=""></span>批次管理<span class="navLeftIcon2"></span></a>
+                    <ul class="leftNavSubWrap">
+                        <li class="leftNav leftNavSub" ><a href="">新建批次</a></li>
+                        <li class="leftNav leftNavSub" ><a href="">批次筛选</a></li>
+                    </ul>
+                    </li>
                 </ul>
                 <div class="exit"><span><img src="images/exit.png" alt=""></span><a href="">退出</a></div>
             </nav>
@@ -112,6 +126,17 @@
         delay: 200,
         theme: 'tooltipster-Shadow',
         trigger: 'click'
+    });
+$(function(){
+        $(".leftNav").click(function(){
+           var flag=$(".leftNavSubWrap").is(":visible");
+            if(flag==true){
+                $(".leftNavSubWrap").hide().end().siblings().show();
+            }
+            else{
+                $(".leftNavSubWrap").show().end().siblings().hide();
+            }
+        })
     });
 </script>
 
