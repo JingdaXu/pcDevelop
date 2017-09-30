@@ -1,26 +1,52 @@
 //公司管理ajax提交form表单的方式
 $(document).ready(//当页面准备好加载完成的时候触发
-    function getval() {
-        $("#TextBox1").blur(function () {//当鼠标点击或离开时触发
-            var txt = $(this).val();//获取文本框的值
-            //使用ajax发送出来文本框的值
+        $("#submit").click(function () {//当鼠标点击或离开时触发
+            var name = $("#name").val();
+            var sname = $("#sname").val();
+            var industry = $("#industry").val();
+            var people = $("#people").val();
+            var Onumber = $("#Onumber").val();
+            var code = $("#code").val();
+            var region = $("#region").val();
+            var postcode = $("#postcode").val();
+            var mail = $("#mail").val();
+            var website = $("#website").val();
+            var place1 = $("#place1").val();
+            var place2 = $("#place2").val();
+            var place3 = $("#place3").val();
+            var place3 = $("#businesslicense").val();
+            var place3 = $("#logo").val();
+            var place3 = $("#personalId").val();
+            formData.append("file", document.getElementById("Logo").files[0]);
+            formData.append("file", document.getElementById("businesslicense").files[1]);
+            formData.append("file", document.getElementById("personalId").files[2]);
+            formData.append("name", name);
+            formData.append("sname", sname);
+            formData.append("industry", industry);
+            formData.append("people", people);
+            formData.append("Onumber", Onumber);
+            formData.append("code", code);
+            formData.append("region", region);
+            formData.append("postcode", postcode);
+            formData.append("mail", mail);
+            formData.append("website", website);
+            formData.append("place1", place1);
+            formData.append("place2", place2);
+            formData.append("place3", place3);
             $.ajax( {
-                url: "De.aspx",
-                type: "POST",
-                data: {id:txt},
-                //接收数据库返回的信息
-                datatype: "xml",
+                url: "http://39.108.160.55:11116/control-center/app/organization/{orgId}",
+                type: "get",
+                data: formData,
+                processData: false,  // 告诉jQuery不要去处理发送的数据
+                contentType: false, // 告诉jQuery不要去设置Content-Type请求头
                 success: function (data) {//data中的数据就是De页面中count的数据
                     var co = $(data).text();
-                    if (parseInt(co) == 0) {
-                        var lbl = document.getElementById("Label1");//利用js输出
-                        lbl.innerHTML = "√";
+                    if (info =="success") {
+                        alert("成功上传");
                     } else {
-                        var lbl = document.getElementById("Label1");
-                        lbl.innerHTML = "此用户名已注册";
+                        alert("上传失败");
                     }
-
                 }
             });
         });
-    });
+    );

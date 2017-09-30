@@ -860,8 +860,8 @@
 	.form-company-batch .btn-back:hover,
 	.btnWrap .btn-confirm,
 	.btnWrap .btn-cancel {
-		background-color: #0099ff;
-		border-color: #0099ff;
+		background-color: #30373f;
+		border-color: #30373f;
 	}
 	.form-company-batch .btn-save {
 		margin-right: 34px;
