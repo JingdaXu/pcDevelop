@@ -199,13 +199,18 @@
 		display: inline-block;
 		position: relative;
 		width:100%;
-		height:58px;
 		line-height: 60px;
 		text-align:center;
 		background: #252a2e;
 		border:1px solid #30373f;
 	}
-
+	.leftNav .leftNavSubWrap{
+		display: none;
+	}
+	.leftNav .leftNavSub{
+		border: none;
+		background-color:#30373f ;
+	}
 	.leftNav a{
 		color: #fff;
 	}
