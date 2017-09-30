@@ -781,7 +781,6 @@
 	.manageBatchContent .state,
 	.manageBatchContent .date {
 		width: 100%;
-		background-image: url(../images/languageA.png);
 		background-repeat:no-repeat;
 		background-position: right;
 		background-position-x:96%;
