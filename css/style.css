@@ -253,6 +253,30 @@
 		background: url(../images/rightA.png) 50% 50% no-repeat;
 		-webkit-background-size:cover;
 		background-size:cover;
+
+	}
+
+	/*箭头动效*/
+	.hoverup {
+		-moz-transition: all 0.5s ease-in-out;
+		-webkit-transition: all 0.5s ease-in-out;
+		-o-transition: all 0.5s ease-in-out;
+		-ms-transition: all 0.5s ease-in-out;
+		transition: all 0.5s ease-in-out;
+	}
+
+	/*箭头旋转90度*/
+	.hoverdown {
+		-moz-transition: all 0.5s ease-in-out;
+		-webkit-transition: all 0.5s ease-in-out;
+		-o-transition: all 0.5s ease-in-out;
+		-ms-transition: all 0.5s ease-in-out;
+		transition: all 0.5s ease-in-out;
+		-moz-transform: rotate(90deg);
+		-webkit-transform: rotate(90deg);
+		-o-transform: rotate(90deg);
+		transform: rotate(90deg);
+		filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
 	}
 	/*公司管理*/
 	#body{
