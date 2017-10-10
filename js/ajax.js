@@ -36,9 +36,27 @@ $(document).ready(//当页面准备好加载完成的时候触发
             $.ajax( {
                 url: "http://39.108.160.55:11116/control-center/app/organization/{orgId}",
                 type: "get",
-                data: formData,
+                data: {
+                    name:$("#name").val(),
+                    sname : $("#sname").val(),
+                    industry:$("#industry").val(),
+                    people:$("#people").val(),
+                    Onumber:$("#Onumber").val(),
+                    code:$("#code").val(),
+                    region:$("#region").val(),
+                    postcode:$("#postcode").val(),
+                    mail:$("#mail").val(),
+                    website:$("#website").val(),
+                    place1:$("#place1").val(),
+                    place2:$("#place2").val(),
+                    place3:$("#place3").val(),
+                    place3:$("#businesslicense").val(),
+                    place3:$("#logo").val(),
+                    place3:$("#personalId").val(),
+                },
+                dataType:"json",
                 processData: false,  // 告诉jQuery不要去处理发送的数据
-                contentType: false, // 告诉jQuery不要去设置Content-Type请求头
+                contentType: false, // 告诉jQuery不要去设置Cotent-Type请求头
                 success: function (data) {//data中的数据就是De页面中count的数据
                     var co = $(data).text();
                     if (info =="success") {
@@ -46,7 +64,8 @@ $(document).ready(//当页面准备好加载完成的时候触发
                     } else {
                         alert("上传失败");
                     }
-                }
+                },
+                error:alert("上传失败")
             });
-        });
+        })
     );
