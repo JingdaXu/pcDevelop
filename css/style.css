@@ -16,13 +16,23 @@
 	.mt10{margin-top: 10px;  }
 	.mb10{margin-bottom: 10px;}
 	/*header*/
-		.containerHeader{margin:0 auto;width: 100%;height: 80px;background-color: #fff;}
+	.containerHeader {
+		margin: 0 auto;
+		width: 100%;
+		height: 80px;
+		background-color: #fff;
+	}
 		.box1{float: left;}
+
+	.box1 a {
+		text-decoration: none;
+	}
 		.logo{margin-top: 28px;width: 36px;height: 24px; background: url(../images/logo.png) 50% 50% no-repeat;  }
 		.box1 h4{margin-top: -30px;margin-left: 48px; font-size: 16px;color: #424448;}
 		.box2{float: right;height: 80px;line-height: 80px;}
 		.box2 a{color: #666;text-decoration: none;}
-		/*左边内容*/
+
+	/*左边内容*/
 		.leftbox{position: relative;}
 		.mainTitle{margin-top: 237px;margin-left: 0%;/*margin-top: 237/1920px;margin-left: 362/1920px;*/}
 		.mainTitle img {width:600px;height: 267px}
@@ -49,8 +59,13 @@
 		.username-field input[name^="p"],
 		.username-field input[name^="c"] {color:#0f0f0f}
 		#username{margin-top: 25px;margin-bottom: 15px;}
+
 		#slide-to-unlock{display:inline-block;width: 320px;height: 36px;margin-top: 23px;margin-bottom: 25px;}
 		.submit{display: block;width: 320px;height: 50px;margin:0 auto;background-color:#424448;color: #fff;}
+
+	.submit:hover {
+		color: #fff
+	}
 		.weekLogin{font-size: 14px;color: #666;}
 		.longinForm a{font-size: 14px;color: #666;}
 		input[name^="u"]{color:#c6ccd3;}
@@ -58,7 +73,14 @@
 		.loginLogin{position: relative;}
 		.loginLogin div{float: left;position: relative;left: 90px;margin-top: 14px;}
 		.loginLogin span{font-size: 14px;color: #666;}
-		.loginLogin a{position: absolute;right: 90px;top: 14px;}
+
+	.loginLogin a {
+		position: absolute;
+		right: 90px;
+		top: 14px;
+		text-decoration: none;
+		color: #666666;
+	}
 		.loginThird{margin-left: auto;margin-right: auto;margin-top: 112px}
 		.loginThird h4{font-size: 14px;color: #9d9d9d;margin-bottom: 32px;}
 		/*第三方登录*/
@@ -83,6 +105,10 @@
 	.indexHeader{
 		width:100%;
 		background-color: #fff;
+	}
+
+	.indexHeader .container {
+		width: 80%;
 	}
     .indexHeader2{
         display:inline-block;
@@ -340,7 +366,7 @@
 		margin-right:5px;
 	}
 	.table{
-		min-height: 600px;
+		/*min-height: 600px;*/
 		text-align: center;
 		color: #656565;
 	}

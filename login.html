@@ -28,9 +28,15 @@
 								<h4>云文件管理系统</h4>
 							</a>
 						</div>
-						<div class="box2">
-							<a href="login.html">首页</a>
-							<a href="">En <span> </span></a>
+						<div class=" box2 nav nav-tabs dropdown">
+							<a href="login.html" class="login">首页</a>
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">EN<span><img
+									src="images/languageA.png" alt=""></span>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="">简体中文</a></li>
+								<li><a href="">繁体中文</a></li>
+							</ul>
 						</div>
 					</div>
 		</div>
@@ -82,7 +88,9 @@
 					<div class="registered">
 						<form action="" class="loginForm" id="registered-form">
 							<div class="username-field">
-								<input type="mail" name="usermail" id="userEmail" class="loginText tooltiper"  required minlength="6"  maxlength="32" tabindex="1" placeholder="请输入您的常用邮箱" title="请确保输入正确的邮箱地址。"value="邮箱/电话" >
+								<input type="mail" name="usermail" id="userEmail" class="loginText tooltiper" required
+									   minlength="6" maxlength="32" tabindex="1" placeholder="请输入您的常用邮箱"
+									   title="请确保输入正确的邮箱地址。">
 							</div>
 							<div class="username-field">
 								<input type="password" name="password" id="registeredPassword" class="loginText tooltiper"  required minlength="6"  maxlength="32" tabindex="2" placeholder="设置密码" title="密码不少于6个字符。数字，字母或常用符号，字母区分大小写。" >
@@ -117,7 +125,8 @@
     		succText: '解锁成功！',
     		progressColor:'#0fd600',
     		progressColor:'#d3d3d3',
-    		succColor:'#0fd600'
+			succColor: '#0fd600',
+			color: '#ffffff'
     	}); 
 	</script>
 	<!-- 小提示 -->
@@ -126,10 +135,13 @@
 		$('.tooltiper').tooltipster({
 		   animation: 'fade',
 		   delay: 200,
-		   theme: 'tooltipster-Shadow',
+					theme: 'tooltipster-shadow',
 		   trigger: 'click',
-			position:'left'
-		});
+					position: 'left',
+
+
+				}
+		);
     </script>
 	<!--登录选项卡切换-->
 	<script>
