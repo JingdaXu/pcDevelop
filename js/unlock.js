@@ -14,7 +14,7 @@
             text: 'slide to unlock',
             succText: 'ok!',
             textColor: '#000',
-            succTextColor: '#000',
+            succTextColor: '#fff',
             successFunc: function() {
                 alert('successfully unlock!');
             }

@@ -35,8 +35,8 @@
 
 /*弹窗*/
 .success {
-    width: 35%;
-    height: 50%;
+    width: 32%;
+    height: 45%;
     background-color: #ffffff;
     border-radius: 8px 8px;
     position: absolute;
@@ -47,6 +47,7 @@
     top: 30%;
     background-image: url("../images/popStyle.png");
     background-repeat: no-repeat;
+
 }
 
 .success .btn_Close {
