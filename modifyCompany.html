@@ -12,9 +12,9 @@
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <!--<script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>-->
+    <!--<script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>-->
+    <!--[endif]-->
 </head>
 <body id="body">
 <div class="app-container">
@@ -192,22 +192,27 @@
                                                     <div class="col-lg-12">
                                                         <div class="form-group">
                                                             <lable >公司地址1</lable>
-                                                            <input type="text" class="form-control companyText"required maxlength="50" minlength="5" name="place"></div>
+                                                            <input type="text" class="form-control companyText" required
+                                                                   maxlength="50" minlength="5" name="place"
+                                                                   id="place1"></div>
                                                     </div>
                                                     <div class="col-lg-12">
                                                         <div class="form-group">
                                                             <lable>公司地址2</lable>
-                                                            <input type="text" class="form-control companyText" ></div>
+                                                            <input type="text" class="form-control companyText"
+                                                                   id="place2">
                                                     </div>
                                                     <div class="col-lg-12">
                                                         <div class="form-group">
                                                             <lable>公司地址3</lable>
-                                                            <input type="text" class="form-control companyText" >
+                                                            <input type="text" class="form-control companyText"
+                                                                   id="place3">
                                                         </div>
                                                     </div>
                                                 </div>
                                             </form>
                                         </div>
+                                    </div>
                                         <div class="col-lg-12 companyBg">
                                             <h4 class="companyBg" >
                                                 <span class="basicTitle"><img src="images/marketing.png" alt=""></span>
@@ -219,7 +224,7 @@
                                                 <tr class="marketingInfo">
                                                     <td><h4>营业执照</h4></td>
                                                     <td>
-                                                        <input class="input-file" type="file">
+                                                        <input class="input-file" type="file" id="businesslicense">
                                                     </td>
                                                     <td class="companyStyle">
                                                         上传类型jpg/png/pdf,2M以内
@@ -231,7 +236,7 @@
                                                 <tr  class="marketingInfo">
                                                     <td><h4>负责人身份证证件</h4></td>
                                                     <td>
-                                                        <input class="input-file"  type="file">
+                                                        <input class="input-file" type="file" id="personalId">
                                                     </td>
                                                     <td  class="companyStyle">
                                                         上传类型jpg/png/pdf,1M以内
@@ -243,7 +248,7 @@
                                                 <tr  class="marketingInfo">
                                                     <td><h4>公司logo</h4></td>
                                                     <td>
-                                                        <input class="input-file"type="file">
+                                                        <input class="input-file" type="file" id="logo">
                                                     </td>
                                                     <td  class="companyStyle">
                                                         上传类型jpg/png/pdf,600K以内
@@ -287,7 +292,7 @@
                     </div>
                     <div class="row">
                         <div class="form-company form-company-bottom form-company-save">
-                            <button class="btn btn-success btn-company" type="submit" >保存</button>
+                            <button class="btn btn-success btn-company" type="submit" id="submit">保存</button>
                             <button class="btn btn-success btn-company" >返回</button>
                         </div>
                     </div>
