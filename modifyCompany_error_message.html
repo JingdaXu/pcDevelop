@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh_HANS">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>公司管理|修改公司</title>
+    <title>公司管理|新增修改</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -15,8 +15,26 @@
     <!--<script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>-->
     <!--<script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>-->
     <!--[endif]-->
+    <style>
+        .error {
+            /* don't why red is not shown. May be too specified from .form-company .companyText override this? */
+            border-width: 2px;
+            border-color: red;
+            border-style: solid;
+        }
+
+        label.error {
+            font-style: italic;
+            color: pink;
+            border-style: none;
+        }
+    </style>
 </head>
 <body id="body">
+<div style="position: fixed; top: 100px; left: 100px; width: 100px; height: 100px; background-color: pink; z-index: 10000; opacity: 0.5;">
+    <button type="button" id="button1">Button 1</button>
+    <button type="button" id="button2">Button 2</button>
+</div>
 <div class="app-container">
     <div class="row content-container">
         <header class="indexHeader2">
@@ -50,7 +68,8 @@
                                 </a>
                             </li>
                             <li class="dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">简体中文<span ><img src="images/languageA.png" alt=""></span>
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">简体中文<span><img
+                                        src="images/languageA.png" alt=""></span>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li><a href="">EN</a></li>
@@ -69,26 +88,14 @@
                     </ul>
                 </a>
                 <ul class="leftMenu">
-                    <li class="leftNav"><a href=""><span class="home navLeftIcon"><img src="images/home.png" alt=""></span>首页 </a></li>
+                    <li class="leftNav"><a href=""><span class="home navLeftIcon"><img src="images/home.png"
+                                                                                       alt=""></span>首页 </a></li>
                     <li class="leftNav"><a href="manageCompany.html"><span class="company navLeftIcon"><img
-                            src="images/company.png" alt=""></span>公司管理<span class="navLeftIcon2"></span></a>
-                        <ul class="leftNavSubWrap">
-                            <li class="leftNav leftNavSub"><a href="modifyCompany.html">新增/修改</a></li>
-                        </ul>
-                    </li>
+                            src="images/company.png" alt=""></span>公司管理</a></li>
                     <li class="leftNav"><a href="manageContract.html"><span class="contract navLeftIcon"><img
-                            src="images/contract.png" alt=""></span>合同管理<span class="navLeftIcon2"></span></a>
-                        <ul class="leftNavSubWrap">
-                            <li class="leftNav leftNavSub"><a href="addContract.html">新增 / 修改</a></li>
-                            <li class="leftNav leftNavSub"><a href="invitationDetail.html">邀请详情</a></li>
-                        </ul>
-                    </li>
+                            src="images/contract.png" alt=""></span>合同管理<span class="navLeftIcon2"></span></a></li>
                     <li class="leftNav"><a href="manageBatch.html"><span class="batch navLeftIcon"><img
-                            src="images/batch.png" alt=""></span>批次管理<span class="navLeftIcon2"></span></a>
-                        <ul class="leftNavSubWrap">
-                            <li class="leftNav leftNavSub"><a href="addBatch.html">新建批次</a></li>
-                        </ul>
-                    </li>
+                            src="images/batch.png" alt=""></span>批次管理<span class="navLeftIcon2"></span></a></li>
                 </ul>
                 <div class="exit"><span><img src="images/exit.png" alt=""></span><a href="">退出</a></div>
             </nav>
@@ -96,100 +103,166 @@
         <main>
             <section class="mainContaier">
                 <div class="containerWrap">
-                    <div class="row overRow">
+                    <div class="alert alert-success alert-dismissable" id="applySucceeded">
+                        成功登记
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="alert alert-danger alert-dismissable" id="applyRejected">
+                        申请被拒
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="alert alert-info alert-dismissable">
+                        申请处理中
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="alert alert-warning alert-dismissable">
+                        星期天不宜工作。
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="row">
                         <div class="col-lg-12">
-                            <h4 class="companyTitle">公司管理 | 修改公司
+                            <h4 class="companyTitle">公司管理 | 新增修改
+                                <div class="fl addCompany1 addCompany"><a href="">修改公司</a></div>
+                                <div class="fl addCompany2 addCompany"><a href="">新增公司</a></div>
                             </h4>
                         </div>
                         <div class="row">
                             <div class="companyContent">
                                 <div class="row">
-                                    <div class="col-lg-12 mainCon">
+                                    <div class="col-lg-12">
                                         <div class="col-lg-8 companyBg ">
                                             <h4 class="companyBg">
-                                                <span class="basicTitle"><img src="images/basicInfo.png" alt=""></span>基础信息</h4>
+                                                <span class="basicTitle"><img src="images/basicInfo.png" alt=""></span>基础信息
+                                            </h4>
                                             <form class="form-horizontal form-company form-company0" id="company-basic">
                                                 <div class="row">
                                                     <div class="col-lg-6">
                                                         <div class="form-group ">
-                                                            <label for="name" >公司名称</label>
-                                                            <input type="text" class="companyText form-control" placeholder="" id="name" name="name" required>
+                                                            <label for="name">公司名称</label>
+                                                            <input type="text" class="companyText form-control error"
+                                                                   placeholder="" id="name" name="name" required><label
+                                                                class="error">必须填写</label>
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6">
                                                         <div class="form-group ">
-                                                            <label for="sname" >公司简称</label>
-                                                            <input type="text" class="companyText form-control" placeholder="" id="sname"  name="sname" required>
+                                                            <label for="sname">公司简称</label>
+                                                            <input type="text" class="companyText form-control error"
+                                                                   placeholder="" id="sname" name="sname"
+                                                                   required><label class="error">必须填写
+                                                            &lt;long message&gt;
+                                                            必须填写。必须填写。必须填写。必必必必必必必必必须填写。必须填写。必须填写。必须填写。必须填写。必须填写。必须填写。必须填写。必须填写。必须填写。必须填写。必须填写。必须填写。必须填写。必必必必必必必必<strong>必</strong>须填写。必须填写。必须填写。</label>
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6">
                                                         <div class="form-group ">
-                                                            <label for="industry" >行业</label>
+                                                            <label for="industry">行业</label>
                                                             <datalist id="company-industry">
                                                                 <option value="1"></option>
                                                                 <option value="2"></option>
                                                                 <option value="3"></option>
                                                             </datalist>
-                                                            <input type="text" class="companyText form-control" placeholder="" id="industry" required maxlength="20" list="company-industry" name="industry">
+                                                            <input type="text" class="companyText form-control"
+                                                                   placeholder="" id="industry" required maxlength="20"
+                                                                   list="company-industry" name="industry">
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6">
                                                         <div class="form-group ">
-                                                            <label for="people" >公司人数</label>
-                                                            <input type="number" class="companyText form-control" placeholder="" id="people" min="0" max="5000" name="people">
+                                                            <label for="people">公司人数</label>
+                                                            <input type="number" class="companyText form-control"
+                                                                   placeholder="" id="people" min="0" max="5000"
+                                                                   name="people">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="form-group">
+                                                            <label for="companyType">公司类型</label>
+                                                            <div class="radio radio-inline">
+                                                                <input type="radio" required="requird"
+                                                                       name="companyType" class="form-control error"
+                                                                       value="PUBLIC">
+                                                                上市公司
+                                                            </div>
+                                                            <div class="radio radio-inline">
+                                                                <input type="radio" required="requird"
+                                                                       name="companyType" class="form-control"
+                                                                       value="PRIVATE">
+                                                                民营企业
+                                                            </div>
+                                                            <label class="error">必须选择</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="form-group">&nbsp;</div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="form-group ">
+                                                            <label for="Onumber">组织机构代码</label>
+                                                            <input type="text" class="companyText form-control"
+                                                                   placeholder="" id="Onumber" required name="Onumber">
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6">
                                                         <div class="form-group ">
-                                                            <label for="Onumber" >组织机构代码</label>
-                                                            <input type="text" class="companyText form-control" placeholder="" id="Onumber" required name="Onumber">
+                                                            <label for="code">税务登记代码</label>
+                                                            <input type="text" class="companyText form-control"
+                                                                   placeholder="" id="code" required name="code">
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6">
                                                         <div class="form-group ">
-                                                            <label for="code" >税务登记代码</label>
-                                                            <input type="text" class="companyText form-control" placeholder="" id="code" required name="code">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-6">
-                                                        <div class="form-group ">
-                                                            <label for="region" >国家地区</label>
+                                                            <label for="region">国家地区</label>
                                                             <datalist id="country-region">
                                                                 <option value="1"></option>
                                                                 <option value="2"></option>
                                                                 <option value="3"></option>
                                                             </datalist>
-                                                            <input type="text" class="companyText form-control" placeholder="" id="region" required list="country-region" name="country">
+                                                            <input type="text" class="companyText form-control"
+                                                                   placeholder="" id="region" required
+                                                                   list="country-region" name="country">
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6">
                                                         <div class="form-group ">
-                                                            <label for="postcode" >邮编</label>
-                                                            <input type="text" class="companyText form-control" placeholder="" id="postcode" name="postcode">
+                                                            <label for="postcode">邮编</label>
+                                                            <input type="text" class="companyText form-control"
+                                                                   placeholder="" id="postcode" name="postcode">
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6">
                                                         <div class="form-group ">
-                                                            <label for="mail" >email</label>
-                                                            <input type="text" class="companyText form-control" placeholder="" id="mail" name="email">
+                                                            <label for="mail">email</label>
+                                                            <input type="text" class="companyText form-control"
+                                                                   placeholder="" id="mail" name="email">
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6">
                                                         <div class="form-group ">
-                                                            <label for="website" >网址</label>
-                                                            <input type="url" class="companyText form-control" placeholder="" id="website">
+                                                            <label for="website">网址</label>
+                                                            <input type="url" class="companyText form-control"
+                                                                   placeholder="" id="website">
                                                         </div>
                                                     </div>
                                                 </div>
                                             </form>
                                         </div>
                                         <div class="col-lg-4 companyBg ">
-                                            <h4 class="companyBg"><span class="basicTitle"><img src="images/location.png" alt=""></span>公司地址</h4>
-                                            <form  class="form-company form-horizontal form-company1" id="company-place">
+                                            <h4 class="companyBg"><span class="basicTitle"><img
+                                                    src="images/location.png" alt=""></span>公司地址</h4>
+                                            <form class="form-company form-horizontal form-company1" id="company-place">
                                                 <div class="row">
                                                     <div class="col-lg-12">
                                                         <div class="form-group">
-                                                            <lable >公司地址1</lable>
+                                                            <lable>公司地址1</lable>
                                                             <input type="text" class="form-control companyText" required
                                                                    maxlength="50" minlength="5" name="place"
                                                                    id="place1"></div>
@@ -198,8 +271,7 @@
                                                         <div class="form-group">
                                                             <lable>公司地址2</lable>
                                                             <input type="text" class="form-control companyText"
-                                                                   id="place2">
-                                                        </div>
+                                                                   id="place2"></div>
                                                     </div>
                                                     <div class="col-lg-12">
                                                         <div class="form-group">
@@ -211,9 +283,8 @@
                                                 </div>
                                             </form>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-12 companyBg company-bottom">
-                                            <h4 class="companyBg" >
+                                        <div class="col-lg-12 companyBg">
+                                            <h4 class="companyBg">
                                                 <span class="basicTitle"><img src="images/marketing.png" alt=""></span>
                                                 营业信息
                                             </h4>
@@ -232,24 +303,24 @@
                                                         <a href="">点击预览</a>
                                                     </td>
                                                 </tr>
-                                                <tr  class="marketingInfo">
+                                                <tr class="marketingInfo">
                                                     <td><h4>负责人身份证证件</h4></td>
                                                     <td>
                                                         <input class="input-file" type="file" id="personalId">
                                                     </td>
-                                                    <td  class="companyStyle">
+                                                    <td class="companyStyle">
                                                         上传类型jpg/png/pdf,1M以内
                                                     </td>
                                                     <td>
                                                         <a href="">正面</a> <a href="">反面</a>
                                                     </td>
                                                 </tr>
-                                                <tr  class="marketingInfo">
+                                                <tr class="marketingInfo">
                                                     <td><h4>公司logo</h4></td>
                                                     <td>
                                                         <input class="input-file" type="file" id="logo">
                                                     </td>
-                                                    <td  class="companyStyle">
+                                                    <td class="companyStyle">
                                                         上传类型jpg/png/pdf,600K以内
                                                     </td>
                                                     <td>
@@ -261,9 +332,10 @@
                                             <form class="form-company">
                                                 <div class="control-group">
                                                     <!-- Text input-->
-                                                    <label class="" >联系电话</label>
+                                                    <label class="">联系电话</label>
                                                     <div class="controls">
-                                                        <input type="text" placeholder="" class="companyText form-control contanctNumber">
+                                                        <input type="text" placeholder=""
+                                                               class="companyText form-control contanctNumber">
                                                     </div>
                                                 </div>
 
@@ -272,7 +344,8 @@
                                                     <div class="controls state">
                                                         <!-- Inline Radios -->
                                                         <div class="radio radio-inline">
-                                                            <input type="radio" value="正常运行" name="group" checked="checked">
+                                                            <input type="radio" value="正常运行" name="group"
+                                                                   checked="checked">
                                                             正常运行
                                                         </div>
                                                         <div class="radio radio-inline">
@@ -287,15 +360,35 @@
                                 </div>
                             </div>
                         </div>
+
                     </div>
-                <div class="row navbar-fixed-bottom overRow">
-                    <div class="form-company-bottom">
-                        <button class="btn btn-default " type="submit">保存</button>
-                        <button class="btn btn-default " onclick="location.href='manageCompany.html'">返回</button>
+                    <div class="row">
+                        <div class="form-company form-company-bottom form-company-save">
+                            <button class="btn btn-success btn-company" type="submit" id="submit">保存</button>
+                            <button class="btn btn-success btn-company">返回</button>
                         </div>
                     </div>
+                </div>
             </section>
         </main>
+    </div>
+</div>
+<div class="modal fade" id="myDialog" rold="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                Modal Title
+                <button type="button" class="close" data-dismiss="modal">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Modal Body
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-default close" data-dismiss="modal">Close</button>
+            </div>
+        </div>
     </div>
 </div>
 <script src="js/jquery-1.9.1.min.js"></script>
@@ -303,9 +396,28 @@
 <script src="js/validate.js"></script>
 <script src="js/messages_zh.js"></script>
 <script src="js/bootstrap.js"></script>
-<script src="js/Menujs.js"></script>
+<!--
 <script src="js/ajax.js"></script>
+-->
 <script>        $('input[required]').before('<span style="color:red">*</span>');    </script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        //$("#applySucceeded").alert();
+        //$("#applyRejected").alert();
+
+        $().alert();
+
+        //$("#myDialog").modal();
+
+        $("#button1").click(function (e) {
+            $("#myDialog").modal();
+        });
+
+
+        $("#button2").click(function (e) {
+        });
+    });
+</script>
 </body>
 </html>
 
