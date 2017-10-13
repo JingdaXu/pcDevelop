@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>公司管理|新增公司</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <!--<script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>-->
+    <!--<script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>-->
+    <!--[endif]-->
+</head>
+<body id="body">
+<div class="app-container">
+    <div class="row content-container">
+        <header class="indexHeader2">
+            <nav class="navbar navbar-fixed-top navbar-top">
+                <div class="containerWrapNav conainer-fluid">
+                    <div class="navbar-left">
+                        <a href="manageCompany.html">首页</a>
+                    </div>
+                    <div class="nav navbar-nav navbar-right">
+                        <ul class="nav nav-tabs">
+                            <li><a href="#"></a></li>
+                            <li><a href="">这是一个用户名</a></li>
+                            <li class="nav-icon">
+                                <a href="">
+                                    <i class="notice"></i>
+                                </a>
+                            </li>
+                            <li class="nav-icon">
+                                <a href="">
+                                    <i class="message"></i>
+                                </a>
+                            </li>
+                            <li class="nav-icon">
+                                <a href="">
+                                    <i class="help"></i>
+                                </a>
+                            </li>
+                            <li class="nav-icon">
+                                <a href="safeSetting.html">
+                                    <i class="setting"></i>
+                                </a>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">简体中文<span><img
+                                        src="images/languageA.png" alt=""></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="">EN</a></li>
+                                    <li><a href="">繁体中文</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <nav class="leftNavbar side-menu sidebar-inverse">
+                <a href="login.html" class="mainLogo">
+                    <ul>
+                        <li class="logo2"></li>
+                        <h4>云文件管理系统</h4>
+                    </ul>
+                </a>
+                <ul class="leftMenu">
+                    <li class="leftNav"><a href=""><span class="home navLeftIcon"><img src="images/home.png"
+                                                                                       alt=""></span>首页 </a></li>
+                    <li class="leftNav"><a href="manageCompany.html"><span class="company navLeftIcon"><img
+                            src="images/company.png" alt=""></span>公司管理<span class="navLeftIcon2"></span></a>
+                        <ul class="leftNavSubWrap">
+                            <li class="leftNav leftNavSub"><a href="modifyCompany.html">新增/新增</a></li>
+                        </ul>
+                    </li>
+                    <li class="leftNav"><a href="manageContract.html"><span class="contract navLeftIcon"><img
+                            src="images/contract.png" alt=""></span>合同管理<span class="navLeftIcon2"></span></a>
+                        <ul class="leftNavSubWrap">
+                            <li class="leftNav leftNavSub"><a href="addContract.html">新增 / 新增</a></li>
+                            <li class="leftNav leftNavSub"><a href="invitationDetail.html">邀请详情</a></li>
+                        </ul>
+                    </li>
+                    <li class="leftNav"><a href="manageBatch.html"><span class="batch navLeftIcon"><img
+                            src="images/batch.png" alt=""></span>批次管理<span class="navLeftIcon2"></span></a>
+                        <ul class="leftNavSubWrap">
+                            <li class="leftNav leftNavSub"><a href="addBatch.html">新建批次</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="exit"><span><img src="images/exit.png" alt=""></span><a href="">退出</a></div>
+            </nav>
+        </header>
+        <main>
+            <section class="mainContaier">
+                <div class="containerWrap">
+                    <div class="row overRow">
+                        <div class="col-lg-12">
+                            <h4 class="companyTitle">公司管理 | 新增公司
+                            </h4>
+                        </div>
+                        <div class="row">
+                            <div class="companyContent">
+                                <div class="row">
+                                    <div class="col-lg-12 mainCon">
+                                        <div class="col-lg-8 companyBg ">
+                                            <h4 class="companyBg">
+                                                <span class="basicTitle"><img src="images/basicInfo.png" alt=""></span>基础信息
+                                            </h4>
+                                            <form class="form-horizontal form-company form-company0" id="company-basic">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <div class="form-group ">
+                                                            <label for="name">公司名称</label>
+                                                            <input type="text" class="companyText form-control"
+                                                                   placeholder="" id="name" name="name" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="form-group ">
+                                                            <label for="sname">公司简称</label>
+                                                            <input type="text" class="companyText form-control"
+                                                                   placeholder="" id="sname" name="sname" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="form-group ">
+                                                            <label for="industry">行业</label>
+                                                            <datalist id="company-industry">
+                                                                <option value="1"></option>
+                                                                <option value="2"></option>
+                                                                <option value="3"></option>
+                                                            </datalist>
+                                                            <input type="text" class="companyText form-control"
+                                                                   placeholder="" id="industry" required maxlength="20"
+                                                                   list="company-industry" name="industry">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="form-group ">
+                                                            <label for="people">公司人数</label>
+                                                            <input type="number" class="companyText form-control"
+                                                                   placeholder="" id="people" min="0" max="5000"
+                                                                   name="people">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="form-group ">
+                                                            <label for="Onumber">组织机构代码</label>
+                                                            <input type="text" class="companyText form-control"
+                                                                   placeholder="" id="Onumber" required name="Onumber">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="form-group ">
+                                                            <label for="code">税务登记代码</label>
+                                                            <input type="text" class="companyText form-control"
+                                                                   placeholder="" id="code" required name="code">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="form-group ">
+                                                            <label for="region">国家地区</label>
+                                                            <datalist id="country-region">
+                                                                <option value="1"></option>
+                                                                <option value="2"></option>
+                                                                <option value="3"></option>
+                                                            </datalist>
+                                                            <input type="text" class="companyText form-control"
+                                                                   placeholder="" id="region" required
+                                                                   list="country-region" name="country">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="form-group ">
+                                                            <label for="postcode">邮编</label>
+                                                            <input type="text" class="companyText form-control"
+                                                                   placeholder="" id="postcode" name="postcode">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="form-group ">
+                                                            <label for="mail">email</label>
+                                                            <input type="text" class="companyText form-control"
+                                                                   placeholder="" id="mail" name="email">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="form-group ">
+                                                            <label for="website">网址</label>
+                                                            <input type="url" class="companyText form-control"
+                                                                   placeholder="" id="website">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="col-lg-4 companyBg ">
+                                            <h4 class="companyBg"><span class="basicTitle"><img
+                                                    src="images/location.png" alt=""></span>公司地址</h4>
+                                            <form class="form-company form-horizontal form-company1" id="company-place">
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <div class="form-group">
+                                                            <lable>公司地址1</lable>
+                                                            <input type="text" class="form-control companyText" required
+                                                                   maxlength="50" minlength="5" name="place"
+                                                                   id="place1"></div>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <div class="form-group">
+                                                            <lable>公司地址2</lable>
+                                                            <input type="text" class="form-control companyText"
+                                                                   id="place2">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <div class="form-group">
+                                                            <lable>公司地址3</lable>
+                                                            <input type="text" class="form-control companyText"
+                                                                   id="place3">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 companyBg company-bottom">
+                                        <h4 class="companyBg">
+                                            <span class="basicTitle"><img src="images/marketing.png" alt=""></span>
+                                            营业信息
+                                        </h4>
+                                        <table class="form-company2 form-company">
+                                            <thead></thead>
+                                            <tbody>
+                                            <tr class="marketingInfo">
+                                                <td><h4>营业执照</h4></td>
+                                                <td>
+                                                    <input class="input-file" type="file" id="businesslicense">
+                                                </td>
+                                                <td class="companyStyle">
+                                                    上传类型jpg/png/pdf,2M以内
+                                                </td>
+                                                <td>
+                                                    <a href="">点击预览</a>
+                                                </td>
+                                            </tr>
+                                            <tr class="marketingInfo">
+                                                <td><h4>负责人身份证证件</h4></td>
+                                                <td>
+                                                    <input class="input-file" type="file" id="personalId">
+                                                </td>
+                                                <td class="companyStyle">
+                                                    上传类型jpg/png/pdf,1M以内
+                                                </td>
+                                                <td>
+                                                    <a href="">正面</a> <a href="">反面</a>
+                                                </td>
+                                            </tr>
+                                            <tr class="marketingInfo">
+                                                <td><h4>公司logo</h4></td>
+                                                <td>
+                                                    <input class="input-file" type="file" id="logo">
+                                                </td>
+                                                <td class="companyStyle">
+                                                    上传类型jpg/png/pdf,600K以内
+                                                </td>
+                                                <td>
+                                                    <a href="">点击预览</a>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <form class="form-company">
+                                            <div class="control-group">
+                                                <!-- Text input-->
+                                                <label class="">联系电话</label>
+                                                <div class="controls">
+                                                    <input type="text" placeholder=""
+                                                           class="companyText form-control contanctNumber">
+                                                </div>
+                                            </div>
+
+                                            <div class="control-group">
+                                                <label class="control-label">公司状态</label>
+                                                <div class="controls state">
+                                                    <!-- Inline Radios -->
+                                                    <div class="radio radio-inline">
+                                                        <input type="radio" value="正常运行" name="group" checked="checked">
+                                                        正常运行
+                                                    </div>
+                                                    <div class="radio radio-inline">
+                                                        <input type="radio" value="停止运行" name="group">
+                                                        停止运行
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row navbar-fixed-bottom overRow">
+                    <div class="form-company-bottom">
+                        <button class="btn btn-default " type="submit">保存</button>
+                        <button class="btn btn-default " onclick="location.href='manageCompany.html'">返回</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</div>
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/validate.js"></script>
+<script src="js/messages_zh.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/Menujs.js"></script>
+<script src="js/ajax.js"></script>
+<script>        $('input[required]').before('<span style="color:red">*</span>');    </script>
+</body>
+</html>
+
