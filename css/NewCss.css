@@ -149,7 +149,6 @@
 .contractContent .col-lg-8,
 .contractContent .col-lg-3,
 .contractContent .col-lg-9 {
-
     margin-bottom: 24px;
 }
 
@@ -281,6 +280,9 @@
     font-size: 14px;
 }
 
+.tableContract .table-hover > tbody > tr.active:hover > th {
+    background-color: red;
+}
 .tableContract tr {
     vertical-align: middle;
     height: 58px;

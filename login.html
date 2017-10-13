@@ -30,12 +30,17 @@
 						</div>
 						<div class=" box2 nav nav-tabs dropdown">
 							<a href="login.html" class="login">首页</a>
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#">EN<span><img
-									src="images/languageA.png" alt=""></span>
-							</a>
-							<ul class="dropdown-menu">
-								<li><a href="">简体中文</a></li>
-								<li><a href="">繁体中文</a></li>
+							<ul class="box3">
+								<li class="rightnav dropdown">
+									<span><img class="button" src="images/china-flag.png">简体中文</span>
+									<img src="images/drop-down.png">
+									<div>
+										<ul class="dropdown-content">
+											<li><span class=" flag1"></span><a href="">English</a></li>
+											<li><span class="flag2"> </span><a href="">繁体中文</a></li>
+										</ul>
+									</div>
+								</li>
 							</ul>
 						</div>
 					</div>
@@ -61,10 +66,14 @@
 						<form action="" class="loginForm"  id="login-form">
 							<div class="username-field">
 								<!--<span class="login-label-count">手机号码/邮箱</span>-->
-								<input type="text" name="username" id="username" class="loginText tooltiper" maxlength="32" tabindex="1" title="请确保输入正确的邮箱地址或者手机号码" value="手机号码/邮箱">
+								<input type="text" name="username" id="username"
+									   class="loginText tooltiper form-control  " maxlength="32" tabindex="1"
+									   title="请确保输入正确的邮箱地址或者手机号码" placeholder="手机号码/邮箱">
 							</div>
 							<div class="password-field">
-								<input type="password" name="password" id="loginPassword" class="loginText tooltiper" maxlength="32" tabindex="2"  title="密码不少于6个字符。数字，字母或常用符号，字母区分大小写。" >
+								<input type="password" name="password" id="loginPassword"
+									   class="loginText tooltiper form-control" maxlength="32" tabindex="2"
+									   title="密码不少于6个字符。数字，字母或常用符号，字母区分大小写。" placeholder="密码">
 							</div>
 							<div id="slide-to-unlock"></div>
 							<button type="submit" class="submit btn btn-lg" tabindex="3" id="submit" onclick="location.href='manageCompany.html'">登录</button>
@@ -74,6 +83,7 @@
 								<a href="#">忘记密码？</a>
 							</div>
 							<div class="loginThird">
+								<hr>
 								<h4>第三方账号登录</h4>
 									<div class="container otherLogin">
 										<div class="cow">
@@ -88,22 +98,34 @@
 					<div class="registered">
 						<form action="" class="loginForm" id="registered-form">
 							<div class="username-field">
-								<input type="mail" name="usermail" id="userEmail" class="loginText tooltiper" required
+								<input type="mail" name="usermail" id="userEmail"
+									   class="loginText tooltiper form-control" required
 									   minlength="6" maxlength="32" tabindex="1" placeholder="请输入您的常用邮箱"
-									   title="请确保输入正确的邮箱地址。">
+									   title="请确保输入正确的邮箱地址。"></br>
 							</div>
 							<div class="username-field">
-								<input type="password" name="password" id="registeredPassword" class="loginText tooltiper"  required minlength="6"  maxlength="32" tabindex="2" placeholder="设置密码" title="密码不少于6个字符。数字，字母或常用符号，字母区分大小写。" >
+								<input type="password" name="password" id="registeredPassword"
+									   class="loginText tooltiper form-control" required minlength="6" maxlength="32"
+									   tabindex="2" placeholder="设置密码" title="密码不少于6个字符。数字，字母或常用符号，字母区分大小写。"></br>
 							</div>
 							<div class="username-field">
-								<input type="password" name="passwordConfirm" id="confirmPassword" class="loginText tooltiper"  required minlength="6" maxlength="32" tabindex="3" placeholder="确认密码" title="请再次输入密码">
+								<input type="password" name="passwordConfirm" id="confirmPassword"
+									   class="loginText tooltiper form-control" required minlength="6" maxlength="32"
+									   tabindex="3" placeholder="确认密码" title="请再次输入密码"></br>
 							</div>
 							<div class="username-field">
-								<input type="text" name="username" id="userName" class="loginText tooltiper" minlength="2"  required maxlength="32" tabindex="4" placeholder="用户名" name="">
+								<input type="text" name="username" id="userName"
+									   class="loginText tooltiper form-control" minlength="2" required maxlength="32"
+									   tabindex="4" placeholder="用户名" name=""></br>
 							</div>
-							<input type="text" name="confirm" class="loginTextHalf loginBg loginTextHalf1 "minlength="6"  required maxlength="6" tabindex="5" placeholder="验证码">
-							<button class="loginTextHalf loginTextHalf2 ">获取验证码</button>
+							<div class="username-field">
+								<input type="text" name="confirm" name="confirm"
+									   class="loginTextHalf loginBg loginTextHalf1 " minlength="6" required
+									   maxlength="6" tabindex="5" placeholder="验证码">
+								<button class="loginTextHalf loginTextHalf2 ">获取验证码</button>
+							</div>
 							<button type="submit" class="submit btn btn-lg" tabindex="3" id="submit">同意协议并提交</button>
+							<hr>
 							<a href="agreement.html" class="agree">《元讯科技服务协议》</a>
 						</form>
 					</div>
@@ -120,26 +142,25 @@
 	<!-- 滑块解锁 -->
 	<script type="text/javascript">
 		var $container = $('#slide-to-unlock'); 
-		$container.slideToUnlock({ 
-			text: '请按住滑块，拖动到最右边', 
+		$container.slideToUnlock({
+			text: '请按住滑块，拖动到最右边',
     		succText: '解锁成功！',
     		progressColor:'#0fd600',
     		progressColor:'#d3d3d3',
 			succColor: '#0fd600',
-			color: '#ffffff'
+			color: '#ffffff',
+			backgroundImage: 'url("../images/unlock.png)")'
     	}); 
 	</script>
 	<!-- 小提示 -->
 	<script type="text/javascript" src="js/tooltipster.bundle.min.js"></script>
-    <script>
+	<script>
 		$('.tooltiper').tooltipster({
-		   animation: 'fade',
-		   delay: 200,
-					theme: 'tooltipster-shadow',
-		   trigger: 'click',
+			animation: 'fade',
+			delay: 200,
+			theme: ['tooltipster-shadow', 'tooltipster-shadow-customized'],
+			trigger: 'click',
 					position: 'left',
-
-
 				}
 		);
     </script>
@@ -154,7 +175,7 @@
 		});
 	</script>
 	<!--登陆时文字消失-->
-	<script>
+	<!--<script>
 		$(function(){
 			$("#username").focus(function(){
 				var txt_value = $(this).val();
@@ -168,17 +189,18 @@
 					$(this).val("手机号码/邮箱");
 				}
 			});
-			$("error").appendTo("<br>");
+			$("error").appendTo("</br>");
+		})
+	</script>-->
+	<script>
+		$(function () {
+			$("label").remove(".error")
 		})
 	</script>
 	<!--提交后的按钮-->
 	<script src="js/jquery.validate.min.js"></script>
-	<scrtip>
-
-	</scrtip>
 	<!--表单校验-->
 	<script src="js/validate.js"></script>
-	<script src="js/messages_zh.js"></script>
 </body>
 </html>
 

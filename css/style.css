@@ -27,11 +27,103 @@
 	.box1 a {
 		text-decoration: none;
 	}
-		.logo{margin-top: 28px;width: 36px;height: 24px; background: url(../images/logo.png) 50% 50% no-repeat;  }
-		.box1 h4{margin-top: -30px;margin-left: 48px; font-size: 16px;color: #424448;}
-		.box2{float: right;height: 80px;line-height: 80px;}
-		.box2 a{color: #666;text-decoration: none;}
 
+	.logo {
+		margin-top: 28px;
+		width: 36px;
+		height: 24px;
+		background: url(../images/logo.png) 50% 50% no-repeat;
+	}
+
+	.box1 h4 {
+		margin-top: -30px;
+		margin-left: 48px;
+		font-size: 16px;
+		color: #424448;
+	}
+
+	.box2 {
+		float: right;
+		height: 80px;
+		line-height: 80px;
+	}
+
+	.box2 a {
+		color: #666;
+		text-decoration: none;
+	}
+
+	/*   .box2 .login{
+           margin-right:100px;
+
+       }*/
+	.box3 {
+		float: right;
+		height: 80px;
+		line-height: 0px;
+	}
+
+	.box3 span {
+		line-height: 80px;
+	}
+
+	li.rightnav {
+		float: right;
+	}
+
+	li.rightnav a.language {
+		padding: 0 10px;
+	}
+
+	.rightnav .dropdown {
+		position: relative;
+		display: inline-block;
+	}
+
+	.dropdown-content {
+		display: none;
+		position: absolute;
+		top: 55px;
+		left: -5px;
+		background-color: #f9f9f9;
+		min-width: 100px;
+		box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+		padding: 0px 16px 12px;
+		z-index: 1000;
+	}
+
+	.dropdown:hover .dropdown-content {
+		display: block;
+	}
+
+	.flag1 {
+		display: inline-block;
+		width: 31px;
+		height: 20px;
+		background: url("../images/flag.png") 50% 50% no-repeat;
+		background-position: -30px -18px;
+	}
+
+	.flag11 {
+		margin-left: 3px;
+	}
+
+	.flag2 {
+		display: inline-block;
+		width: 31px;
+		height: 20px;
+		background: url("../images/flag.png") 50% 50% no-repeat;
+		background-position: -30px -460px;
+	}
+
+	.flag22 {
+		margin-left: 3px;
+	}
+
+	.flag3 {
+		margin-left: 9px;
+		width: 17px;
+	}
 	/*左边内容*/
 		.leftbox{position: relative;}
 		.mainTitle{margin-top: 237px;margin-left: 0%;/*margin-top: 237/1920px;margin-left: 362/1920px;*/}
@@ -41,20 +133,81 @@
 		/*右边内容*/
 		.indexBackground{ position: absolute;z-index:-1; width: 100%;height:100%;top:0px;left:0px;min-height: 900px}
 		.containerWrapLogin{width: 1200px;height: 800px;margin:0 auto;overflow: hidden;position: relative;z-index: 999;}
-		.containerWrapLogin .rightBox{position: absolute;top: 117px;right: 0px;width: 500px;height: 580px;background-color: #fff; border-radius: 4px;-webkit-border-radius:4px;-o-border-radius:4px;-moz-border-radius:4px;}
-		.tabtn{width: 320px; font-size: 24px;color: #666;margin-top: 34px;margin-left: auto;margin-right: auto;}
+
+	.containerWrapLogin .rightBox {
+		position: absolute;
+		top: 117px;
+		right: 0px;
+		width: 460px;
+		height: 613px;
+		background-color: #fff;
+		border-radius: 8px;
+		-webkit-border-radius: 4px;
+		-o-border-radius: 4px;
+		-moz-border-radius: 4px;
+	}
+
+	.tabtn {
+		width: 320px;
+		font-size: 24px;
+		color: #666;
+		margin-top: 55px;
+		margin-left: auto;
+		margin-right: auto;
+	}
 		.tabtn ul li{float: left;margin-right: 20px;margin-left: 20px;  cursor: pointer;}
-		.tabtn li a{color: #666;text-decoration: none}
 		.underline{width: 88px;height: 2px;border-bottom: 2px solid #d7dde6;padding-bottom:35px; margin-right: 15px;text-align: center;color:#d7dde6}
-		.tabtn .active{border-bottom: 2px solid #424448;color:#424448}
+
+	.tabtn .active {
+		border-bottom: 2px solid #424448;
+		color: #666
+	}
 		.containerWrapLogin	.rightBox .tabcon > div{ display: none;}
 		.containerWrapLogin .rightBox .tabcon > div:first-child{ display: block;}
 		/*登录*/
-		.username-field{position: relative; }
+	.Fusername-field {
+		position: relative;
+	}
 		.login-label-count{  position: absolute; top: 75px;left: 105px; color: #c6ccd3;}
 		.login-label-password{  position: absolute; top: 190px;left: 105px; color: #c6ccd3;}
-		.loginForm{width:500px;text-align: center;}
-		.loginText{ display:inline-block;width: 320px;height: 50px;border-radius: 4px;-webkit-border-radius:4px;-o-border-radius:4px;-moz-border-radius:4px;border:1px solid #ebeced;background-color: #fcfcfc;padding-left: 10px;}
+
+	.loginForm {
+		width: 460px;
+		text-align: center;
+	}
+
+	.loginForm label {
+		position: absolute;
+		z-index: 1;
+		left: 18%;
+		font-size: 10px;
+		height: 25px;
+		line-height: 25px;
+	}
+
+	#confirm label {
+		margin-top: 0px;
+	}
+
+	.loginForm .btn-lg {
+		font-size: 14px;
+	}
+
+	.loginText {
+		display: inline-block;
+		width: 320px;
+		height: 50px;
+		border-radius: 4px;
+		-webkit-border-radius: 4px;
+		-o-border-radius: 4px;
+		-moz-border-radius: 4px;
+		background-color: #fcfcfc;
+		padding-left: 10px;
+	}
+
+	.tooltipster-sidetip.tooltipster-shadow .tooltiper-content {
+		color: #ff0033
+	}
 		.username-field input[name^="u"],
 		.username-field input[name^="p"],
 		.username-field input[name^="c"] {color:#0f0f0f}
@@ -74,32 +227,118 @@
 		.loginLogin div{float: left;position: relative;left: 90px;margin-top: 14px;}
 		.loginLogin span{font-size: 14px;color: #666;}
 
+	title {
+		color: red;
+	}
+
+	.tooltipster-sidetip.tooltipster-shadow.tooltipster-shadow-customized .tooltipster-content {
+		color: red
+	}
 	.loginLogin a {
 		position: absolute;
-		right: 90px;
+		right: 62px;
 		top: 14px;
 		text-decoration: none;
 		color: #666666;
 	}
-		.loginThird{margin-left: auto;margin-right: auto;margin-top: 112px}
-		.loginThird h4{font-size: 14px;color: #9d9d9d;margin-bottom: 32px;}
+
+	.loginThird {
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 100px
+	}
+
+	.loginThird hr {
+		width: 70%;
+		margin-bottom: 32px
+	}
+
+	.loginThird h4 {
+		font-size: 14px;
+		color: #9d9d9d;
+		margin-bottom: 32px;
+		position: absolute;
+		z-index: 1;
+		bottom: 16.5%;
+		background-color: #fff;
+		left: 37%;
+		padding-left: 15px;
+		padding-right: 15px
+	}
 		/*第三方登录*/
 		.otherLogin,
-		.otherLogin .cow{width: 500px;}
+		.otherLogin .cow {
+			width: 436px;
+		}
 		/*注册*/
 		#userEmail{margin-top: 25px;}
 		#password,
 		#registeredPassword,
 		#confirmPassword,
-		#userName,
-		.agree{margin-top: 14px;}
-		.loginForm .agree{color: #0099ff;font-size: 12px;display: block}
-		.loginTextHalf{ display:block;margin-bottom: 14px; width: 155px;height: 50px;border-radius: 4px;-webkit-border-radius:4px;-o-border-radius:4px;-moz-border-radius:4px;border:1px solid #ebeced;padding-left: 10px;}
-		.loginTextHalfT{ display:block;margin-bottom: 14px; width: 155px;height: 50px;border:1px solid #ebeced;padding-left: 10px;}
-		.loginTextHalf1{ margin-left: 90px;margin-top: 14px;}
-		.loginTextHalf2{ margin-left: 255px;margin-top: -64px;}
+		#userName {
+			margin-top: 25px;
+		}
+
+	.agree {
+		margin-top: 15px;
+	}
+
+	.loginForm .agree {
+		color: #0099ff;
+		font-size: 12px;
+		display: block;
+		text-decoration: none
+	}
+
+	.loginTextHalf {
+		display: block;
+		margin-bottom: 15px;
+		width: 155px;
+		height: 40px;
+		border-radius: 4px;
+		-webkit-border-radius: 4px;
+		-o-border-radius: 4px;
+		-moz-border-radius: 4px;
+		border: 1px solid #ebeced;
+		padding-left: 10px;
+	}
+
+	.loginTextHalfT {
+		display: block;
+		margin-bottom: 15px;
+		width: 155px;
+		height: 40px;
+		border: 1px solid #ebeced;
+		padding-left: 10px;
+	}
+
+	.loginTextHalf1 {
+		margin-left: 15%;
+		margin-top: 5%;
+	}
+
+	.loginTextHalf2 {
+		margin-left: 51%;
+		margin-top: -12%;
+		color: #ffffff;
+		background-color: #aeaeae
+	}
 		.loginBg{background-color: #fcfcfc;}
 
+	.registered hr {
+		width: 70%;
+
+	}
+
+	.agree {
+		position: absolute;
+		z-index: 1;
+		bottom: 10%;
+		background-color: #fff;
+		left: 34%;
+		padding-left: 15px;
+		padding-right: 15px
+	}
     /*主页*/
     .logo2{width: 36px;height: 24px; background: url(../images/logo2.png) 50% 50% no-repeat;  }
 	.indexHeader{

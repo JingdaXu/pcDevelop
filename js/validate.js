@@ -83,9 +83,8 @@ $().ready(function() {
             // Append error within linked label
             $( element )
                 .closest( "form" )
-                .find( "label[for='" + element.attr( "id" ) + "']" )
-                .append( error )
-                .append( "</br>" );
+                .find("label[for='" + element.attr("id") + "']")
+                .append(error);
         },
         errorElement: "span",
         rules: {
@@ -107,11 +106,12 @@ $().ready(function() {
     $("#registered-form").validate({
         errorPlacement: function(error, element) {
             error.appendTo(element.parent());
+            error.appendTo($('.confirm').html());
         },
         messages: {
             usermail: "请确保输入正确的邮箱地址",
             username: "请输入用户名",
-            registeredPassword: "请输入登录密码",
+            password: "请输入登录密码",
             passwordConfirm: {
                 required:"请再次输入登录密码",
                 equalTo:"密码与确认密码不一致"
@@ -138,8 +138,6 @@ $().ready(function() {
             },
             confirm: "required"
         }})
-
-
 });
 /**
  * Created by user on 2017/9/15.

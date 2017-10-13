@@ -47,18 +47,19 @@
                 });
                 $container.find('.slide-to-unlock-bg').css({
                     width: options.width + 'px',
-                    height: options.height + 'px',
+                    height: (options.height - 6) + 'px',
                     backgroundColor: options.bgColor,
                 });
                 $container.find('.slide-to-unlock-progress').css({
-                    backgroundColor: options.progressColor,
-                    height: options.height - 2 + 'px'
+                    height: options.height - 6 + 'px',
+                    backgroundColor: options.succColor,
+
                 });
                 $container.find('.slide-to-unlock-handle').css({
                     backgroundColor: options.handleColor,
-                    height: (options.height - 0) + 'px',
-                    lineHeight: (options.height - 0) + 'px',
-                    width: (Math.floor(options.width / 8)) + 'px',
+                    height: options.height + 'px',
+                    lineHeight: options.height + 'px',
+                    width: (Math.floor(options.width / 9)) + 'px',
                 });
             }
         },
