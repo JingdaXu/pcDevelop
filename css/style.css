@@ -9,6 +9,10 @@
 	  -webkit-font-smoothing: antialiased;
 		overflow-x:hidden;
 	}
+
+	a {
+		color: #0099ff
+	}
 	li{list-style: none}
 	/*垂直居中*/
 	.table-cell{display:table-cell;vertical-align:middle}
@@ -341,14 +345,21 @@
 		color: white;
 		font-size:14px ;
 	}
+
+	.mainContaier .addCompany0:hover {
+		background-color: #1451a5
+	}
 	.mainContaier .addCompany1{
 		top:0px;
 		right: 132px;
 		height: 58px;
 		line-height: 58px;
-		color: #989898;
 		font-size:16px ;
 		font-weight:700;
+	}
+
+	.mainContaier .addCompany1 > a {
+		color: #989898;
 	}
 	.mainContaier .containerWrap .addCompany2{
 		top:0px;
@@ -395,11 +406,15 @@
 	.companyBg{
 		background-color: #f7f7f7;
 		margin-bottom: 21px;
-
 	}
 	.companyContent{
-		margin-left:3%;
-		margin-right:3%;
+		margin-left: 3.5%;
+		margin-right: 3.5%
+	}
+
+	.companyContent .row > .mainCon {
+		min-height: 500px;
+		background: #f7f7f7;
 	}
 	.basicTitle{
 		position: relative;
@@ -423,11 +438,19 @@
 	.form-company2{
 		min-height: 282px;
 	}
-	.form-company-save{
-		margin-top: 34px;
-	}
 	.form-company-bottom{
-		text-align: center;;
+		text-align: center;
+		background-color: #fff;
+		height: 100px;
+		line-height: 100px;
+	}
+
+	.form-company-bottom button {
+		margin-right: 34px;
+	}
+
+	.company-bottom {
+		margin-bottom: 100px;
 	}
 	.mainContaier .address{
 		position: absolute;
@@ -439,8 +462,14 @@
 		color: white;
 		font-size:14px ;
 	}
-	.form-company .companyText{
+
+	.form-control {
 		background-color: #f7f7f7;
+		border-color: #ebeced;
+	}
+
+	.form-control:focus {
+		background-color: #ededed;
 		border-color: #ebeced;
 	}
 	.marketingInfo{
@@ -469,14 +498,17 @@
 	.form-company .companyStyle{
 		color: #ff003c;
 	}
-	.form-company .btn-company{
+
+	.btn-default {
 		width: 120px;
 		height:40px;
 		background-color: #0099ff;
 		border-color: #0099ff;
 		margin:0 auto;
+		color: #fff;
 	}
-	.form-company .contanctNumber{
+
+	.form-company > .contanctNumber {
 		display: inline-block;
 		margin-left: 14px;
 		width:284px;
@@ -494,6 +526,19 @@
 	.form-company .state .radio{
 		/*margin-right:20px;*/
 	}
+
+	.table-bordered > thead > tr > th,
+	.table-bordered > tbody > tr > th,
+	.table-bordered > tfoot > tr > th,
+	.table-bordered > thead > tr > td,
+	.table-bordered > tbody > tr > td,
+	.table-bordered > tfoot > tr > td {
+		border: 1px solid #f2f2f4;
+	}
+
+	.table-striped > tbody > tr:nth-of-type(odd) {
+		background-color: #fff;
+	}
 	/*底部分页*/
 	.navigation{
 		background-color: #fff;
@@ -501,6 +546,7 @@
 		text-align: center;
 		min-height: 58px;
 		line-height: 58px;
+		margin-bottom: 0;
 	}
 	.navigation li{
 		display: inline-block;
@@ -718,7 +764,7 @@
 	}
 	/*批次管理*/
 	.contentWrap{
-		width:98%;
+		width: 96%;
 		margin:0 auto;
 		overflow: hidden;
 		border-top:1px solid #ebeced;
@@ -783,7 +829,7 @@
 	.batchContent lable,
 	.contractContent .col-lg-5 lable {
 		float: left;
-		hight: 48px;
+		height: 48px;
 		line-height: 48px;
 	}
 	.dataUpload .btn-upload,
@@ -805,13 +851,13 @@
 
 	/*批次管理*/
 	.manageBatchContent{
-		width:96%;
-		margin: 0 auto;
+		/*width:96%;*/
 		margin-bottom: 83px;
 		padding-bottom: 20px;
 	}
 
-	.manageBatchContent h4.companyBg{
+	.manageBatchContent h4 > .companyBg,
+	.manageBatchContent2 h4 {
 		margin-top: 32px;
 		margin-bottom: 21px;
 		margin-left: 24px;
@@ -861,14 +907,15 @@
 		border:1px solid #9fafc1;
 	}
 
-	.btnFilter .btn-success.btn-filter:hover,
-	.btnFilter .btn-success.btn-reset:hover {
+	.btnFilter .btn-default.btn-filter:hover,
+	.btnFilter .btn-default.btn-reset:hover {
 		background-color:#9fafc1;
 		border-color: #9fafc1;
 	}
 	.manageList{
 		overflow: hidden;
 		padding: 34px 24px 34px 24px;
+		min-height: 600px;
 	}
 	.manageList table{
 		width:100%;
@@ -888,33 +935,10 @@
 		text-align: center;
 		vertical-align: middle;
 	}
-	.form-company-batch{
-		width: 100%;
-		height: 58px;
-		line-height: 58px;
-		position: fixed;
-		bottom:0px ;
-		padding-right: 16%;
-	}
-
-	.form-company-batch .btn-save,
-	.form-company-batch .btn-back {
-		width: 120px;
-		height: 40px;
-		background-color: #0099ff;
-		border-color: #0099ff;
-		margin: 0 auto;
-	}
-
-	.form-company-batch .btn-save:hover,
-	.form-company-batch .btn-back:hover,
 	.btnWrap .btn-confirm,
 	.btnWrap .btn-cancel {
 		background-color: #30373f;
 		border-color: #30373f;
-	}
-	.form-company-batch .btn-save {
-		margin-right: 34px;
 	}
 	.manageList table tbody tr .op{
 		text-align: left;
@@ -971,10 +995,24 @@
 		background-color:#30373f;
 		border-color:#30373f;
 	}
-	.form-company .btn-company:hover{
+
+	.btn-success:hover,
+	.btn-success:active,
+	.btn-success:active:hover,
+	.btn-success:focus {
 		background-color:#30373f;
 		border-color:#30373f;
 	}
+
+	.btn-default:hover,
+	.btn-default:active,
+	.btn-default:active:hover,
+	.btn-default:focus {
+		background-color: #30373f;
+		border-color: #30373f;
+		color: #ffffff;
+	}
+
 	.marketingInfo td:last-child :hover{
 		color:#1451a5;
 	}
@@ -1028,4 +1066,452 @@
 	}
 	.nav-tabs .dropdown-menu{
 		margin-top: -30px;
+	}
+
+	/*邀请详情*/
+	.invitationContent {
+		margin: 0 auto;
+		margin-top: 16px;
+		border-top: 1px solid #ebeced;
+		overflow: hidden;
+		background-color: #ffffff;
+		padding-top: 34px;
+		padding-bottom: 34px;
+	}
+
+	.invitationContent .form-group {
+		margin: 0px;
+	}
+
+	.invitationContent .companyName,
+	.invitationContent .invitationName,
+	.invitationContent .batchName {
+		margin-left: 14px;
+		display: inline-block;
+	}
+
+	.pd0 {
+		padding: 0px;
+	}
+
+	.invitationContent .companyName,
+	.invitationContent .invitationName {
+		margin-bottom: 34px;
+	}
+
+	.dataUpload .checkUpData {
+		text-decoration: underline;
+	}
+
+	.manageList table tbody tr td a.downLoad {
+		margin-left: 50%;
+	}
+
+	/*弹窗*/
+	.success {
+		width: 32%;
+		height: 45%;
+		background-color: #ffffff;
+		border-radius: 8px 8px;
+		position: absolute;
+		z-index: 999;
+		text-align: center;
+		display: table;
+		left: 40%;
+		top: 30%;
+		background-image: url("../images/popStyle.png");
+		background-repeat: no-repeat;
+
+	}
+
+	.success .btn_Close {
+		cursor: pointer;
+		position: absolute;
+		right: 3%;
+		top: 0;
+	}
+
+	.success .sucContaier {
+		margin: 0 auto;
+		text-align: center;
+		margin-top: 5%;
+	}
+
+	.sucContaier .suc_Icon img {
+		margin-bottom: 40px;
+
+	}
+
+	.suc_font {
+		font-size: 22px;
+		margin-bottom: 40px;
+	}
+
+	.btn_confirm {
+		background-color: #ffffff;
+		border-color: #dd0000;
+		color: #ff0000;
+		width: 25%;
+		border-radius: 20px 20px;
+	}
+
+	.confirmWrap .btn_confirm:hover {
+		border-color: #dd0000;
+		color: #ff0000;
+		background-color: transparent;
+	}
+
+	.icon_confirm {
+		vertical-align: text-bottom;
+		margin-left: -3%;
+	}
+
+	/*合同管理*/
+	.CompanyStateWrap {
+		height: 80px;
+		line-height: 80px;
+		margin-top: 16px;
+		border-top: 1px solid #ebeced;
+		border-bottom: 1px solid #ebeced;
+		text-align: center;
+		position: relative;
+	}
+
+	.CompanyStateWrap h4 {
+		margin: 0;
+		padding: 0;
+		display: inline-block;
+		float: left;
+		line-height: 80px;
+		padding-left: 24px;
+	}
+
+	.CompanyStateWrap span {
+		position: absolute;
+		z-index: 999;
+		right: 2%;
+		top: 25%;
+		float: right;
+	}
+
+	.CompanyStateWrap .btn-liftFreeze {
+		float: right;
+		display: inline-block;
+		width: 120px;
+		height: 36px;
+		background-color: #ff0033;
+		border-color: #ff0033;
+	}
+
+	.CompanyStateWrap .btn-liftFreeze:hover {
+		background-color: #ff0033;
+		border-color: #ff0033;
+	}
+
+	.CompanyStateWrap .companyState1 {
+		color: #ff3300;
+		margin-left: -12%;
+	}
+
+	.contractContent {
+		overflow: hidden;
+		padding-top: 24px;
+		padding-left: 24px;
+		padding-right: 24px;
+		min-height: 505px;
+	}
+
+	.contractContent .contractContentBg {
+		margin: 0px;
+	}
+
+	.contractContent .form-inline,
+	.contractContent .col-lg-12,
+	.contractContent .col-lg-5,
+	.contractContent .col-lg-8,
+	.contractContent .col-lg-3,
+	.contractContent .col-lg-9 {
+
+		margin-bottom: 24px;
+	}
+
+	.contractContent textarea {
+		height: 100px;
+	}
+
+	.contractFrequencyWrap {
+		height: 48px;
+		line-height: 48px;
+		overflow: hidden
+	}
+
+	.contractFrequencyWrap .contractName {
+		float: left;
+		margin: 0;
+		margin-left: 24px;
+		margin-right: 14px;
+	}
+
+	.contractTemplate,
+	.downloadTemplate {
+		text-decoration: underline;
+		font-size: 18px;
+	}
+
+	.contractTemplate {
+		margin-left: 112px;
+	}
+
+	.downloadTemplate {
+		float: right;
+	}
+
+	.contractFrequencyWrap .startDate,
+	.contractFrequencyWrap .endDate {
+		width: 25%;
+		padding-right: 14px;
+		background-image: url(../images/languageA.png);
+		background-repeat: no-repeat;
+		background-position: right;
+		background-position-x: 95%;
+	}
+
+	.contractFrequencyWrap input {
+		margin-right: 5px;
+	}
+
+	.contractFrequencyWrap .time {
+		margin: 0;
+		padding: 0;
+		margin-right: 14px;
+	}
+
+	.Mes_invitationWrap {
+		width: 50%;
+		border-radius: 4px 4px;
+		position: absolute;
+		z-index: 1000;
+		left: 30%;
+		top: 20%;
+		display: none;
+	}
+
+	.Mes_invitationWrap h4 {
+		display: inline-block;
+		padding-left: 18px;
+	}
+
+	.Mes_invitationWrap .invitationTitle {
+		height: 60px;
+		line-height: 60px;
+		border-bottom: 1px solid #e6e6e6;
+	}
+
+	.Mes_invitationFont {
+		margin-left: 18px;
+		font-size: 12px;
+		color: #989898;
+	}
+
+	.Mes_invitationFont img {
+		margin-right: 8px;
+		vertical-align: text-bottom;
+	}
+
+	.Mes_invitationContent {
+		padding-left: 18px;
+
+	}
+
+	.Mes_invitationContent textarea {
+		border: 1px solid #c4c5c6;
+		margin: 14px 18px 16px 0;
+		width: 95%;
+		background-color: #efefef;
+	}
+
+	.Mes_invitationContent p {
+		font-size: 12px;
+		color: #989898;
+		margin-bottom: 36px;
+	}
+
+	.btnWrap {
+		text-align: center;
+	}
+
+	.btnWrap .btn-confirm,
+	.btnWrap .btn-cancel {
+		width: 168px;
+		height: 40px;
+		background-color: #0099ff;
+		border-color: #0099ff;
+		margin: 0 auto;
+		margin-bottom: 40px;
+	}
+
+	.btnWrap .btn-confirm {
+
+		margin-right: 80px;
+	}
+
+	.btnWrap .btn-cancel {
+		margin-left: 80px;
+	}
+
+	/*合同管理*/
+	.tableContract {
+		margin: 0;
+		padding: 0;
+		margin-top: 16px;
+		width: 100%;
+		font-size: 14px;
+	}
+
+	.tableContract tr {
+		vertical-align: middle;
+		height: 58px;
+	}
+
+	.tableContract tr td {
+		display: table-cell;
+		width: 20%;
+	}
+
+	.tableContract a {
+		text-decoration: underline;
+	}
+
+	.tableContract .Invitationtemplate_Install {
+		margin-right: 9%;
+	}
+
+	.tableContract .InvitationDetail {
+		margin-left: 9%;
+	}
+
+	.tableContract .Modify {
+		float: left;
+		margin-left: 65px;
+	}
+
+	.tableContract .Delete {
+		float: right;
+		margin-right: 65px;
+	}
+
+	/*选择系统模板*/
+	.TemplateContaier {
+		height: 100%;
+	}
+
+	.TemplateWrap {
+		margin: 0 40px 58px 40px;
+		overflow: hidden;
+		text-align: center;
+		height: 100%;
+		background-color: #f7f7f7;
+	}
+
+	.minTemplate {
+		display: table;
+		text-align: center;
+		width: 31.8%;
+		height: 250px;
+		margin-top: 16px;
+		margin-right: 1.5%;
+	}
+
+	.minTemplate p {
+		margin: 0 auto;
+		text-align: center;
+		vertical-align: middle;
+	}
+
+	.imgWrap {
+		line-height: 200px;
+	}
+
+	.imgWrap img {
+		width: 33%;
+	}
+
+	.minTemplate input {
+		position: absolute;
+		right: 2%;
+		bottom: 2%;
+	}
+
+	.form-company-batchWrap {
+		background-color: transparent;
+		height: 15%;
+	}
+
+	.containerWrap0 {
+		height: 100%;
+		position: fixed;
+	}
+
+	.Template.col-lg-12 {
+		position: fixed;
+		display: table;
+		left: 0;
+		right: 0;
+		height: 45%;
+		width: 37%;
+		margin: 5% 50% 0 40%;
+		text-align: center;
+		vertical-align: middle;
+
+	}
+
+	.Template p {
+		text-align: center;
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	.Template .pageDown {
+		text-align: center;
+		display: table-cell;
+		vertical-align: middle;
+		position: absolute;
+		right: -4%;
+		top: 40%;
+		bottom: 0;
+		cursor: pointer;
+	}
+
+	/*bootstrap重写*/
+	.radio,
+	.checkbox {
+		/*display: block;*/
+	}
+
+	.radio-inline,
+	.checkbox-inline {
+		/*vertical-align: middle;*/
+	}
+
+	.form-horizontal .form-group {
+		margin-right: 0px;
+		margin-left: 0px;
+	}
+
+	.dropdown-menu {
+		min-width: 60px;
+	}
+
+	.nav-tabs {
+		border-bottom: 0px solid #ddd;
+	}
+
+	.navbar-fixed-bottom {
+		left: 265px;
+		right: 15px;
+	}
+
+	.overRow {
+		margin-left: -5px;
+		margin-right: -5px;
 	}
