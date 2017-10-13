@@ -623,14 +623,21 @@
 	.mainContaier .companyContent .table tr,
 	.mainContaier .companyContent .table td{
 		height:58px;
-		line-height:58px;
 	}
-	.mainContaier .companyContent .table tr:hover{
+
+	.mainContaier .companyContent .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+		vertical-align: middle;
+	}
+
+	.mainContaier .companyContent .table tr:hover,
+	.contentWrap .tableContract.table tbody tr:hover {
 		background-color: #dfdfdf;
 		color:#484848
 	}
-	.mainContaier  .companyContent  .table tr td:last-child :hover{
-		color:#ff0000;
+
+	.Modify:hover,
+	.Delete:hover {
+		color: #ff5500;
 	}
 	.tableCompany{
 		margin-top: 14px;
@@ -639,21 +646,28 @@
 		background-color:#f2f2f4;
 	}
 	.mainBgSize{
-		min-height: 600px;
+		min-height: 500px;
 	}
 	/*公司管理*/
 	.companyBg{
 		background-color: #f7f7f7;
-		margin-bottom: 21px;
 	}
 	.companyContent{
-		margin-left: 3.5%;
-		margin-right: 3.5%
+		margin-left: 4%;
+		margin-right: 4%;
 	}
 
 	.companyContent .row > .mainCon {
 		min-height: 500px;
 		background: #f7f7f7;
+	}
+
+	.companyContent .col-lg-8 {
+		padding-left: 0;
+	}
+
+	.companyContent .col-lg-4 {
+		padding-right: 0;
 	}
 	.basicTitle{
 		position: relative;
@@ -985,8 +999,18 @@
 	.contractContentBg,
 	.manageBatchContent {
 		background-color: #f7f7f7;
+
 	}
 
+	.contentWrap,
+	.manageBatchContent {
+		min-height: 450px;
+	}
+
+	.manageBatchContent {
+		margin-left: 3%;
+		margin-right: 3%;
+	}
 	.batchContent,
 	.contractContent,
 	.dataUpload,
@@ -1030,6 +1054,9 @@
 		margin:0px;
 	}
 
+	.batchBg {
+		margin-left: 2%;
+	}
 	.batchContentBg {
 		width: 100%;
 		height:48px;
@@ -1097,8 +1124,6 @@
 
 	.manageBatchContent h4 > .companyBg,
 	.manageBatchContent2 h4 {
-		margin-top: 32px;
-		margin-bottom: 21px;
 		margin-left: 24px;
 	}
 	.batchFilter{
@@ -1154,7 +1179,7 @@
 	.manageList{
 		overflow: hidden;
 		padding: 34px 24px 34px 24px;
-		min-height: 600px;
+		min-height: 350px;
 	}
 	.manageList table{
 		width:100%;
@@ -1188,7 +1213,7 @@
 		text-decoration: underline;
 	}
 	.manageList table tbody tr td .cancel{
-		margin-left: 43%;
+		margin-left: 34%;
 		margin-right: 1px;
 	}
 
@@ -1200,7 +1225,8 @@
 		color: #0099ff;
 	}
 
-	.unapproved, .planning {
+	.unapproved,
+	.planning {
 		color:#ff5500;
 	}
 
@@ -1396,7 +1422,7 @@
 
 	.confirmWrap .btn_confirm:hover {
 		border-color: #dd0000;
-		color: #ff0000;
+		color: #ff5500;
 		background-color: transparent;
 	}
 
@@ -1457,7 +1483,6 @@
 		padding-top: 24px;
 		padding-left: 24px;
 		padding-right: 24px;
-		min-height: 505px;
 	}
 
 	.contractContent .contractContentBg {
@@ -1612,6 +1637,12 @@
 		height: 58px;
 	}
 
+	.tableContract .title {
+		font-size: 18px;
+		vertical-align: middle;
+		text-align: center;
+		background-color: #ffffff;
+	}
 	.tableContract tr td {
 		display: table-cell;
 		width: 20%;
