@@ -119,8 +119,8 @@
 									   tabindex="4" placeholder="用户名" name=""></br>
 							</div>
 							<div class="username-field">
-								<input type="text" name="confirm" name="confirm"
-									   class="loginTextHalf loginBg loginTextHalf1 " minlength="6" required
+								<input type="text" name="confirm" id="confirm"
+									   class="loginTextHalf loginBg loginTextHalf1 " minlength="6"
 									   maxlength="6" tabindex="5" placeholder="验证码">
 								<button class="loginTextHalf loginTextHalf2 ">获取验证码</button>
 							</div>
@@ -193,9 +193,7 @@
 		})
 	</script>-->
 	<script>
-		$(function () {
-			$("label").remove(".error")
-		})
+
 	</script>
 	<!--提交后的按钮-->
 	<script src="js/jquery.validate.min.js"></script>

@@ -90,7 +90,7 @@
 		top: 55px;
 		left: -5px;
 		background-color: #f9f9f9;
-		min-width: 100px;
+		min-width: 130px;
 		box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 		padding: 0px 16px 12px;
 		z-index: 1000;
@@ -189,6 +189,9 @@
 		line-height: 25px;
 	}
 
+	.loginForm label#confirm-error.error {
+		display: none;
+	}
 	#confirm label {
 		margin-top: 0px;
 	}
@@ -425,10 +428,21 @@
 	.navbar-right>ul>li>a{
 		height: 100px;
 		line-height: 100px;
-		padding: 0px 20px 0px 20px;
-		margin: 0px;
 		border: 0px;
 	}
+
+	.navbar-left {
+		padding-left: 3%;
+	}
+
+	.navbar-right {
+		margin-right: 3%;
+	}
+
+	.navbar-right > ul > li > a {
+		padding: 0px 10px 0px 10px;
+	}
+
     .navbar i{
 		width: 24px;
 		height: 24px;
@@ -642,8 +656,14 @@
 	.tableCompany{
 		margin-top: 14px;
 	}
-	.mainBg{
+
+	.mainBg,
+	.contractBg {
 		background-color:#f2f2f4;
+	}
+
+	.mainBg.col-lg-12 {
+		padding: 0;
 	}
 	.mainBgSize{
 		min-height: 500px;
@@ -800,9 +820,11 @@
 		min-height: 58px;
 		line-height: 58px;
 		margin-bottom: 0;
+		padding-right: 5%;
 	}
 	.navigation li{
 		display: inline-block;
+
 	}
 	.companyContent .form-control:focus{
 		box-shadow: none;
@@ -1016,7 +1038,6 @@
 	.dataUpload,
 	.batchFilter,
 	.manageList,
-	.form-company-batch,
 	.CompanyStateWrap,
 	.Mes_invitationWrap,
 	.ManagecontractContent,
@@ -1033,7 +1054,9 @@
 		border-top:1px solid #ebeced;
 		margin-bottom: 58px;
 	}
-	.contentWrap  lable {
+
+	.contentWrap lable,
+	.contractBg lable {
 		color:#181b20;
 		font-size: 18px;
 		margin-left: 24px;
@@ -1213,10 +1236,9 @@
 		text-decoration: underline;
 	}
 	.manageList table tbody tr td .cancel{
-		margin-left: 34%;
-		margin-right: 1px;
+		margin-left: 50px;
+		margin-right: 5px;
 	}
-
 	.approved, .finish {
 		color: #00ff37;
 	}
@@ -1310,6 +1332,14 @@
 	.nav-icon .setting:hover{
 		 background:url("../images/setting-hover.png") 50% 50% no-repeat;
 	}
+
+	.nav-icon .notice,
+	.nav-icon .message,
+	.nav-icon .help,
+	.nav-icon .setting {
+		vertical-align: middle;
+		margin-bottom: 1%;
+	}
 	.nav > li > a:hover,
 	.nav > li > a:focus{
 		background-color:transparent ;
@@ -1369,7 +1399,7 @@
 	}
 
 	.manageList table tbody tr td a.downLoad {
-		margin-left: 50%;
+		float: right;
 	}
 
 	/*弹窗*/
@@ -1485,10 +1515,25 @@
 		padding-right: 24px;
 	}
 
+	.contractContent textarea {
+		resize: none;
+	}
+
+	.contractContent .prompt {
+		position: absolute;
+		z-index: 1;
+		bottom: 10px;
+		right: 26px;
+		font-size: 14px;
+		color: #989898;
+	}
 	.contractContent .contractContentBg {
 		margin: 0px;
 	}
 
+	.contractContent .col-lg-7 {
+		padding: 0;
+	}
 	.contractContent .form-inline,
 	.contractContent .col-lg-12,
 	.contractContent .col-lg-5,
@@ -1548,8 +1593,8 @@
 		margin: 0;
 		padding: 0;
 		margin-right: 14px;
+		font-size: 15px;
 	}
-
 	.Mes_invitationWrap {
 		width: 50%;
 		border-radius: 4px 4px;
@@ -1756,6 +1801,7 @@
 	.radio,
 	.checkbox {
 		/*display: block;*/
+		margin: 0px;
 	}
 
 	.radio-inline,
@@ -1771,9 +1817,9 @@
 	.dropdown-menu {
 		min-width: 60px;
 	}
-
 	.nav-tabs {
 		border-bottom: 0px solid #ddd;
+
 	}
 
 	.navbar-fixed-bottom {
@@ -1784,4 +1830,26 @@
 	.overRow {
 		margin-left: -5px;
 		margin-right: -5px;
+	}
+
+	.time span {
+		margin-right: 1%;
+	}
+
+	.radio-icon {
+		background: url(../images/radio-icon.png) no-repeat;
+		background-position-x: 15px;
+		background-position-y: 13px;
+		display: block;
+		padding-left: 3.15rem;
+		float: left;
+		background-size: 22px, 22px;
+	}
+
+	.radio-icon.active {
+		background: url(../images/radio.png) no-repeat;
+		background-position-x: 15px;
+		background-position-y: 14px;
+		background-size: 20px, 20px;
+
 	}

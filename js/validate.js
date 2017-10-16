@@ -4,6 +4,13 @@ $.validator.setDefaults({
         alert("提交事件!");
     }
 });
+$(function () {
+    $("#submit").click(function () {
+        if ($('#confirm').val() == "") {
+            $("#confirm").val("不能为空");
+        }
+    })
+})
 $().ready(function() {
     //公司管理表单
     $("#company-basic").validate({
@@ -105,9 +112,9 @@ $().ready(function() {
     //注册表单
     $("#registered-form").validate({
         errorPlacement: function(error, element) {
-            error.appendTo(element.parent());
-            error.appendTo($('.confirm').html());
+            error.appendTo(element.parent())
         },
+        ignore: "#confirm",
         messages: {
             usermail: "请确保输入正确的邮箱地址",
             username: "请输入用户名",
@@ -139,6 +146,7 @@ $().ready(function() {
             confirm: "required"
         }})
 });
+
 /**
  * Created by user on 2017/9/15.
  */
