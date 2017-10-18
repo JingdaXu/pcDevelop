@@ -5,8 +5,8 @@ $.validator.setDefaults({
     }
 });
 $().ready(function() {
-    //公司管理表单
-    $("#company-basic").validate({
+    //新增公司表单
+    $("#detailForm").validate({
         rules: {
             name: {
                 required:true,
@@ -25,13 +25,15 @@ $().ready(function() {
             people: {
                 minlength: 1
             },
-            onumber: {
+            Onumber: {
                 required: true,
-                minlength: 1
+                minlength: 1,
+                number: true
             },
             code: {
                 required: true,
-                minlength: 1
+                minlength: 1,
+                number: true
             },
             country: {
                 required: true,
@@ -43,6 +45,9 @@ $().ready(function() {
             email: {
                 required: true,
                 email: true
+            },
+            websitePlace: {
+                required: false
             }
         },
         messages: {
@@ -56,7 +61,7 @@ $().ready(function() {
                 required: "请输入公司人数",
                 minlength: "公司人数不能小于 1"
             },
-            onumber: {
+            Onumber: {
                 required: "请输入组织机构代码",
                 minlength: "组织机构代码不能小于 1"
             },

@@ -111,7 +111,7 @@
                                             <h4 class="companyBg">
                                                 <span class="basicTitle"><img src="images/basicInfo.png" alt=""></span>基础信息
                                             </h4>
-                                            <form class="form-horizontal form-company form-company0" id="company-basic">
+                                            <form class="form-horizontal form-company form-company0" id="detailForm">
                                                 <div class="row">
                                                     <div class="col-lg-6">
                                                         <div class="form-group ">
@@ -189,13 +189,12 @@
                                                                    placeholder="" id="mail" name="email">
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-6">
-                                                        <div class="form-group ">
-                                                            <label for="website">网址</label>
-                                                            <input type="url" class="companyText form-control"
-                                                                   placeholder="" id="website">
-                                                        </div>
-                                                    </div>
+                                                    <!--<div class="col-lg-6">-->
+                                                    <!--<div class="form-group ">-->
+                                                    <!--<label for="websitePlace">网址</label>-->
+                                                    <!--<input type="url" class="companyText form-control" placeholder="" id="websitePlace">-->
+                                                    <!--</div>-->
+                                                    <!--</div>-->
                                                 </div>
                                             </form>
                                         </div>
@@ -308,7 +307,7 @@
                 </div>
                 <div class="row navbar-fixed-bottom overRow">
                     <div class="form-company-bottom">
-                        <button class="btn btn-default " type="submit">保存</button>
+                        <button class="btn btn-default " type="submit" id="createButton">保存</button>
                         <button class="btn btn-default " onclick="location.href='manageCompany.html'">返回</button>
                     </div>
                 </div>
@@ -317,12 +316,15 @@
     </div>
 </div>
 <script src="js/jquery-1.9.1.min.js"></script>
+<script src="http://39.108.160.55:11116/control-center/resources/js/extend.js" type="text/javascript"></script>
+<script src="http://39.108.160.55:11116/control-center/resources/js/jquery.validate.js" type="text/javascript"
+        charset="utf-8"></script>
 <script src="js/jquery.validate.min.js"></script>
 <script src="js/validate.js"></script>
 <script src="js/messages_zh.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/Menujs.js"></script>
-<script src="js/ajax.js"></script>
+<script src="js/ajax2.js"></script>
 <script>        $('input[required]').before('<span style="color:red">*</span>');    </script>
 </body>
 </html>

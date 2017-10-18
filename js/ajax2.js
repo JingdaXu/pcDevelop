@@ -10,13 +10,13 @@ $(document).ready(function () {
         },
         onsubmit: false
     });
-
-    $("#button1").click(function (e) {
+//公司管理查询公司
+    $("#btn_query").click(function (e) {
         var orgId = $("#query_org_id").val();
 
-        alert(orgId)
+        alert(orgId);
         $.ajax({
-            url: "http://39.108.160.55:11116/control-center/app/organization/" + orgId,
+            url: "http://39.108.160.55:11116/control-center/app/organization/{orgId}",
             type: "get",
             success: function (data, textStatus, xhr) {
                 console.log("status: " + status);
@@ -34,13 +34,13 @@ $(document).ready(function () {
             }
         });
     });
-
+//公司管理新增公司
     $("#createButton").click(function (e) {
         // this event request server to create this entry regardless.
         if ($("#detailForm").valid()) {
             var formData = $("#detailForm").serializeObject();
             $.ajax({
-                url: "/control-center/app/organization",
+                url: "http://39.108.160.55:11116/control-center/app/organization/",
                 type: "post",
                 data: formData,
                 success: function (data, status, xhr) {
@@ -71,7 +71,7 @@ $(document).ready(function () {
         if ($("#detailForm").valid()) {
             var formData = $("#detailForm").serializeObject();
             $.ajax({
-                url: "/control-center/app/organization/" + formData.organizationId,
+                url: "http://39.108.160.55:11116/control-center/app/organization/" + formData.organizationId,
                 //url: "/control-center/app/organization/update",
                 type: "put",
                 data: formData,
