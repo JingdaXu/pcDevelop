@@ -399,6 +399,8 @@
         top:0;
         width:100%;
 		background: #fff;
+		box-shadow: 0 1px 10px #ccc;
+
 	}
 	.content-container .navbar-top {
 		padding-left: 250px;
@@ -632,7 +634,7 @@
 	.table{
 		/*min-height: 600px;*/
 		text-align: center;
-		color: #656565;
+		color: #747474;;
 	}
 	.mainContaier .companyContent .table tr,
 	.mainContaier .companyContent .table td{
@@ -666,7 +668,7 @@
 		padding: 0;
 	}
 	.mainBgSize{
-		min-height: 500px;
+		min-height: 530px;
 	}
 	/*公司管理*/
 	.companyBg{
@@ -723,7 +725,7 @@
 	}
 
 	.company-bottom {
-		margin-bottom: 100px;
+		margin-bottom: 80px;
 	}
 	.mainContaier .address{
 		position: absolute;
@@ -824,7 +826,14 @@
 	}
 	.navigation li{
 		display: inline-block;
+	}
 
+	.navigation .leftPage {
+		margin-left: 24px;
+	}
+
+	.navigation .rightPage {
+		margin-right: 24px;
 	}
 	.companyContent .form-control:focus{
 		box-shadow: none;
@@ -1042,7 +1051,8 @@
 	.Mes_invitationWrap,
 	.ManagecontractContent,
 	.Template,
-	.minTemplate
+	.minTemplate,
+	.tableContract .title
 	{
 		background-color: #ffffff;
 	}
@@ -1214,10 +1224,6 @@
 		height: 48px;
 		vertical-align: middle;
 	}
-
-	.manageList table thead {
-		font-size: 18px;
-	}
 	.manageList table thead th,tbody tr td{
 		text-align: center;
 		vertical-align: middle;
@@ -1236,7 +1242,7 @@
 		text-decoration: underline;
 	}
 	.manageList table tbody tr td .cancel{
-		margin-left: 50px;
+		margin-left: 30%;
 		margin-right: 5px;
 	}
 	.approved, .finish {
@@ -1483,7 +1489,7 @@
 
 	.CompanyStateWrap span {
 		position: absolute;
-		z-index: 999;
+		z-index: 1;
 		right: 2%;
 		top: 25%;
 		float: right;
@@ -1682,11 +1688,12 @@
 		height: 58px;
 	}
 
-	.tableContract .title {
-		font-size: 18px;
+	.tableContract .title,
+	.manageList .title {
+		font-size: 16px;
 		vertical-align: middle;
 		text-align: center;
-		background-color: #ffffff;
+		color: black;
 	}
 	.tableContract tr td {
 		display: table-cell;
@@ -1706,8 +1713,6 @@
 	}
 
 	.tableContract .Modify {
-		float: left;
-		margin-left: 65px;
 	}
 
 	.tableContract .Delete {
@@ -1732,29 +1737,83 @@
 		display: table;
 		text-align: center;
 		width: 31.8%;
-		height: 250px;
+		height: 220px;
+		padding-top: 40px;
 		margin-top: 16px;
 		margin-right: 1.5%;
+
 	}
 
+	.minTemplateWrap {
+		background-color: rgba(0, 0, 0, 0.4);
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 1;
+		display: none;
+	}
+
+	.hover {
+		display: block;
+	}
+
+	.minTemplateWrap .previewImg {
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: -25px;
+		margin-left: -25px;
+
+	}
+
+	.minTemplateWrap .preview a {
+		position: absolute;
+		top: 63%;
+		left: 40%;
+		color: #ffffff;
+		text-decoration: underline;
+	}
 	.minTemplate p {
 		margin: 0 auto;
-		text-align: center;
-		vertical-align: middle;
 	}
 
 	.imgWrap {
-		line-height: 200px;
+		line-height: 120px;
+	}
+
+	.imgWrap .imgContent {
+		width: 80%;
 	}
 
 	.imgWrap img {
-		width: 33%;
+		width: 25%;
+
 	}
 
-	.minTemplate input {
+	.minTemplate .radio-wrap {
+		float: right;
 		position: absolute;
-		right: 2%;
-		bottom: 2%;
+		bottom: 12px;
+		right: 12px;
+	}
+
+	.radio-wrap span {
+		width: 20px;
+		height: 20px;
+	}
+
+	.radio-wrap .radio-icon {
+		background-position-y: 2px;
+		background-position-x: 25px;
+	}
+
+	.radio-wrap .radio-icon.active {
+		background-position-y: 2px;
+		background-position-x: 25px;
 	}
 
 	.form-company-batchWrap {
@@ -1816,6 +1875,7 @@
 
 	.dropdown-menu {
 		min-width: 60px;
+		margin-right: 10px;
 	}
 	.nav-tabs {
 		border-bottom: 0px solid #ddd;
@@ -1827,6 +1887,20 @@
 		right: 15px;
 	}
 
+	.navbar-fixed-bottom .page {
+		width: 22px;
+		height: 22px;
+		text-align: center;
+		background-color: #0099ff;
+		color: #ffffff;
+		margin: 0 14px 0 14px;
+		border: none;
+		border-radius: 2px;
+	}
+
+	.page:hover {
+		background-color: #a5b6c8;
+	}
 	.overRow {
 		margin-left: -5px;
 		margin-right: -5px;
@@ -1839,17 +1913,17 @@
 	.radio-icon {
 		background: url(../images/radio-icon.png) no-repeat;
 		background-position-x: 15px;
-		background-position-y: 13px;
+		background-position-y: 15px;
 		display: block;
 		padding-left: 3.15rem;
 		float: left;
-		background-size: 22px, 22px;
+		background-size: 18px, 18px;
 	}
 
 	.radio-icon.active {
 		background: url(../images/radio.png) no-repeat;
 		background-position-x: 15px;
-		background-position-y: 14px;
-		background-size: 20px, 20px;
+		background-position-y: 15px;
+		background-size: 18px, 18px;
 
 	}

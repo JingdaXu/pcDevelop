@@ -5,7 +5,7 @@
 $(function () {
     /*单选按钮*/
     $("span.radio-icon").click(function () {
-        $(this).addClass("active").parent().siblings().find("span.radio-icon").removeClass("active");
+        $(this).addClass("active").parents().siblings().find("span.radio-icon").removeClass("active");
     });
     /*解除冻结*/
     $("#liftFreeze").click(function () {
@@ -13,7 +13,10 @@ $(function () {
         $(this).css("display", "none")
     })
     /*选择系统模板*/
-    $(".minTemplate").hover(function () {
-
+    $(".minTemplate").mouseover(function () {
+        $(this).children(".minTemplateWrap").addClass("hover")
+    })
+    $(".minTemplate").mouseout(function () {
+        $(this).children(".minTemplateWrap").removeClass("hover")
     })
 })
