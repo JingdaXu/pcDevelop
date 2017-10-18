@@ -19,6 +19,7 @@ function actionFormatter(value, row, index) {
     ].join('');
 }
 
+
 var TableInit = function () {
     var oTableInit = new Object();
 
@@ -36,7 +37,7 @@ var TableInit = function () {
             dataType: "json",
             contentType: "application/json",
             crossDomain: true,
-            //striped: true,                      //是否显示行间隔色
+            striped: true,                      //是否显示行间隔色
             //cache: false,                       //是否使用缓存，默认为true，所以一般情况下需要设置一下这个属性（*）
             //pagination: true,                   //是否显示分页（*）
             //sortable: false,                     //是否启用排序
@@ -58,11 +59,11 @@ var TableInit = function () {
             //cardView: false,                    //是否显示详细视图
             //detailView: false,                   //是否显示父子表
             columns: [
-                {title: "编号", field: 'organizationId', align: 'left', width: 80},
-                {title: "公司名称", field: "organizationName", align: 'left', width: 450},
-                {title: "公司简称", field: "organizationShortName", align: 'center', width: 200},
-                {title: "公司状态.", field: "status", width: 100},
-                {title: "操作", formatter: "actionFormatter"}
+                {title: "编号", field: 'organizationId', align: 'center'},
+                {title: "公司名称", field: "organizationName", align: 'center'},
+                {title: "公司简称", field: "organizationShortName", align: 'center'},
+                {title: "公司状态.", field: "status", align: 'center'},
+                {title: "操作", formatter: "actionFormatter", align: 'center'}
             ],
         });
     };

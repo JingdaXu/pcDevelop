@@ -10,11 +10,13 @@
 		overflow-x:hidden;
 	}
 
+	label {
+		font-weight: normal;
+	}
 	a {
 		color: #0099ff
 	}
 	li{list-style: none}
-	/*垂直居中*/
 	.table-cell{display:table-cell;vertical-align:middle}
 	.fl{  float: left;}
 	.mt10{margin-top: 10px;  }
@@ -26,7 +28,10 @@
 		height: 80px;
 		background-color: #fff;
 	}
-		.box1{float: left;}
+
+	.box1 {
+		float: left;
+	}
 
 	.box1 a {
 		text-decoration: none;
@@ -632,9 +637,8 @@
 		margin-right:5px;
 	}
 	.table{
-		/*min-height: 600px;*/
 		text-align: center;
-		color: #747474;;
+		color: #656565;;
 	}
 	.mainContaier .companyContent .table tr,
 	.mainContaier .companyContent .table td{
@@ -645,6 +649,14 @@
 		vertical-align: middle;
 	}
 
+	#tb_departments thead tr {
+		background-color: #fff;
+	}
+
+	#tb_departments
+	.fixed-table-header > .table-hover > thead {
+		background-color: #fff;
+	}
 	.mainContaier .companyContent .table tr:hover,
 	.contentWrap .tableContract.table tbody tr:hover {
 		background-color: #dfdfdf;
@@ -812,6 +824,14 @@
 	}
 
 	.table-striped > tbody > tr:nth-of-type(odd) {
+		background-color: #f2f2f4;
+	}
+
+	.table-striped > tbody > tr:nth-of-type(2n) {
+		background-color: #fff;
+	}
+
+	.bootstrap-table .table {
 		background-color: #fff;
 	}
 	/*底部分页*/
@@ -1065,8 +1085,8 @@
 		margin-bottom: 58px;
 	}
 
-	.contentWrap lable,
-	.contractBg lable {
+	.contentWrap label,
+	.contractBg label {
 		color:#181b20;
 		font-size: 18px;
 		margin-left: 24px;
