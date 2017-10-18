@@ -15,12 +15,12 @@ $().ready(function() {
     //新增公司表单
     $("#detailForm").validate({
         rules: {
-            name: {
+            organizationName: {
                 required:true,
                 minlength:5,
                 maxlength:50
             },
-           sname: {
+            organizationShortName: {
                 required:true,
                 minlength:2,
                 maxlength:20
@@ -58,8 +58,8 @@ $().ready(function() {
             }
         },
         messages: {
-            name: "请输入您公司名称,最少5个字",
-            sname: "请输入您公司简称",
+            organizationName: "请输入您公司名称,最少5个字",
+            organizationShortName: "请输入您公司简称",
             industry: {
                 required: "请输入行业",
                 minlength: "行业至少有2个字"
