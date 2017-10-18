@@ -1266,7 +1266,7 @@
 		color:#ff00cc;
 	}
 	/*错误提示表单*/
-	#company-basic label.error,
+	#detailForm label.error,
 	#company-place label.error,
 	#login-form label.error
 	{
