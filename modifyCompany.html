@@ -113,13 +113,17 @@
                                                     <div class="col-lg-6">
                                                         <div class="form-group ">
                                                             <label for="name" >公司名称</label>
-                                                            <input type="text" class="companyText form-control" placeholder="" id="name" name="name" required>
+                                                            <input type="text" class="companyText form-control"
+                                                                   placeholder="" id="name" name="organizationName"
+                                                                   required>
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6">
                                                         <div class="form-group ">
                                                             <label for="sname" >公司简称</label>
-                                                            <input type="text" class="companyText form-control" placeholder="" id="sname"  name="sname" required>
+                                                            <input type="text" class="companyText form-control"
+                                                                   placeholder="" id="sname"
+                                                                   name="organizationShortName" required>
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6">
@@ -263,7 +267,9 @@
                                                     <!-- Text input-->
                                                     <label class="" >联系电话</label>
                                                     <div class="controls">
-                                                        <input type="text" placeholder="" class="companyText form-control contanctNumber">
+                                                        <input type="text" placeholder=""
+                                                               class="companyText form-control contanctNumber"
+                                                               name="phone" id="phone">
                                                     </div>
                                                 </div>
 
@@ -306,6 +312,38 @@
 <script src="js/Menujs.js"></script>
 <script src="js/ajax.js"></script>
 <script>        $('input[required]').before('<span style="color:red">*</span>');    </script>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        var a = window.location.toString();
+        var organizationId = a.substring(a.indexOf("=") + 1);
+        $.ajax({
+            url: 'http://39.108.160.55:11116/control-center/app/organization/' + organizationId,
+            type: "get",
+            success: function (data, textStatus, xhr) {
+                $('#name').val(data.organizationName);
+                $('#sname').val(data.organizationShortName);
+                $('#industry').val(data.status);
+                $('#mail').val(data.email);
+                $('#place1').val(data.addressLine1);
+                $('#place2').val(data.addressLine2);
+                $('#place3').val(data.addressLine3);
+                $('#phone').val(data.phone);
+
+                //alert('ok');
+            },
+            error: function (xhr, textStatus, ex) {
+                if (xhr.status == 404) {
+                    alert('no such object');
+                } else {
+                    alert(ex);
+                }
+            }
+        });
+
+    })
+</script>
 </body>
 </html>
 
