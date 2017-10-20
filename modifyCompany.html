@@ -113,7 +113,7 @@
                                                     <div class="col-lg-6">
                                                         <div class="form-group ">
                                                             <label for="name" >公司名称</label>
-                                                            <input type="text" class="companyText form-control"
+                                                            <input type="text" class=" form-control"
                                                                    placeholder="" id="name" name="organizationName"
                                                                    required>
                                                         </div>
@@ -121,7 +121,7 @@
                                                     <div class="col-lg-6">
                                                         <div class="form-group ">
                                                             <label for="sname" >公司简称</label>
-                                                            <input type="text" class="companyText form-control"
+                                                            <input type="text" class=" form-control"
                                                                    placeholder="" id="sname"
                                                                    name="organizationShortName" required>
                                                         </div>
@@ -134,25 +134,30 @@
                                                                 <option value="2"></option>
                                                                 <option value="3"></option>
                                                             </datalist>
-                                                            <input type="text" class="companyText form-control" placeholder="" id="industry" required maxlength="20" list="company-industry" name="industry">
+                                                            <input type="text" class="form-control" placeholder=""
+                                                                   id="industry" required maxlength="20"
+                                                                   list="company-industry" name="industry">
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6">
                                                         <div class="form-group ">
                                                             <label for="people">公司人数</label>
-                                                            <input type="number" class="companyText form-control" placeholder="" id="people" min="0" max="5000" name="people">
+                                                            <input type="number" class=" form-control" placeholder=""
+                                                                   id="people" min="0" max="5000" name="people">
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6">
                                                         <div class="form-group ">
                                                             <label for="Onumber">组织机构代码</label>
-                                                            <input type="text" class="companyText form-control" placeholder="" id="Onumber" required name="Onumber">
+                                                            <input type="text" class=" form-control" placeholder=""
+                                                                   id="Onumber" required name="Onumber">
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6">
                                                         <div class="form-group ">
                                                             <label for="code">税务登记代码</label>
-                                                            <input type="text" class="companyText form-control" placeholder="" id="code" required name="code">
+                                                            <input type="text" class=" form-control" placeholder=""
+                                                                   id="code" required name="code">
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6">
@@ -163,25 +168,30 @@
                                                                 <option value="2"></option>
                                                                 <option value="3"></option>
                                                             </datalist>
-                                                            <input type="text" class="companyText form-control" placeholder="" id="region" required list="country-region" name="country">
+                                                            <input type="text" class=" form-control" placeholder=""
+                                                                   id="region" required list="country-region"
+                                                                   name="country">
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6">
                                                         <div class="form-group ">
                                                             <label for="postcode">邮编</label>
-                                                            <input type="text" class="companyText form-control" placeholder="" id="postcode" name="postcode">
+                                                            <input type="text" class=" form-control" placeholder=""
+                                                                   id="postcode" name="postcode">
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6">
                                                         <div class="form-group ">
                                                             <label for="mail">email</label>
-                                                            <input type="text" class="companyText form-control" placeholder="" id="mail" name="email">
+                                                            <input type="text" class=" form-control" placeholder=""
+                                                                   id="mail" name="email">
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6">
                                                         <div class="form-group ">
                                                             <label for="website">网址</label>
-                                                            <input type="url" class="companyText form-control" placeholder="" id="website">
+                                                            <input type="url" class=" form-control" placeholder=""
+                                                                   id="website">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -194,22 +204,20 @@
                                                     <div class="col-lg-12">
                                                         <div class="form-group">
                                                             <label>公司地址1</label>
-                                                            <input type="text" class="form-control companyText" required
+                                                            <input type="text" class="form-control " required
                                                                    maxlength="50" minlength="5" name="place"
                                                                    id="place1"></div>
                                                     </div>
                                                     <div class="col-lg-12">
                                                         <div class="form-group">
                                                             <label>公司地址2</label>
-                                                            <input type="text" class="form-control companyText"
-                                                                   id="place2">
+                                                            <input type="text" class="form-control " id="place2">
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-12">
                                                         <div class="form-group">
                                                             <label>公司地址3</label>
-                                                            <input type="text" class="form-control companyText"
-                                                                   id="place3">
+                                                            <input type="text" class="form-control " id="place3">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -268,7 +276,7 @@
                                                     <label class="" >联系电话</label>
                                                     <div class="controls">
                                                         <input type="text" placeholder=""
-                                                               class="companyText form-control contanctNumber"
+                                                               class=" form-control contanctNumber"
                                                                name="phone" id="phone">
                                                     </div>
                                                 </div>
@@ -296,7 +304,7 @@
                     </div>
                 <div class="row navbar-fixed-bottom overRow">
                     <div class="form-company-bottom">
-                        <button class="btn btn-default " type="submit">保存</button>
+                        <button class="btn btn-default " type="submit" id="submit">保存</button>
                         <button class="btn btn-default " onclick="location.href='manageCompany.html'">返回</button>
                         </div>
                     </div>

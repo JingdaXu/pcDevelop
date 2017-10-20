@@ -1,9 +1,4 @@
-$.validator.setDefaults({
-    debug:true,
-    submitHandler: function() {
-        alert("提交事件!");
-    }
-});
+
 $(function () {
     $("#submit").click(function () {
         if ($('#confirm').val() == "") {
@@ -11,6 +6,16 @@ $(function () {
         }
     })
 })
+function beforeSubmitValidate(formData, jqForm, options) {
+    for (var i = 0; i < formData.length; i++) {
+        if (!formData[i].value) {
+            alert("表单内容不能为空!");
+            return false;
+        }
+    }
+    var queryString = $.param(fomData);
+    return true;
+}
 $().ready(function() {
     //新增公司表单
     $("#detailForm").validate({
@@ -120,6 +125,7 @@ $().ready(function() {
             error.appendTo(element.parent())
         },
         ignore: "#confirm",
+        submitHandler: beforeSubmitValidate,
         messages: {
             usermail: "请确保输入正确的邮箱地址",
             username: "请输入用户名",
@@ -152,6 +158,3 @@ $().ready(function() {
         }})
 });
 
-/**
- * Created by user on 2017/9/15.
- */
