@@ -1992,3 +1992,32 @@
 	.photoCover {
 		height: 30px;
 	}
+
+	/*单选框样式优化*/
+	.radio_box {
+		display: inline-block;
+		position: relative;
+	}
+
+	.radio_box label {
+		width: 15px;
+		height: 15px;
+		position: absolute;
+		top: 3px;
+		left: 0;
+		border: 2px solid #ef4949;
+		border-radius: 50%;
+		background: #fff;
+		cursor: pointer;
+	}
+
+	.radio_box input:checked + label:after {
+		content: '';
+		width: 9px;
+		height: 9px;
+		position: absolute;
+		top: 1px;
+		left: 1px;
+		background: #ef4949;
+		border-radius: 50%;
+	}
