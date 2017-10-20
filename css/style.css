@@ -1969,3 +1969,26 @@
 	.modal-footer {
 		border-top: 0px;
 	}
+
+	/*上传文件样式优化*/
+	.input-append span {
+		margin-left: -85px;
+	}
+
+	.marketingInfo .input-append > a,
+	.marketingInfo .input-append .box > a {
+		background: #0099ff;
+		color: #fff;
+	}
+
+	.marketingInfo .input-append .box:first-child {
+		margin-bottom: -30px;
+	}
+
+	.marketingInfo .input-append > a:hover {
+		color: #000;
+	}
+
+	.photoCover {
+		height: 30px;
+	}

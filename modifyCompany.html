@@ -235,19 +235,41 @@
                                                 <tr class="marketingInfo">
                                                     <td><h4>营业执照</h4></td>
                                                     <td>
-                                                        <input class="input-file" type="file" id="businesslicense">
+                                                        <input class="input-file" type="file" id="businesslicense"
+                                                               style="display: none">
+                                                        <div class="input-append">
+                                                            <input type="text" id="photoCover1"
+                                                                   class="input-large photoCover" type="text">
+                                                            <a class="btn"
+                                                               onclick="$('input[id=businesslicense]').click()">浏览</a>
+                                                        </div>
                                                     </td>
-                                                    <td class="companyStyle">
-                                                        上传类型jpg/png/pdf,2M以内
-                                                    </td>
-                                                    <td>
-                                                        <a href="">点击预览</a>
-                                                    </td>
+                                                    <td class="companyStyle">上传类型jpg/png/pdf,2M以内</td>
+                                                    <td><a href="">点击预览</a></td>
                                                 </tr>
                                                 <tr  class="marketingInfo">
                                                     <td><h4>负责人身份证证件</h4></td>
                                                     <td>
-                                                        <input class="input-file" type="file" id="personalId">
+                                                        <input class="input-file" type="file" id="personalId"
+                                                               style="display: none">
+                                                        <input class="input-file" type="file" id="personalId2"
+                                                               style="display: none">
+                                                        <div class="input-append">
+                                                            <div class="box">
+                                                                <span>身份证正面:</span>
+                                                                <input type="text" id="photoCover2-1"
+                                                                       class="input-large photoCover" type="text">
+                                                                <a class="btn"
+                                                                   onclick="$('input[id=personalId]').click()">浏览</a>
+                                                            </div>
+                                                            <div class="box">
+                                                                <span>身份证反面:</span>
+                                                                <input type="text" id="photoCover2-2"
+                                                                       class="input-large photoCover" type="text">
+                                                                <a class="btn"
+                                                                   onclick="$('input[id=personalId2]').click()">浏览</a>
+                                                            </div>
+                                                        </div>
                                                     </td>
                                                     <td  class="companyStyle">
                                                         上传类型jpg/png/pdf,1M以内
@@ -259,7 +281,13 @@
                                                 <tr  class="marketingInfo">
                                                     <td><h4>公司logo</h4></td>
                                                     <td>
-                                                        <input class="input-file" type="file" id="logo">
+                                                        <input class="input-file" type="file" id="logo"
+                                                               style="display: none">
+                                                        <div class="input-append">
+                                                            <input type="text" id="photoCover3"
+                                                                   class="input-large photoCover" type="text">
+                                                            <a class="btn" onclick="$('input[id=logo]').click()">浏览</a>
+                                                        </div>
                                                     </td>
                                                     <td  class="companyStyle">
                                                         上传类型jpg/png/pdf,600K以内
@@ -285,14 +313,45 @@
                                                     <label class="control-label">公司状态</label>
                                                     <div class="controls state">
                                                         <!-- Inline Radios -->
-                                                        <div class="radio radio-inline">
-                                                            <input type="radio" value="正常运行" name="group" checked="checked">
+                                                        <style>
+                                                            .radio_box {
+                                                                display: inline-block;
+                                                                position: relative;
+                                                            }
+
+                                                            .radio_box label {
+                                                                width: 15px;
+                                                                height: 15px;
+                                                                position: absolute;
+                                                                top: 3px;
+                                                                left: 0;
+                                                                border: 2px solid #ef4949;
+                                                                border-radius: 50%;
+                                                                background: #fff;
+                                                                cursor: pointer;
+                                                            }
+
+                                                            .radio_box input:checked + label:after {
+                                                                content: '';
+                                                                width: 9px;
+                                                                height: 9px;
+                                                                position: absolute;
+                                                                top: 1px;
+                                                                left: 1px;
+                                                                background: #ef4949;
+                                                                border-radius: 50%;
+                                                            }
+                                                        </style>
+                                                        <span class="radio_box">
+                                                             <input type="radio" id="radio_1" name="radio" checked>
+                                                             <label for="radio_1"></label>
                                                             正常运行
-                                                        </div>
-                                                        <div class="radio radio-inline">
-                                                            <input type="radio" value="停止运行" name="group">
+                                                        </span>
+                                                        <span class="radio_box">
+                                                             <input type="radio" id="radio_2" name="radio">
+                                                             <label for="radio_2"></label>
                                                             停止运行
-                                                        </div>
+                                                        </span>
                                                     </div>
                                                 </div>
                                             </form>
@@ -354,4 +413,18 @@
 </script>
 </body>
 </html>
+<script type="text/javascript">
+    $('input[id=businesslicense]').change(function () {
+        $('#photoCover1').val($(this).val());
+    });
+    $('input[id=personalId]').change(function () {
+        $('#photoCover2-1').val($(this).val());
+    });
+    $('input[id=personalId2]').change(function () {
+        $('#photoCover2-2').val($(this).val());
+    });
+    $('input[id=logo]').change(function () {
+        $('#photoCover3').val($(this).val());
+    });
+</script>
 
