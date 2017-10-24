@@ -121,7 +121,7 @@ $().ready(function() {
         },
         ignore: "#confirm",
         messages: {
-            usermail: "请确保输入正确的邮箱地址",
+            usermail: "请输入一个正确的邮箱",
             username: "请输入用户名",
             password: "请输入登录密码",
             passwordConfirm: {
@@ -132,8 +132,8 @@ $().ready(function() {
         },
         rules: {
             usermail:{
-                required:true,
-                minlength:2
+                required: true,
+                email: true
             },
             username:{
                 required:true,
