@@ -66,8 +66,8 @@
                 <a href="login.html" class="mainLogo">
                     <ul>
                         <li class="logo2"></li>
-                        <h4>云文件管理系统</h4>
                     </ul>
+                    <h4>云文件管理系统</h4>
                 </a>
                 <ul class="leftMenu">
                     <li class="leftNav"><a href=""><span class="home navLeftIcon"><img src="images/home.png" alt=""></span>首页 </a></li>
@@ -100,10 +100,10 @@
                     <div class="row overRow">
                         <div class="col-lg-12">
                             <h4 class="companyTitle">批次管理
-                                <a href="addBatch.html">
-                                    <div class="fl addCompany addCompany0"><span><img src="images/add.png" alt=""></span>新建批次
-                                    </div>
-                                </a>
+                                <!--<a href="addBatch.html">-->
+                                <!--<div class="fl addCompany addCompany0"><span><img src="images/add.png" alt=""></span>新建批次-->
+                                <!--</div>-->
+                                <!--</a>-->
                             </h4>
                         </div>
                     </div>
@@ -114,10 +114,10 @@
                                     <h4 class="companyBg batchBg"><span class="basicTitle"><img src="images/filter.png"
                                                                                                 alt=""></span>批次筛选
                                     </h4>
-                                    <form class="batchFilter" role="form">
+                                    <form class="batchFilter">
                                         <div class="col-lg-3">
                                             <div class="form-group">
-                                                <lable for="company">公司</lable>
+                                                <label for="list-company">公司</label>
                                                 <datalist id="list-company">
                                                     <option value="1"></option>
                                                     <option value="2"></option>
@@ -127,34 +127,36 @@
                                                        maxlength="50" minlength="5">
                                             </div>
                                             <div class="form-group">
-                                                <lable for="company">开始日期</lable>
+                                                <label for="datapicker1">开始日期</label>
                                                 <input type="text" class="help-block date batchContentBg" id="datapicker1">
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
-                                                <lable for="company">合同</lable>
+                                                <label for="contract">合同</label>
                                                 <datalist id="list-contract">
                                                     <option value="1"></option>
                                                     <option value="2"></option>
                                                     <option value="3"></option>
                                                 </datalist>
                                                 <input type="text" class="help-block name batchContentBg" list="list-contract"
-                                                       maxlength="50" minlength="5">
+                                                       maxlength="50" minlength="5" id="contract">
                                             </div>
                                             <div class="form-group">
-                                                <lable for="company">结束日期</lable>
+                                                <label for="datapicker2">结束日期</label>
                                                 <input type="text" class="help-block date batchContentBg"  id="datapicker2">
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
-                                                <lable for="company">批次状态</lable>
-                                                <input type="text" class="help-block state batchContentBg">
+                                                <label for="batchStatus">批次状态</label>
+                                                <input type="text" class="help-block state batchContentBg"
+                                                       id="batchStatus">
                                             </div>
                                             <div class="form-group">
-                                                <lable for="company">发送状态</lable>
-                                                <input type="text" class="help-block state batchContentBg">
+                                                <label for="sendStatus">发送状态</label>
+                                                <input type="text" class="help-block state batchContentBg"
+                                                       id="sendStatus">
                                             </div>
                                         </div>
                                         <div class="col-lg-12">
