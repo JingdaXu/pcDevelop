@@ -473,6 +473,7 @@
 		width: 248px;
 		height:100%;
 		position: fixed;
+		top: 0px;
 		background: #30373f;
 		z-index: 10000;
 	}
@@ -680,7 +681,7 @@
 		padding: 0;
 	}
 	.mainBgSize{
-		min-height: 530px;
+		min-height: 414px;
 	}
 	/*公司管理*/
 	.companyBg{
@@ -1195,9 +1196,9 @@
 		width: 100%;
 	}
 
-	.dataUpload lable,
-	.batchContent lable,
-	.contractContent .col-lg-5 lable {
+	.dataUpload label,
+	.batchContent label,
+	.contractContent .col-lg-5 label {
 		float: left;
 		height: 48px;
 		line-height: 48px;
@@ -1243,7 +1244,8 @@
 		overflow: hidden;
 		margin-right: 34px;
 	}
-	.batchFilter lable{
+
+	.batchFilter label {
 		margin-bottom:12px;
 	}
 	.manageBatchContent .name ,
@@ -2013,4 +2015,77 @@
 		background-position-y: 15px;
 		background-size: 18px, 18px;
 
+	}
+
+	/*模态窗口样式*/
+	.modal-header {
+		border-bottom: 0px;
+	}
+
+	.modal-body {
+		margin-top: 100px;
+	}
+
+	.modal-content {
+		text-align: center;
+		background-image: url("../images/popStyle.png");
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		background-size: cover;
+	}
+
+	.modal-footer {
+		border-top: 0px;
+	}
+
+	/*上传文件样式优化*/
+	.input-append span {
+		margin-left: -85px;
+	}
+
+	.marketingInfo .input-append > a,
+	.marketingInfo .input-append .box > a {
+		background: #0099ff;
+		color: #fff;
+	}
+
+	.marketingInfo .input-append .box:first-child {
+		margin-bottom: -30px;
+	}
+
+	.marketingInfo .input-append > a:hover {
+		color: #000;
+	}
+
+	.photoCover {
+		height: 30px;
+	}
+
+	/*单选框样式优化*/
+	.radio_box {
+		display: inline-block;
+		position: relative;
+	}
+
+	.radio_box label {
+		width: 15px;
+		height: 15px;
+		position: absolute;
+		top: 3px;
+		left: 0;
+		border: 2px solid #ef4949;
+		border-radius: 50%;
+		background: #fff;
+		cursor: pointer;
+	}
+
+	.radio_box input:checked + label:after {
+		content: '';
+		width: 9px;
+		height: 9px;
+		position: absolute;
+		top: 1px;
+		left: 1px;
+		background: #ef4949;
+		border-radius: 50%;
 	}

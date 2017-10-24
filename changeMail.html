@@ -23,24 +23,24 @@
     <div class="countSafe-Content changeMailBg">
         <h4>修改邮箱账户</h4>
         <div class="username-field">
-            <input type="text" name="username"  class=" tooltiper" maxlength="32" tabindex="4" placeholder="输入新邮箱" name="">
+            <input type="text" name="username" class=" tooltiper" maxlength="32" tabindex="4" placeholder="输入新邮箱">
         </div>
         <div id="slide-to-unlock" class="slider"></div>
 
         <button class="changeMail" type="button" onclick="location.href='changeMailVertification.html'">下一步</button>
     </div>
 </main>
-</body>
-</html>
 <script src="js/jquery-1.9.1.min.js"></script>
 <script src="js/unlock.js"></script>
-<script type="text/javascript">
+<script>
     var $container = $('#slide-to-unlock');
     $container.slideToUnlock({
         text: '请按住滑块，拖动到最右边',
         succText: '解锁成功！',
-        progressColor:'#0fd600',
-        progressColor:'#d3d3d3',
-        succColor:'#0fd600'
+        progressColor: '#0fd600',
+        progressColor: '#d3d3d3',
+        succColor: '#0fd600'
     });
 </script>
+</body>
+</html>

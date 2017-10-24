@@ -3,7 +3,6 @@
 <head>
 	<meta charset="UTF-8">
 	<title>EBC-login</title>
-	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -14,9 +13,9 @@
      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-      <!--<script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>-->
-      <!--<script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>-->
-    <!--[endif]-->
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
 	<header class="indexHeader">
@@ -32,8 +31,8 @@
 							<a href="login.html" class="login">首页</a>
 							<ul class="box3">
 								<li class="rightnav dropdown">
-									<span><img class="button" src="images/china-flag.png">简体中文</span>
-									<img src="images/drop-down.png">
+									<span><img  src="images/china-flag.png" alt="简体中文">简体中文</span>
+									<img src="images/drop-down.png" alt="下拉">
 									<div>
 										<ul class="dropdown-content">
 											<li><span class=" flag1"></span><a href="">English</a></li>
@@ -48,7 +47,7 @@
 	</header>
 	<main class="mainLogin">
 		<div class="indexBackground">
-			<img src="images/background.png" width="100%" height="100%">
+			<img src="images/background.png"  alt="背景">
 		</div>
 		<div class="containerWrapLogin">
 			<div class="leftBox">
@@ -63,7 +62,7 @@
 				</div>
 				<div class="tabcon">
 					<div class="login">
-						<form action="" class="loginForm"  id="login-form">
+						<form  class="loginForm"  id="login-form">
 							<div class="username-field">
 								<!--<span class="login-label-count">手机号码/邮箱</span>-->
 								<input type="text" name="username" id="username"
@@ -83,7 +82,7 @@
 								<a href="#">忘记密码？</a>
 							</div>
 							<div class="loginThird">
-								<hr>
+								</hr>
 								<h4>第三方账号登录</h4>
 									<div class="container otherLogin">
 										<div class="cow">
@@ -96,35 +95,31 @@
 						</form>
 					</div>
 					<div class="registered">
-						<form action="" class="loginForm" id="registered-form">
+						<form class="loginForm" id="registered-form">
 							<div class="username-field">
+
 								<input type="email" name="usermail" id="userEmail"
 									   class="loginText tooltiper form-control" required
 									   minlength="6" maxlength="32" tabindex="1" placeholder="请输入您的常用邮箱"
 									   title="请确保输入正确的邮箱地址。"></br>
+
+								<input type="email" name="usermail" id="userEmail" class="loginText tooltiper form-control" required minlength="6" maxlength="32" tabindex="1" placeholder="请输入您的常用邮箱" title="请确保输入正确的邮箱地址。">
+
 							</div>
 							<div class="username-field">
-								<input type="password" name="password" id="registeredPassword"
-									   class="loginText tooltiper form-control" required minlength="6" maxlength="32"
-									   tabindex="2" placeholder="设置密码" title="密码不少于6个字符。数字，字母或常用符号，字母区分大小写。"></br>
+								<input type="password" name="password" id="registeredPassword" class="loginText tooltiper form-control" required minlength="6" maxlength="32" tabindex="2" placeholder="设置密码" title="密码不少于6个字符。数字，字母或常用符号，字母区分大小写。">
 							</div>
 							<div class="username-field">
-								<input type="password" name="passwordConfirm" id="confirmPassword"
-									   class="loginText tooltiper form-control" required minlength="6" maxlength="32"
-									   tabindex="3" placeholder="确认密码" title="请再次输入密码"></br>
+								<input type="password" name="passwordConfirm" id="confirmPassword" class="loginText tooltiper form-control" required minlength="6" maxlength="32" tabindex="3" placeholder="确认密码" title="请再次输入密码">
 							</div>
 							<div class="username-field">
-								<input type="text" name="username" id="userName"
-									   class="loginText tooltiper form-control" minlength="2" required maxlength="32"
-									   tabindex="4" placeholder="用户名" name=""></br>
+								<input type="text" name="username"  class="loginText tooltiper form-control" minlength="2" required maxlength="32" tabindex="4" placeholder="用户名" >
 							</div>
 							<div class="username-field">
-								<input type="text" name="confirm" id="confirm"
-									   class="loginTextHalf loginBg loginTextHalf1 " minlength="6"
-									   maxlength="6" tabindex="5" placeholder="验证码">
+								<input type="text" name="confirm" id="confirm" class="loginTextHalf loginBg loginTextHalf1 " minlength="6" maxlength="6" tabindex="5" placeholder="验证码">
 								<button class="loginTextHalf loginTextHalf2 ">获取验证码</button>
 							</div>
-							<button type="submit" class="submit btn btn-lg" tabindex="3" id="submit">同意协议并提交</button>
+							<button type="submit" class="submit btn btn-lg" tabindex="3" >同意协议并提交</button>
 							<hr>
 							<a href="agreement.html" class="agree">《元讯科技服务协议》</a>
 						</form>
