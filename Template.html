@@ -97,22 +97,28 @@
         </header>
         <main>
             <section class="mainContaier">
-                <div class="containerWrap containerWrap0  ">
-                    <div class="row">
-                        <div class="Template ">
-                               <p><img src="images/defaultDisplay.png" alt=""></p>
-                                  <p> <img src="images/pageDown.png" alt="" class="pageDown"></p>
-                        </div>
-                        <div class="Template ">
+                <li class="containerWrap containerWrap0  ">
+                    <ul class="TemplateWrap0 ">
+                        <li class="Template table-cell ">
                             <p><img src="images/defaultDisplay.png" alt=""></p>
                             <p><img src="images/pageDown.png" alt="" class="pageDown"></p>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="form-company-batchWrap form-company-batch form-company-bottom ">
-
-                </div>
+                        </li>
+                        <li class="Template table-cell">
+                            <p><img src="images/defaultDisplay.png" alt=""></p>
+                        </li>
+                        <li class="Template table-cell">
+                            <p><img src="images/defaultDisplay.png" alt=""></p>
+                        </li>
+                        <li class="Template table-cell">
+                            <p><img src="images/defaultDisplay.png" alt=""></p>
+                        </li>
+                        <li class="Template table-cell">
+                            <p><img src="images/defaultDisplay.png" alt=""></p>
+                        </li>
+                        <li class="Template table-cell">
+                            <p><img src="images/defaultDisplay.png" alt=""></p>
+                        </li>
+                    </ul>
                 <div class="row navbar-fixed-bottom overRow ">
                     <div class="form-company-batchWrap form-company-bottom">
                         <button class="btn btn-default">确认</button>
@@ -135,6 +141,12 @@
         theme: 'tooltipster-Shadow',
         trigger: 'click'
     });
+
+
+    $(".pageDown").click(function () {
+        $(this).parents().parent(".Template").animate({right: '50%'}, 600).next().animate({right: '39%'}, 600);
+
+    })
 </script>
 
 </body>

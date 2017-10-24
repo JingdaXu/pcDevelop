@@ -828,12 +828,63 @@
 		display: inline-block;
 	}
 
-	.navigation .leftPage {
-		margin-left: 24px;
+	.navigation a {
+		margin-bottom: -4px;
 	}
 
+	/*底部分页按钮的Hover*/
+	/*左一*/
+	.navigation .leftEndpage {
+		display: block;
+		width: 32px;
+		height: 21px;
+		background: url("../images/leftEndpage.png");
+		background-repeat: no-repeat;
+	}
+
+	.navigation .leftEndpage:hover {
+		background: url("../images/leftEndpageHover.png");
+	}
+
+	/*左二*/
+	.navigation .leftPage {
+		display: block;
+		margin-left: 24px;
+		width: 17px;
+		height: 20px;
+		background: url("../images/leftPage.png");
+		background-repeat: no-repeat;
+	}
+
+	.navigation .leftPage:hover {
+		background: url("../images/leftPageHover.png");
+	}
+
+	/*右一*/
 	.navigation .rightPage {
+		display: block;
 		margin-right: 24px;
+		width: 17px;
+		height: 20px;
+		background: url("../images/rightPage.png");
+		background-repeat: no-repeat;
+	}
+
+	.navigation .rightPage:hover {
+		background: url("../images/rightPageHover.png");
+	}
+
+	/*右二*/
+	.navigation .rightEndpage {
+		display: block;
+		width: 32px;
+		height: 21px;
+		background: url("../images/rightEndpage.png");
+		background-repeat: no-repeat;
+	}
+
+	.navigation .rightEndpage:hover {
+		background: url("../images/rightEndpageHover.png");
 	}
 	.companyContent .form-control:focus{
 		box-shadow: none;
@@ -1778,7 +1829,7 @@
 	.minTemplateWrap .preview a {
 		position: absolute;
 		top: 63%;
-		left: 40%;
+		left: 35%;
 		color: #ffffff;
 		text-decoration: underline;
 	}
@@ -1831,13 +1882,33 @@
 		position: fixed;
 	}
 
-	.Template {
+	.containerWrap0 ul.TemplateWrap0 {
+		width: 1200px;
+		height: 100%;
 		position: absolute;
-		display: table;
+		z-index: 1000;
+		left: 20%;
 		top: 15%;
-		left: 25%;
-		height: 45%;
+		border: 1px solid red;
+		overflow: hidden;
+	}
+
+	.Template {
+		display: table;
+		position: relative;
 		width: 37%;
+		height: 45%;
+		margin-right: 44px;
+		float: left;
+	}
+
+	.TemplateThumb {
+		display: table;
+		position: relative;
+		width: 30%;
+		height: 38%;
+		margin-right: 44px;
+		float: left;
 	}
 
 	.Template p {
@@ -1847,13 +1918,8 @@
 	}
 
 	.Template .pageDown {
-		text-align: center;
-		display: table-cell;
-		vertical-align: middle;
-		position: absolute;
-		right: -4%;
-		top: 40%;
-		bottom: 0;
+		position: relative;
+		left: 50%;
 		cursor: pointer;
 	}
 
