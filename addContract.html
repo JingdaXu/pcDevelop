@@ -66,8 +66,8 @@
                 <a href="login.html" class="mainLogo">
                     <ul>
                         <li class="logo2"></li>
-                        <h4>云文件管理系统</h4>
                     </ul>
+                    <h4>云文件管理系统</h4>
                 </a>
                 <ul class="leftMenu">
                     <li class="leftNav"><a href=""><span class="home navLeftIcon"><img src="images/home.png" alt=""></span>首页 </a></li>
@@ -105,7 +105,7 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="Mes_invitationContent">
-                                    <textarea name="" rows="10" class="form-control" placeholder="请在此输入您将要发送的内容"></textarea>
+                                    <textarea rows="10" class="form-control" placeholder="请在此输入您将要发送的内容"></textarea>
                                     <p>详细规则说明：邀请一个用户加入云EBC，是指一个手机号/身份证号/一台设备。</p>
                                 </div>
                             </div>
@@ -133,14 +133,14 @@
                         <div class="companyContent">
                             <div class="row ">
                                 <div class=" col-lg-12 contractBg mainBgSize">
-                                    <form role="form">
+                                    <form>
                                         <div class="row">
                                             <div class="CompanyStateWrap">
                                                 <h4>公司状态</h4>
-                                                <lable class="companyState1">冻结</lable>
+                                                <label class="companyState1">冻结</label>
                                                 <span><input type="button" class="btn btn-success btn-liftFreeze"
                                                              id="liftFreeze" value="解除冻结">
-                                                    </input></span>
+                                                </span>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -148,27 +148,27 @@
                                                 <div class="col-lg-5">
                                                     <div class="row">
                                                         <div class="form-group">
-                                                            <lable for="companyName">公司简称</lable>
+                                                            <label for="companyName">公司简称</label>
                                                             <div class="col-lg-8 col-md-8">
                                                                 <input type="text"
                                                                        class=" contractContentBg batchContentBg"
-                                                                       maxlength="50" minlength="5">
+                                                                       maxlength="50" minlength="5" id="companyName">
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="row">
                                                         <div class="form-group">
-                                                            <lable for="contractName">合同名称</lable>
+                                                            <label for="contractName">合同名称</label>
                                                             <div class="col-lg-8 col-md-8">
                                                                 <input type="text"
                                                                        class=" contractContentBg batchContentBg"
-                                                                       maxlength="50" minlength="5">
+                                                                       maxlength="50" minlength="5" id="contractName">
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="row">
                                                         <div class="form-group">
-                                                            <lable for="companyName">合同描述</lable>
+                                                            <label for="companyName">合同描述</label>
                                                             <div class="col-lg-8 col-md-8">
                                                                 <textarea
                                                                         class=" contractContentBg bname batchContentBg "
@@ -181,9 +181,8 @@
                                                 </div>
                                                 <div class="col-lg-7">
                                                     <div class="contractFrequencyWrap form-group ">
-                                                        <lable for="contractName" class="contractName">合同频率</lable>
-                                                        <form for="companyName" action="" method="get"
-                                                              class="contractName">
+                                                        <label for="contractName" class="contractName">合同频率</label>
+                                                        <div class="contractName">
                                                             <p class="time">
                                                                 <span class="radio-icon active">一次</span>
                                                             </p>
@@ -199,10 +198,10 @@
                                                             <p class="time">
                                                                 <span class="radio-icon ">每年一次</span>
                                                             </p>
-                                                        </form>
+                                                        </div>
                                                     </div>
                                                     <div class="contractFrequencyWrap form-group">
-                                                        <lable for="contractName" class="contractName">合同模板</lable>
+                                                        <label for="contractName" class="contractName">合同模板</label>
                                                         <div class="col-lg-6 col-md-6">
                                                             <input type="button" class="btn btn-success btn-select"
                                                                    onclick="location.href='selectTemplate.html'"
@@ -214,13 +213,12 @@
                                                         <a href="" class="downloadTemplate">下载模板</a>
                                                     </div>
                                                     <div class="contractFrequencyWrap form-group">
-                                                        <lable for="batchName" class="contractName">开始日期</lable>
+                                                        <label for="datapicker1" class="contractName">开始日期</label>
                                                         <input type="text" class="startDate batchContentBg"
-                                                               maxlength="50" minlength="5" id="datapicker1"
-                                                               class="datapicker">
-                                                        <lable for="batchName">结束日期</lable>
+                                                               maxlength="50" minlength="5" id="datapicker1">
+                                                        <label for="datapicker2">结束日期</label>
                                                         <input type="text" class="endDate batchContentBg" maxlength="50"
-                                                               minlength="5" id="datapicker2" class="datapicker">
+                                                               minlength="5" id="datapicker2">
                                                     </div>
                                                 </div>
                                             </div>

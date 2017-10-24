@@ -473,6 +473,7 @@
 		width: 248px;
 		height:100%;
 		position: fixed;
+		top: 0px;
 		background: #30373f;
 		z-index: 10000;
 	}
