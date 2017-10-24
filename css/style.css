@@ -681,7 +681,7 @@
 		padding: 0;
 	}
 	.mainBgSize{
-		min-height: 530px;
+		min-height: 414px;
 	}
 	/*公司管理*/
 	.companyBg{
@@ -1145,9 +1145,9 @@
 		width: 100%;
 	}
 
-	.dataUpload lable,
-	.batchContent lable,
-	.contractContent .col-lg-5 lable {
+	.dataUpload label,
+	.batchContent label,
+	.contractContent .col-lg-5 label {
 		float: left;
 		height: 48px;
 		line-height: 48px;
@@ -1193,7 +1193,8 @@
 		overflow: hidden;
 		margin-right: 34px;
 	}
-	.batchFilter lable{
+
+	.batchFilter label {
 		margin-bottom:12px;
 	}
 	.manageBatchContent .name ,
