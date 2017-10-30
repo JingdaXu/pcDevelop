@@ -107,6 +107,10 @@
                             <div class="companyContent">
                                 <div class="row">
                                     <div class="col-lg-12 mainCon">
+                                        <input name="status" style="display: none">
+                                        <input name="lastUpdateDate" style="display: none">
+                                        <input name="organizationId" style="display: none">
+                                        <input name="organizationCode" style="display: none">
                                         <div class="col-lg-8 companyBg ">
                                             <h4 class="companyBg">
                                                 <span class="basicTitle"><img src="images/basicInfo.png" alt=""></span>基础信息
@@ -117,15 +121,14 @@
                                                         <div class="form-group ">
                                                             <label for="name">公司名称</label>
                                                             <input type="text" class=" form-control" placeholder=""
-                                                                   id="name" name="organizationName" required>
+                                                                   id="name" name="organizationName">
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6">
                                                         <div class="form-group ">
                                                             <label for="sname">公司简称</label>
-                                                            <input type="text" class="t form-control"
-                                                                   placeholder="" id="sname"
-                                                                   name="organizationShortName" required>
+                                                            <input type="text" class=" form-control" placeholder=""
+                                                                   id="sname" name="organizationShortName">
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6">
@@ -136,9 +139,9 @@
                                                                 <option value="2"></option>
                                                                 <option value="3"></option>
                                                             </datalist>
-                                                            <input type="text" class=" form-control" placeholder=""
-                                                                   id="industry" required maxlength="20"
-                                                                   list="company-industry" name="industry">
+                                                            <input type="text" class="form-control" placeholder=""
+                                                                   id="industry" maxlength="20" list="company-industry"
+                                                                   name="industry">
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6">
@@ -152,14 +155,14 @@
                                                         <div class="form-group ">
                                                             <label for="Onumber">组织机构代码</label>
                                                             <input type="text" class=" form-control" placeholder=""
-                                                                   id="Onumber" required name="Onumber">
+                                                                   id="Onumber" name="Onumber">
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6">
                                                         <div class="form-group ">
                                                             <label for="code">税务登记代码</label>
-                                                            <input type="text" class=" form-control"
-                                                                   placeholder="" id="code" required name="code">
+                                                            <input type="text" class=" form-control" placeholder=""
+                                                                   id="code" name="code">
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6">
@@ -170,9 +173,9 @@
                                                                 <option value="2"></option>
                                                                 <option value="3"></option>
                                                             </datalist>
-                                                            <input type="text" class=" form-control"
-                                                                   placeholder="" id="region" required
-                                                                   list="country-region" name="country">
+                                                            <input type="text" class=" form-control" placeholder=""
+                                                                   id="region" list="country-region"
+                                                                   name="country">
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6">
@@ -209,27 +212,27 @@
                                                             <label>公司地址1</label>
                                                             <input type="text" class="form-control " required
                                                                    maxlength="50" minlength="5" name="place"
-                                                                   id="place1"></div>
+                                                                   id="place1" name="addressLine1"></div>
                                                     </div>
                                                     <div class="col-lg-12">
                                                         <div class="form-group">
                                                             <label>公司地址2</label>
-                                                            <input type="text" class="form-control "
-                                                                   id="place2">
+                                                            <input type="text" class="form-control " id="place2"
+                                                                   name="addressLine2">
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-12">
                                                         <div class="form-group">
                                                             <label>公司地址3</label>
-                                                            <input type="text" class="form-control "
-                                                                   id="place3">
+                                                            <input type="text" class="form-control " id="place3"
+                                                                   name="addressLine3">
                                                         </div>
                                                     </div>
                                                 </div>
                                             </form>
                                         </div>
                                     </div>
-                                    <div class="col-lg-12 companyBg company-bottom">
+                                    <div class="col-lg-12 companyBg company-bottom mainBgSize">
                                         <h4 class="companyBg">
                                             <span class="basicTitle"><img src="images/marketing.png" alt=""></span>
                                             营业信息
@@ -240,19 +243,41 @@
                                             <tr class="marketingInfo">
                                                 <td><h4>营业执照</h4></td>
                                                 <td>
-                                                    <input class="input-file" type="file" id="businesslicense">
+                                                    <input class="input-file" type="file" id="businesslicense"
+                                                           style="display: none">
+                                                    <div class="input-append">
+                                                        <input type="text" id="photoCover1"
+                                                               class="input-large photoCover">
+                                                        <a class="btn"
+                                                           onclick="$('input[id=businesslicense]').click()">浏览</a>
+                                                    </div>
                                                 </td>
-                                                <td class="companyStyle">
-                                                    上传类型jpg/png/pdf,2M以内
-                                                </td>
-                                                <td>
-                                                    <a href="">点击预览</a>
-                                                </td>
+                                                <td class="companyStyle">上传类型jpg/png/pdf,2M以内</td>
+                                                <td><a href="">点击预览</a></td>
                                             </tr>
                                             <tr class="marketingInfo">
                                                 <td><h4>负责人身份证证件</h4></td>
                                                 <td>
-                                                    <input class="input-file" type="file" id="personalId">
+                                                    <input class="input-file" type="file" id="personalId"
+                                                           style="display: none">
+                                                    <input class="input-file" type="file" id="personalId2"
+                                                           style="display: none">
+                                                    <div class="input-append">
+                                                        <div class="box">
+                                                            <span>身份证正面:</span>
+                                                            <input type="text" id="photoCover2-1"
+                                                                   class="input-large photoCover">
+                                                            <a class="btn"
+                                                               onclick="$('input[id=personalId]').click()">浏览</a>
+                                                        </div>
+                                                        <div class="box">
+                                                            <span>身份证反面:</span>
+                                                            <input type="text" id="photoCover2-2"
+                                                                   class="input-large photoCover">
+                                                            <a class="btn"
+                                                               onclick="$('input[id=personalId2]').click()">浏览</a>
+                                                        </div>
+                                                    </div>
                                                 </td>
                                                 <td class="companyStyle">
                                                     上传类型jpg/png/pdf,1M以内
@@ -264,7 +289,13 @@
                                             <tr class="marketingInfo">
                                                 <td><h4>公司logo</h4></td>
                                                 <td>
-                                                    <input class="input-file" type="file" id="logo">
+                                                    <input class="input-file" type="file" id="logo"
+                                                           style="display: none">
+                                                    <div class="input-append">
+                                                        <input type="text" id="photoCover3"
+                                                               class="input-large photoCover">
+                                                        <a class="btn" onclick="$('input[id=logo]').click()">浏览</a>
+                                                    </div>
                                                 </td>
                                                 <td class="companyStyle">
                                                     上传类型jpg/png/pdf,600K以内
@@ -281,31 +312,34 @@
                                                 <label class="">联系电话</label>
                                                 <div class="controls">
                                                     <input type="text" placeholder=""
-                                                           class=" form-control contanctNumber">
+                                                           class=" form-control contanctNumber"
+                                                           name="phone" id="phone">
                                                 </div>
-                                            </div>
+                                                </div>
 
                                             <div class="control-group">
                                                 <label class="control-label">公司状态</label>
                                                 <div class="controls state">
                                                     <!-- Inline Radios -->
-                                                    <div class="radio radio-inline">
-                                                        <input type="radio" value="正常运行" name="group" checked="checked">
-                                                        正常运行
-                                                    </div>
-                                                    <div class="radio radio-inline">
-                                                        <input type="radio" value="停止运行" name="group">
-                                                        停止运行
+                                                        <span class="radio_box">
+                                                             <input type="radio" id="radio_1" name="radio" checked>
+                                                             <label for="radio_1"></label>
+                                                            正常运行
+                                                        </span>
+                                                        <span class="radio_box">
+                                                             <input type="radio" id="radio_2" name="radio">
+                                                             <label for="radio_2"></label>
+                                                            停止运行
+                                                        </span>
                                                     </div>
                                                 </div>
-                                            </div>
                                         </form>
+                                    </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
                 <div class="row navbar-fixed-bottom overRow">
                     <div class="form-company-bottom">
                         <button class="btn btn-default " type="submit" id="createButton">保存</button>
@@ -325,8 +359,64 @@
 <script src="js/messages_zh.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/Menujs.js"></script>
+<script src="js/extend.js"></script>
 <script src="js/ajax2.js"></script>
 <script>        $('input[required]').before('<span style="color:red">*</span>');    </script>
+<script>
+    $(document).ready(function () {
+        var a = window.location.toString();
+        var organizationId = a.substring(a.indexOf("=") + 1);
+        $('#organizationId').val(organizationId);
+        $.ajax({
+            url: 'http://39.108.160.55:11116/control-center/app/organization/' + organizationId,
+            type: "post",
+            success: function (data, textStatus, xhr) {
+                $("#detailForm").populateObject(data);
+            },
+            error: function (xhr, textStatus, ex) {
+                if (xhr.status == 404) {
+                    alert('no such object');
+                } else {
+                    alert(ex);
+                }
+            }
+        });
+    });
+    $("#createButton").click(function (e) {
+        // this event request server to create this entry regardless.
+        if ($("#detailForm").valid()) {
+            var formData = $("#detailForm").serializeObject();
+            $.ajax({
+                url: "http://39.108.160.55:11116/control-center/app/organization/",
+                type: "post",
+                data: formData,
+                success: function (data, status, xhr) {
+                    console.log("status: " + status);
+
+                    if (xhr.status == 200 || xhr.status == 201) {
+                        $("#detailForm").populateObject(data);
+                    }
+
+                    alert('ok');
+                },
+                error: function (xhr, textStatus, ex) {
+
+                    if (xhr.status == 409) {
+                        var response = JSON.parse(xhr.responseText);
+                        alert('400 error');
+
+                        if (response.errors) {
+                            $("#detailForm").validate().showErrors(response.errors);
+                        }
+                    } else {
+                        alert(textStatus);
+                    }
+                }
+            });
+        }
+    });
+</script>
 </body>
 </html>
+
 

@@ -172,53 +172,8 @@ $(document).ready(function () {
         }
     });
 
-    $("#updateButton").click(function (e) {
-        if ($("#detailForm").valid()) {
-            var formData = $("#detailForm").serializeObject();
-            $.ajax({
-                url: "http://39.108.160.55:11116/control-center/app/organization/" + formData.organizationId,
-                //url: "/control-center/app/organization/update",
-                type: "put",
-                data: formData,
-                success: function (data, status, xhr) {
-                    console.log("status: " + status);
-
-                    if (xhr.status = 200 || xhr.status == 201) {
-                        $("#detailForm").populateObject(data);
-                    }
-
-                    alert('ok');
-                },
-                error: function (xhr, textStatus, ex) {
-                    if (xhr.status == 400) {
-                        var response = JSON.parse(xhr.responseText);
-                        //alert('400 error');
-                        if (response.errors) {
-                            $("#detailForm").validate().showErrors(response.errors);
-                        }
-                    } else {
-                        alert(textStatus);
-                    }
-                }
-            });
-        }
-    });
-
     $("#resetButton").click(function (e) {
         $("#detailForm").validate().resetForm();
-    });
-
-    $("#totalButton").click(function (e) {
-        $.ajax({
-            url: "http://39.108.160.55:11116/control-center/app/organization/",
-            type: "get",
-            success: function (data, textStatus, xhr) {
-                $("#totalField").val(data);
-            },
-            error: function (xhr, textStatus, e) {
-                alert(textStatus);
-            }
-        })
     });
 
     $("#pageButton").click(function (e) {

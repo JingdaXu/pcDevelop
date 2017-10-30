@@ -1,6 +1,7 @@
 /**
  * Created by user on 2017/10/13.
  */
+
 $(document).ready(function () {
     $("#detailForm").validate({
         rules: {
@@ -66,17 +67,26 @@ $(document).ready(function () {
             });
         }
     });
-
-    $("#updateButton").click(function (e) {
+//保存公司
+    $("#submit").click(function (e) {
         if ($("#detailForm").valid()) {
             var formData = $("#detailForm").serializeObject();
             $.ajax({
                 url: "http://39.108.160.55:11116/control-center/app/organization/" + formData.organizationId,
-                //url: "/control-center/app/organization/update",
+                //url: "http://39.108.160.55:11116/control-center/app/organization/update",
                 type: "put",
                 data: formData,
                 success: function (data, status, xhr) {
+                    alert("OK");
                     console.log("status: " + status);
+                    $('#name').val(data.organizationName);
+                    $('#sname').val(data.organizationShortName);
+                    $('#industry').val(data.status);
+                    $('#mail').val(data.email);
+                    $('#place1').val(data.addressLine1);
+                    $('#place2').val(data.addressLine2);
+                    $('#place3').val(data.addressLine3);
+                    $('#phone').val(data.phone);
 
                     if (xhr.status = 200 || xhr.status == 201) {
                         $("#detailForm").populateObject(data);

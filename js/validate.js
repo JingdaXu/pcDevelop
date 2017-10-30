@@ -90,7 +90,7 @@ $().ready(function() {
             place: "required"
         },
         messages: {
-            place: "请输入公司地址",
+            place: "请输入公司正确的地址",
             minlength: "地址最少2个字"
         }
     });

@@ -590,6 +590,7 @@
 		line-height: 58px;
 		padding-left: 34px;
 		margin-bottom: 0px;
+		margin-top: 0px;
 	}
 	.mainContaier .addCompany{
 		position: absolute;
@@ -858,54 +859,58 @@
 	.navigation .leftEndpage {
 		display: block;
 		width: 32px;
-		height: 21px;
+		height: 26px;
 		background: url("../images/leftEndpage.png");
 		background-repeat: no-repeat;
 	}
 
 	.navigation .leftEndpage:hover {
 		background: url("../images/leftEndpageHover.png");
+		background-repeat: no-repeat;
 	}
 
 	/*左二*/
 	.navigation .leftPage {
 		display: block;
 		margin-left: 24px;
-		width: 17px;
-		height: 20px;
+		width: 32px;
+		height: 26px;
 		background: url("../images/leftPage.png");
 		background-repeat: no-repeat;
 	}
 
 	.navigation .leftPage:hover {
 		background: url("../images/leftPageHover.png");
+		background-repeat: no-repeat;
 	}
 
 	/*右一*/
 	.navigation .rightPage {
 		display: block;
 		margin-right: 24px;
-		width: 17px;
-		height: 20px;
+		width: 32px;
+		height: 26px;
 		background: url("../images/rightPage.png");
 		background-repeat: no-repeat;
 	}
 
 	.navigation .rightPage:hover {
 		background: url("../images/rightPageHover.png");
+		background-repeat: no-repeat;
 	}
 
 	/*右二*/
 	.navigation .rightEndpage {
 		display: block;
 		width: 32px;
-		height: 21px;
+		height: 26px;
 		background: url("../images/rightEndpage.png");
 		background-repeat: no-repeat;
 	}
 
 	.navigation .rightEndpage:hover {
 		background: url("../images/rightEndpageHover.png");
+		background-repeat: no-repeat;
 	}
 	.companyContent .form-control:focus{
 		box-shadow: none;
@@ -2088,4 +2093,41 @@
 		left: 1px;
 		background: #ef4949;
 		border-radius: 50%;
+	}
+
+	/*Allan 修复*/
+	.form-control-static {
+		min-height: 34px;
+		padding-top: 7px;
+		padding-bottom: 7px;
+		margin-bottom: 0;
+	}
+
+	.fixed-table-container thead th {
+		height: 0;
+		padding: 0;
+		margin: 0;
+		border-left: 1px solid #dddddd;
+		color: #f5f5f5;
+		background-color: #0099ff;
+	}
+
+	.fixed-table-pagination div.pagination,
+	.fixed-table-pagination .pagination-detail {
+		margin-top: 0px;
+		margin-bottom: 0px;
+
+	}
+
+	.fixed-table-toolbar .bs-bars,
+	.fixed-table-toolbar .search,
+	.fixed-table-toolbar .columns {
+		position: relative;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		line-height: 20px;
+	}
+
+	.minTemplateWrap .preview a {
+		left: 40%;
 	}
