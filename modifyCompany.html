@@ -96,25 +96,26 @@
         <main>
             <section class="mainContaier">
                 <div class="containerWrap">
-                    <div class="alert alert-success alert-dismissable" id="applySucceeded">
+                    <div class="alert alert-success alert-dismissable" id="applySucceeded"
+                         style="display: none;position: relative;top: -50px;">
                         成功登记
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <div class="alert alert-danger alert-dismissable" id="applyRejected">
+                    <div class="alert alert-danger alert-dismissable" id="applyRejected" style="display: none;">
                         申请被拒
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <div class="alert alert-info alert-dismissable">
+                    <div class="alert alert-info alert-dismissable" style="display: none;">
                         申请处理中
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <div class="alert alert-warning alert-dismissable">
+                    <div class="alert alert-warning alert-dismissable" style="display: none;">
                         星期天不宜工作。
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
@@ -128,25 +129,26 @@
                         <div class="row">
                             <div class="companyContent">
                                 <div class="row">
-                                    <div class="col-lg-12 mainCon">
+                                    <form class="form-horizontal " id="detailForm">
                                         <input name="status" style="display: none">
                                         <input name="lastUpdateDate" style="display: none">
                                         <input name="organizationId" style="display: none">
                                         <input name="organizationCode" style="display: none">
-                                        <div class="col-lg-8 companyBg ">
+                                        <div class="col-lg-12 mainCon companyBg">
+                                            <div class="col-lg-8 companyBg  form-company-mheight ">
                                             <h4 class="companyBg">
                                                 <span class="basicTitle"><img src="images/basicInfo.png" alt=""></span>基础信息
                                             </h4>
-                                            <form class="form-horizontal form-company form-company0" id="detailForm">
-                                                <div class="row">
-                                                    <div class="col-lg-6">
+
+                                                <div class="row ">
+                                                    <div class="col-lg-6 white">
                                                         <div class="form-group ">
                                                             <label for="name">公司名称</label>
                                                             <input type="text" class=" form-control" placeholder=""
                                                                    id="name" name="organizationName" required>
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-6">
+                                                    <div class="col-lg-6 white">
                                                         <div class="form-group ">
                                                             <label for="sname" >公司简称</label>
                                                             <input type="text" class=" form-control"
@@ -154,7 +156,7 @@
                                                                    name="organizationShortName" required>
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-6">
+                                                    <div class="col-lg-6 white">
                                                         <div class="form-group ">
                                                             <label for="industry">行业</label>
                                                             <datalist id="company-industry">
@@ -167,28 +169,28 @@
                                                                    list="company-industry" name="industry">
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-6">
+                                                    <div class="col-lg-6 white">
                                                         <div class="form-group ">
                                                             <label for="people">公司人数</label>
                                                             <input type="number" class=" form-control" placeholder=""
                                                                    id="people" min="0" max="5000" name="people">
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-6">
+                                                    <div class="col-lg-6 white">
                                                         <div class="form-group ">
                                                             <label for="Onumber">组织机构代码</label>
                                                             <input type="text" class=" form-control" placeholder=""
                                                                    id="Onumber" required name="Onumber">
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-6">
+                                                    <div class="col-lg-6 white">
                                                         <div class="form-group ">
                                                             <label for="code">税务登记代码</label>
                                                             <input type="text" class=" form-control" placeholder=""
-                                                                   id="code" required name="code">
+                                                                   id="code" name="code">
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-6">
+                                                    <div class="col-lg-6 white">
                                                         <div class="form-group ">
                                                             <label for="region">国家地区</label>
                                                             <datalist id="country-region">
@@ -201,49 +203,48 @@
                                                                    name="country">
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-6">
+                                                    <div class="col-lg-6 white">
                                                         <div class="form-group ">
                                                             <label for="postcode">邮编</label>
-                                                            <input type="text" class=" form-control" placeholder=""
-                                                                   id="postcode" name="postcode">
+                                                            <input type="text" class=" form-control"
+                                                                   placeholder="" id="postcode" name="postcode">
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-6">
+                                                    <div class="col-lg-6 white">
                                                         <div class="form-group ">
                                                             <label for="mail">email</label>
-                                                            <input type="text" class=" form-control" placeholder=""
-                                                                   id="mail" name="email">
+                                                            <input type="text" class=" form-control"
+                                                                   placeholder="" id="mail" name="email">
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-6">
+                                                    <div class="col-lg-6 white">
                                                         <div class="form-group ">
-                                                            <label for="website">网址</label>
-                                                            <input type="url" class=" form-control" placeholder=""
-                                                                   id="website">
+                                                            <label for="websitePlace">网址</label>
+                                                            <input type="url" class=" form-control"
+                                                                   placeholder="" id="websitePlace">
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </form>
                                         </div>
-                                        <div class="col-lg-4 companyBg  ">
-                                            <h4 class="companyBg"><span class="basicTitle"><img src="images/location.png" alt=""></span>公司地址</h4>
-                                            <form  class="form-company form-horizontal form-company1" id="company-place">
+                                            <div class="col-lg-4 companyBg  form-company-mheight">
+                                                <h4 class="companyBg"><span class="basicTitle"><img
+                                                        src="images/location.png" alt=""></span>公司地址</h4>
                                                 <div class="row">
-                                                    <div class="col-lg-12">
+                                                    <div class="col-lg-12 white">
                                                         <div class="form-group">
                                                             <label>公司地址1</label>
                                                             <input type="text" class="form-control " required
                                                                    maxlength="50" minlength="5" name="place"
                                                                    id="place1" name="addressLine1"></div>
                                                     </div>
-                                                    <div class="col-lg-12">
+                                                    <div class="col-lg-12 white">
                                                         <div class="form-group">
                                                             <label>公司地址2</label>
                                                             <input type="text" class="form-control " id="place2"
                                                                    name="addressLine2">
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-12">
+                                                    <div class="col-lg-12 white form-company-right-height">
                                                         <div class="form-group">
                                                             <label>公司地址3</label>
                                                             <input type="text" class="form-control " id="place3"
@@ -251,11 +252,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </form>
                                         </div>
                                     </div>
-                                    <div class="col-lg-12 companyBg company-bottom mainBgSize">
-                                            <h4 class="companyBg" >
+                                        <div class="col-lg-12 companyBg  company-bottom form-company-mheight ">
+                                            <h4 class="companyBg">
                                                 <span class="basicTitle"><img src="images/marketing.png" alt=""></span>
                                                 营业信息
                                             </h4>
@@ -277,7 +277,7 @@
                                                     <td class="companyStyle">上传类型jpg/png/pdf,2M以内</td>
                                                     <td><a href="">点击预览</a></td>
                                                 </tr>
-                                                <tr  class="marketingInfo">
+                                                <tr class="marketingInfo">
                                                     <td><h4>负责人身份证证件</h4></td>
                                                     <td>
                                                         <input class="input-file" type="file" id="personalId"
@@ -298,17 +298,17 @@
                                                                        class="input-large photoCover">
                                                                 <a class="btn"
                                                                    onclick="$('input[id=personalId2]').click()">浏览</a>
-                                                            </div>
+                                                        </div>
                                                         </div>
                                                     </td>
-                                                    <td  class="companyStyle">
+                                                    <td class="companyStyle">
                                                         上传类型jpg/png/pdf,1M以内
                                                     </td>
                                                     <td>
                                                         <a href="">正面</a> <a href="">反面</a>
                                                     </td>
                                                 </tr>
-                                                <tr  class="marketingInfo">
+                                                <tr class="marketingInfo">
                                                     <td><h4>公司logo</h4></td>
                                                     <td>
                                                         <input class="input-file" type="file" id="logo"
@@ -319,7 +319,7 @@
                                                             <a class="btn" onclick="$('input[id=logo]').click()">浏览</a>
                                                         </div>
                                                     </td>
-                                                    <td  class="companyStyle">
+                                                    <td class="companyStyle">
                                                         上传类型jpg/png/pdf,600K以内
                                                     </td>
                                                     <td>
@@ -328,14 +328,14 @@
                                                 </tr>
                                                 </tbody>
                                             </table>
-                                            <form class="form-company">
+                                            <div class="form-company">
                                                 <div class="control-group">
                                                     <!-- Text input-->
-                                                    <label class="" >联系电话</label>
+                                                    <label class="">联系电话</label>
                                                     <div class="controls">
                                                         <input type="text" placeholder=""
-                                                               class=" form-control contanctNumber"
-                                                               name="phone" id="phone">
+                                                               class=" form-control contanctNumber" name="phone"
+                                                               id="phone">
                                                     </div>
                                                 </div>
 
@@ -344,22 +344,25 @@
                                                     <div class="controls state">
                                                         <!-- Inline Radios -->
                                                         <span class="radio_box">
-                                                             <input type="radio" id="radio_1" name="radio" checked>
+                                                             <input type="radio" id="radio_1" name="status" value="A"
+                                                                    class="normal-input radio_box">
                                                              <label for="radio_1"></label>
                                                             正常运行
                                                         </span>
                                                         <span class="radio_box">
-                                                             <input type="radio" id="radio_2" name="radio">
+                                                             <input type="radio" id="radio_2" name="status" value="I"
+                                                                    class="normal-input radio_box">
                                                              <label for="radio_2"></label>
                                                             停止运行
                                                         </span>
-                                                    </div>
                                                 </div>
-                                            </form>
+                                                </div>
                                         </div>
+
                                     </div>
+                                    </form>
+
                                 </div>
-                            </div>
                         </div>
                     </div>
                 <div class="row navbar-fixed-bottom overRow">
@@ -403,7 +406,7 @@
     $(document).ready(function () {
         var a = window.location.toString();
         var organizationId = a.substring(a.indexOf("=") + 1);
-        $('#organizationId').val(organizationId)
+        $('#organizationId').val(organizationId);
         $.ajax({
             url: 'http://39.108.160.55:11116/control-center/app/organization/' + organizationId,
             type: "get",
@@ -432,19 +435,22 @@
                 success: function (data, status, xhr) {
                     console.log("status: " + status);
                     if (xhr.status = 200 || xhr.status == 201) {
-                        $("#detailForm").populateObject(data);
+                        $("#detailForm").populateObject(data)
+                        $("#applySucceeded").show();
                     }
                     alert('ok');
                 },
                 error: function (xhr, textStatus, ex) {
 
                     alert('Fuck save fail');
+                    $("#applyRejected").show().animate({top: '0px', position: 'relative'}, 2000);
 
 
                     if (xhr.status == 400) {
                         var response = JSON.parse(xhr.responseText);
                         if (response.errors) {
                             $("#detailForm").validate().showErrors(response.errors);
+                            $("#applyRejected").show();
                         } else {
                             alert(textStatus);
                         }
