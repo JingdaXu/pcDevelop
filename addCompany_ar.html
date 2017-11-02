@@ -98,34 +98,6 @@
         <main>
             <section class="mainContaier">
                 <div class="containerWrap">
-                    <div class="alert alert-success alert-dismissable" id="applySucceeded"
-                         style="display: none;position: relative;top: -100px;">
-                        成功登记
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="alert alert-danger alert-dismissable" id="applyRejected"
-                         style="display: none;position:relative;top: -100px;">
-                        修改失敗
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="alert alert-info alert-dismissable"
-                         style="display: none;position: relative;top: -100px;">
-                        申请处理中
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="alert alert-warning alert-dismissable"
-                         style="display: none;position: relative;top: -100px;">
-                        星期天不宜工作。
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
                     <div class="row overRow">
                         <div class="col-lg-12">
                             <h4 class="companyTitle">公司管理 | 新增公司
@@ -134,34 +106,34 @@
                         <div class="row">
                             <div class="companyContent">
                                 <div class="row">
-                                    <form class="form-horizontal " id="detailForm">
+                                    <form class="form-horizontal form-company form-company0" id="detailForm">
 
-                                        <div class="col-lg-12 mainCon companyBg">
-                                            <div class="col-lg-8 companyBg  form-company-mheight ">
-                                            <h4 class="companyBg">
-                                                <span class="basicTitle"><img src="images/basicInfo.png" alt=""></span>基础信息
-                                            </h4>
+                                        <div class="col-lg-12 mainCon">
+                                            <div class="col-lg-8 companyBg ">
+                                                <h4 class="companyBg">
+                                                    <span class="basicTitle"><img src="images/basicInfo.png"
+                                                                                  alt=""></span>基础信息
+                                                </h4>
 
                                                 <input name="organizationCode" id="organizationCode"
                                                        style="display: none">
 
-                                                <div class="row ">
-                                                    <div class="col-lg-6 white">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
                                                         <div class="form-group ">
                                                             <label for="name">公司名称</label>
                                                             <input type="text" class=" form-control" placeholder=""
-                                                                   id="name" name="organizationName" required>
+                                                                   id="name" name="organizationName">
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-6 white">
+                                                    <div class="col-lg-6">
                                                         <div class="form-group ">
                                                             <label for="sname">公司简称</label>
-                                                            <input type="text" class=" form-control"
-                                                                   placeholder="" id="sname"
-                                                                   name="organizationShortName" required>
+                                                            <input type="text" class=" form-control" placeholder=""
+                                                                   id="sname" name="organizationShortName">
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-6 white">
+                                                    <div class="col-lg-6">
                                                         <div class="form-group ">
                                                             <label for="industry">行业</label>
                                                             <datalist id="company-industry">
@@ -170,32 +142,32 @@
                                                                 <option value="3"></option>
                                                             </datalist>
                                                             <input type="text" class="form-control" placeholder=""
-                                                                   id="industry" required maxlength="20"
-                                                                   list="company-industry" name="industry">
+                                                                   id="industry" maxlength="20" list="company-industry"
+                                                                   name="industry">
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-6 white">
+                                                    <div class="col-lg-6">
                                                         <div class="form-group ">
                                                             <label for="people">公司人数</label>
                                                             <input type="number" class=" form-control" placeholder=""
                                                                    id="people" min="0" max="5000" name="people">
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-6 white">
+                                                    <div class="col-lg-6">
                                                         <div class="form-group ">
                                                             <label for="Onumber">组织机构代码</label>
                                                             <input type="text" class=" form-control" placeholder=""
-                                                                   id="Onumber" required name="Onumber">
+                                                                   id="Onumber" name="Onumber">
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-6 white">
+                                                    <div class="col-lg-6">
                                                         <div class="form-group ">
                                                             <label for="code">税务登记代码</label>
                                                             <input type="text" class=" form-control" placeholder=""
                                                                    id="code" name="code">
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-6 white">
+                                                    <div class="col-lg-6">
                                                         <div class="form-group ">
                                                             <label for="region">国家地区</label>
                                                             <datalist id="country-region">
@@ -208,21 +180,21 @@
                                                                    name="country">
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-6 white">
+                                                    <div class="col-lg-6">
                                                         <div class="form-group ">
                                                             <label for="postcode">邮编</label>
                                                             <input type="text" class=" form-control"
                                                                    placeholder="" id="postcode" name="postcode">
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-6 white">
+                                                    <div class="col-lg-6">
                                                         <div class="form-group ">
                                                             <label for="mail">email</label>
                                                             <input type="text" class=" form-control"
                                                                    placeholder="" id="mail" name="email">
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-6 white">
+                                                    <div class="col-lg-6">
                                                         <div class="form-group ">
                                                             <label for="websitePlace">网址</label>
                                                             <input type="url" class=" form-control"
@@ -230,26 +202,26 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                        </div>
-                                            <div class="col-lg-4 companyBg  form-company-mheight">
-                                            <h4 class="companyBg"><span class="basicTitle"><img
-                                                    src="images/location.png" alt=""></span>公司地址</h4>
+                                            </div>
+                                            <div class="col-lg-4 companyBg ">
+                                                <h4 class="companyBg"><span class="basicTitle"><img
+                                                        src="images/location.png" alt=""></span>公司地址</h4>
                                                 <div class="row">
-                                                    <div class="col-lg-12 white">
+                                                    <div class="col-lg-12">
                                                         <div class="form-group">
                                                             <label>公司地址1</label>
                                                             <input type="text" class="form-control " required
                                                                    maxlength="50" minlength="5" name="place"
                                                                    id="place1" name="addressLine1"></div>
                                                     </div>
-                                                    <div class="col-lg-12 white">
+                                                    <div class="col-lg-12">
                                                         <div class="form-group">
                                                             <label>公司地址2</label>
                                                             <input type="text" class="form-control " id="place2"
                                                                    name="addressLine2">
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-12 white form-company-right-height">
+                                                    <div class="col-lg-12">
                                                         <div class="form-group">
                                                             <label>公司地址3</label>
                                                             <input type="text" class="form-control " id="place3"
@@ -257,80 +229,81 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                        <div class="col-lg-12 companyBg  company-bottom form-company-mheight ">
+                                        <div class="col-lg-12 companyBg company-bottom mainBgSize">
                                             <h4 class="companyBg">
                                                 <span class="basicTitle"><img src="images/marketing.png" alt=""></span>
                                                 营业信息
                                             </h4>
                                             <table class="form-company2 form-company">
-                                            <thead></thead>
-                                            <tbody>
-                                            <tr class="marketingInfo">
-                                                <td><h4>营业执照</h4></td>
-                                                <td>
-                                                    <input class="input-file" type="file" id="businesslicense"
-                                                           style="display: none">
-                                                    <div class="input-append">
-                                                        <input type="text" id="photoCover1"
-                                                               class="input-large photoCover">
-                                                        <a class="btn"
-                                                           onclick="$('input[id=businesslicense]').click()">浏览</a>
-                                                    </div>
-                                                </td>
-                                                <td class="companyStyle">上传类型jpg/png/pdf,2M以内</td>
-                                                <td><a href="">点击预览</a></td>
-                                            </tr>
-                                            <tr class="marketingInfo">
-                                                <td><h4>负责人身份证证件</h4></td>
-                                                <td>
-                                                    <input class="input-file" type="file" id="personalId"
-                                                           style="display: none">
-                                                    <input class="input-file" type="file" id="personalId2"
-                                                           style="display: none">
-                                                    <div class="input-append">
-                                                        <div class="box">
-                                                            <span>身份证正面:</span>
-                                                            <input type="text" id="photoCover2-1"
+                                                <thead></thead>
+                                                <tbody>
+                                                <tr class="marketingInfo">
+                                                    <td><h4>营业执照</h4></td>
+                                                    <td>
+                                                        <input class="input-file" type="file" id="businesslicense"
+                                                               style="display: none">
+                                                        <div class="input-append">
+                                                            <input type="text" id="photoCover1"
                                                                    class="input-large photoCover">
                                                             <a class="btn"
-                                                               onclick="$('input[id=personalId]').click()">浏览</a>
+                                                               onclick="$('input[id=businesslicense]').click()">浏览</a>
                                                         </div>
-                                                        <div class="box">
-                                                            <span>身份证反面:</span>
-                                                            <input type="text" id="photoCover2-2"
+                                                    </td>
+                                                    <td class="companyStyle">上传类型jpg/png/pdf,2M以内</td>
+                                                    <td><a href="">点击预览</a></td>
+                                                </tr>
+                                                <tr class="marketingInfo">
+                                                    <td><h4>负责人身份证证件</h4></td>
+                                                    <td>
+                                                        <input class="input-file" type="file" id="personalId"
+                                                               style="display: none">
+                                                        <input class="input-file" type="file" id="personalId2"
+                                                               style="display: none">
+                                                        <div class="input-append">
+                                                            <div class="box">
+                                                                <span>身份证正面:</span>
+                                                                <input type="text" id="photoCover2-1"
+                                                                       class="input-large photoCover">
+                                                                <a class="btn"
+                                                                   onclick="$('input[id=personalId]').click()">浏览</a>
+                                                            </div>
+                                                            <div class="box">
+                                                                <span>身份证反面:</span>
+                                                                <input type="text" id="photoCover2-2"
+                                                                       class="input-large photoCover">
+                                                                <a class="btn"
+                                                                   onclick="$('input[id=personalId2]').click()">浏览</a>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="companyStyle">
+                                                        上传类型jpg/png/pdf,1M以内
+                                                    </td>
+                                                    <td>
+                                                        <a href="">正面</a> <a href="">反面</a>
+                                                    </td>
+                                                </tr>
+                                                <tr class="marketingInfo">
+                                                    <td><h4>公司logo</h4></td>
+                                                    <td>
+                                                        <input class="input-file" type="file" id="logo"
+                                                               style="display: none">
+                                                        <div class="input-append">
+                                                            <input type="text" id="photoCover3"
                                                                    class="input-large photoCover">
-                                                            <a class="btn" onclick="$('input[id=personalId2]').click()">浏览</a>
+                                                            <a class="btn" onclick="$('input[id=logo]').click()">浏览</a>
                                                         </div>
-                                                    </div>
-                                                </td>
-                                                <td class="companyStyle">
-                                                    上传类型jpg/png/pdf,1M以内
-                                                </td>
-                                                <td>
-                                                    <a href="">正面</a> <a href="">反面</a>
-                                                </td>
-                                            </tr>
-                                            <tr class="marketingInfo">
-                                                <td><h4>公司logo</h4></td>
-                                                <td>
-                                                    <input class="input-file" type="file" id="logo"
-                                                           style="display: none">
-                                                    <div class="input-append">
-                                                        <input type="text" id="photoCover3"
-                                                               class="input-large photoCover">
-                                                        <a class="btn" onclick="$('input[id=logo]').click()">浏览</a>
-                                                    </div>
-                                                </td>
-                                                <td class="companyStyle">
-                                                    上传类型jpg/png/pdf,600K以内
-                                                </td>
-                                                <td>
-                                                    <a href="">点击预览</a>
-                                                </td>
-                                            </tr>
-                                            </tbody>
+                                                    </td>
+                                                    <td class="companyStyle">
+                                                        上传类型jpg/png/pdf,600K以内
+                                                    </td>
+                                                    <td>
+                                                        <a href="">点击预览</a>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
                                             </table>
                                             <div class="form-company">
                                                 <div class="control-group">
@@ -343,10 +316,10 @@
                                                     </div>
                                                 </div>
 
-                                            <div class="control-group">
-                                                <label class="control-label">公司状态</label>
-                                                <div class="controls state">
-                                                    <!-- Inline Radios -->
+                                                <div class="control-group">
+                                                    <label class="control-label">公司状态</label>
+                                                    <div class="controls state">
+                                                        <!-- Inline Radios -->
                                                         <span class="radio_box">
                                                              <input type="radio" id="radio_1" name="status" value="A"
                                                                     checked="checked" class="normal-input radio_box">
@@ -359,22 +332,23 @@
                                                              <label for="radio_2"></label>
                                                             停止运行
                                                         </span>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
 
                                         </div>
                                     </form>
 
                                 </div>
+                            </div>
                         </div>
-                    </div>
-                <div class="row navbar-fixed-bottom overRow">
-                    <div class="form-company-bottom">
-                        <button class="btn btn-default " type="submit" id="createButton">保存</button>
-                        <button class="btn btn-default " onclick="location.href='manageCompany.html'">返回</button>
-                    </div>
-                </div>
+                        <div class="row navbar-fixed-bottom overRow">
+                            <div class="form-company-bottom">
+                                <button class="btn btn-default " type="submit" id="createButton">保存</button>
+                                <button class="btn btn-default " onclick="location.href='manageCompany.html'">返回
+                                </button>
+                            </div>
+                        </div>
             </section>
         </main>
     </div>
