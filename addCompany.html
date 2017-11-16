@@ -265,72 +265,73 @@
                                                 营业信息
                                             </h4>
                                             <table class="form-company2 form-company">
-                                            <thead></thead>
-                                            <tbody>
-                                            <tr class="marketingInfo">
-                                                <td><h4>营业执照</h4></td>
-                                                <td>
-                                                    <input class="input-file" type="file" id="businesslicense"
-                                                           style="display: none">
-                                                    <div class="input-append">
-                                                        <input type="text" id="photoCover1"
-                                                               class="input-large photoCover">
-                                                        <a class="btn"
-                                                           onclick="$('input[id=businesslicense]').click()">浏览</a>
-                                                    </div>
-                                                </td>
-                                                <td class="companyStyle">上传类型jpg/png/pdf,2M以内</td>
-                                                <td><a href="">点击预览</a></td>
-                                            </tr>
-                                            <tr class="marketingInfo">
-                                                <td><h4>负责人身份证证件</h4></td>
-                                                <td>
-                                                    <input class="input-file" type="file" id="personalId"
-                                                           style="display: none">
-                                                    <input class="input-file" type="file" id="personalId2"
-                                                           style="display: none">
-                                                    <div class="input-append">
-                                                        <div class="box">
-                                                            <span>身份证正面:</span>
-                                                            <input type="text" id="photoCover2-1"
+                                                <thead></thead>
+                                                <tbody>
+                                                <tr class="marketingInfo">
+                                                    <td><h4>营业执照</h4></td>
+                                                    <td>
+                                                        <input class="input-file" type="file" id="businesslicense"
+                                                               style="display: none">
+                                                        <div class="input-append">
+                                                            <input type="text" id="photoCover1"
                                                                    class="input-large photoCover">
                                                             <a class="btn"
-                                                               onclick="$('input[id=personalId]').click()">浏览</a>
+                                                               onclick="$('input[id=businesslicense]').click()">浏览</a>
                                                         </div>
-                                                        <div class="box">
-                                                            <span>身份证反面:</span>
-                                                            <input type="text" id="photoCover2-2"
+                                                    </td>
+                                                    <td class="companyStyle">上传类型jpg/png/pdf,2M以内</td>
+                                                    <td><a href="">点击预览</a></td>
+                                                </tr>
+                                                <tr class="marketingInfo">
+                                                    <td><h4>负责人身份证证件</h4></td>
+                                                    <td>
+                                                        <input class="input-file" type="file" id="personalId"
+                                                               style="display: none">
+                                                        <input class="input-file" type="file" id="personalId2"
+                                                               style="display: none">
+                                                        <div class="input-append">
+                                                            <div class="box">
+                                                                <span>身份证正面:</span>
+                                                                <input type="text" id="photoCover2-1"
+                                                                       class="input-large photoCover">
+                                                                <a class="btn"
+                                                                   onclick="$('input[id=personalId]').click()">浏览</a>
+                                                            </div>
+                                                            <div class="box">
+                                                                <span>身份证反面:</span>
+                                                                <input type="text" id="photoCover2-2"
+                                                                       class="input-large photoCover">
+                                                                <a class="btn"
+                                                                   onclick="$('input[id=personalId2]').click()">浏览</a>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="companyStyle">
+                                                        上传类型jpg/png/pdf,1M以内
+                                                    </td>
+                                                    <td>
+                                                        <a href="">正面</a> <a href="">反面</a>
+                                                    </td>
+                                                </tr>
+                                                <tr class="marketingInfo">
+                                                    <td><h4>公司logo</h4></td>
+                                                    <td>
+                                                        <input class="input-file" type="file" id="logo"
+                                                               style="display: none">
+                                                        <div class="input-append">
+                                                            <input type="text" id="photoCover3"
                                                                    class="input-large photoCover">
-                                                            <a class="btn" onclick="$('input[id=personalId2]').click()">浏览</a>
+                                                            <a class="btn" onclick="$('input[id=logo]').click()">浏览</a>
                                                         </div>
-                                                    </div>
-                                                </td>
-                                                <td class="companyStyle">
-                                                    上传类型jpg/png/pdf,1M以内
-                                                </td>
-                                                <td>
-                                                    <a href="">正面</a> <a href="">反面</a>
-                                                </td>
-                                            </tr>
-                                            <tr class="marketingInfo">
-                                                <td><h4>公司logo</h4></td>
-                                                <td>
-                                                    <input class="input-file" type="file" id="logo"
-                                                           style="display: none">
-                                                    <div class="input-append">
-                                                        <input type="text" id="photoCover3"
-                                                               class="input-large photoCover">
-                                                        <a class="btn" onclick="$('input[id=logo]').click()">浏览</a>
-                                                    </div>
-                                                </td>
-                                                <td class="companyStyle">
-                                                    上传类型jpg/png/pdf,600K以内
-                                                </td>
-                                                <td>
-                                                    <a href="">点击预览</a>
-                                                </td>
-                                            </tr>
-                                            </tbody>
+                                                    </td>
+                                                    <td class="companyStyle">
+                                                        上传类型jpg/png/pdf,600K以内
+                                                    </td>
+                                                    <td>
+                                                        <a href="">点击预览</a>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
                                             </table>
                                             <div class="form-company">
                                                 <div class="control-group">
@@ -360,13 +361,14 @@
                                                             停止运行
                                                         </span>
                                                 </div>
+                                                </div>
                                             </div>
-                                        </div>
 
                                         </div>
                                     </form>
 
                                 </div>
+                            </div>
                         </div>
                     </div>
                 <div class="row navbar-fixed-bottom overRow">
@@ -386,10 +388,9 @@
 <script src="js/jquery.validate.min.js"></script>
 <script src="js/validate.js"></script>
 <script src="js/messages_zh.js"></script>
-<script src="js/bootstrap.js"></script>
+<!--<script src="js/bootstrap.js"></script>-->
 <script src="js/Menujs.js"></script>
 <script src="js/extend.js"></script>
-<script src="js/ajax2.js"></script>
 <script>        $('input[required]').before('<span style="color:red">*</span>');    </script>
 <script>
     $(document).ready(function () {
@@ -397,6 +398,7 @@
         $("#createButton").click(function (e) {
             // this event request servaer to create this entry regardless.
             if ($("#detailForm").valid()) {
+                var formData = $("#detailForm").serializeObject();
                 $("#organizationCode").val($("#sname").val());
                 $.ajax({
                     url: "http://39.108.160.55:11116/control-center/app/organization/",
@@ -406,6 +408,8 @@
                         console.log("status: " + status);
                         if (xhr.status == 200 || xhr.status == 201) {
                             $("#detailForm").populateObject(data);
+                            $("#applySucceeded").show().animate({top: "0px"}, 500);
+                            alert("成功生成新公司");
                         }
 
                         alert('ok');
@@ -418,6 +422,9 @@
 
                             if (response.errors) {
                                 $("#detailForm").validate().showErrors(response.errors);
+                                $("#applyRejected").show().animate({top: "0px"}, 500);
+                                alert("您的表单校验为通过，请确认");
+
                             }
                         } else {
                             alert(textStatus);
