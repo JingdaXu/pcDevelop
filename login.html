@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/unlock.css">
-    <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/tooltipster.bundle.min.css" />
     <link rel="stylesheet" href="css/tooltipster-sideTip-shadow.min.css" />
      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -75,16 +75,20 @@
 									   title="密码不少于6个字符。数字，字母或常用符号，字母区分大小写。" placeholder="密码">
 							</div>
 							<div id="slide-to-unlock"></div>
-							<button type="submit" class="submit btn btn-lg" tabindex="3" id="submit" onclick="location.href='manageCompany.html'">登录</button>
+							<button type="submit" class="submit btn btn-lg" tabindex="3" id="submit"
+									onclick="location.href='companyManage.html'">登录
+							</button>
 							<div class="loginLogin">
 								<!--<div><input type="checkbox" class="weekLogin">	  <span>一个礼拜内自动登陆</span>-->
 								<!--</div>-->
 								<a href="#">忘记密码？</a>
 							</div>
 							<div class="loginThird">
-								</hr>
-								<h4>第三方账号登录</h4>
-									<div class="container otherLogin">
+
+								<span class="loginLine loginLine1"></span><h4>第三方账号登录</h4><span
+									class="loginLine"></span>
+
+								<div class="container otherLogin">
 										<div class="cow">
 											<div class="col-lg-3 col-lg-offset-1"><a href=""><img src="images/Messenger.png" alt=""></a></div>
 											<div class="col-lg-3"><a href=""><img src="images/Twitter.png" alt=""></a></div>
@@ -108,7 +112,9 @@
 								<input type="password" name="passwordConfirm" id="confirmPassword" class="loginText tooltiper form-control" required minlength="6" maxlength="32" tabindex="3" placeholder="确认密码" title="请再次输入密码">
 							</div>
 							<div class="username-field">
-								<input type="text" name="username"  class="loginText tooltiper form-control" minlength="2" required maxlength="32" tabindex="4" placeholder="用户名" >
+								<input type="text" name="username" id="userRegisteredName"
+									   class="loginText tooltiper form-control" minlength="2" required maxlength="32"
+									   tabindex="4" placeholder="用户名">
 							</div>
 							<div class="username-field">
 								<input type="text" name="confirm" id="confirm" class="loginTextHalf loginBg loginTextHalf1 " minlength="6" maxlength="6" tabindex="5" placeholder="验证码">

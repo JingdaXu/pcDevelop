@@ -1,7 +1,7 @@
 
 $(function () {
     $("#submit").click(function () {
-        if ($('#confirm').val() == "") {
+        if ($("#confirm").val() == "") {
             $("#confirm").val("不能为空");
         }
     })
@@ -34,7 +34,7 @@ $().ready(function() {
                 required: true,
                 minlength: 2
             },
-            people: {
+            size: {
                 minlength: 1
             },
             Onumber: {
@@ -51,7 +51,7 @@ $().ready(function() {
                 required: true,
                 minlength: 1
             },
-            postcode:{
+            postalCode: {
                 requirde:false
             },
             email: {
@@ -68,10 +68,6 @@ $().ready(function() {
             industry: {
                 required: "请输入行业",
                 minlength: "行业至少有2个字"
-            },
-            people: {
-                required: "请输入公司人数",
-                minlength: "公司人数不能小于 1"
             },
             Onumber: {
                 required: "请输入组织机构代码",
@@ -129,7 +125,7 @@ $().ready(function() {
         messages: {
             usermail: "请输入一个正确的邮箱",
             username: "请输入用户名",
-            password: "请输入登录密码",
+            password: "请输入6位数的登录密码",
             passwordConfirm: {
                 required:"请再次输入登录密码",
                 equalTo:"密码与确认密码不一致"

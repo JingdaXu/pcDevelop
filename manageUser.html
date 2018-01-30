@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>用户管理</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body id="body">
+<div class="app-container">
+    <div class="row content-container">
+        <header class="indexHeader2">
+            <nav class="navbar navbar-fixed-top navbar-top">
+                <div class="containerWrapNav conainer-fluid">
+                    <div class="navbar-left">
+                        <a href="companyManage.html">首页</a>
+                    </div>
+                    <div class="nav navbar-nav navbar-right">
+                        <ul class="nav nav-tabs">
+                            <li><a href="#"></a></li>
+                            <li><a href="">这是一个用户名</a></li>
+                            <li class="nav-icon">
+                                <a href="">
+                                    <i class="notice"></i>
+                                </a>
+                            </li>
+                            <li class="nav-icon">
+                                <a href="">
+                                    <i class="message"></i>
+                                </a>
+                            </li>
+                            <li class="nav-icon">
+                                <a href="">
+                                    <i class="help"></i>
+                                </a>
+                            </li>
+                            <li class="nav-icon">
+                                <a href="safeSetting.html">
+                                    <i class="setting"></i>
+                                </a>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">简体中文<span><img
+                                        src="images/languageA.png" alt=""></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="">EN</a></li>
+                                    <li><a href="">繁体中文</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <nav class="leftNavbar side-menu sidebar-inverse">
+                <a href="login.html" class="mainLogo">
+                    <ul>
+                        <li class="logo2"></li>
+                    </ul>
+                    <h4>云文件管理系统</h4>
+                </a>
+                <ul class="leftMenu">
+                    <li class="leftNav"><a href=""><span class="home navLeftIcon"><img src="images/home.png"
+                                                                                       alt=""></span>首页 </a></li>
+                    <li class="leftNav"><a href="companyManage.html"><span class="company navLeftIcon"><img
+                            src="images/company.png" alt=""></span>公司管理<span class="navLeftIcon2"></span></a>
+                        <ul class="leftNavSubWrap">
+                            <li class="leftNav leftNavSub"><a href="modifyCompany.html">新增/修改</a></li>
+                        </ul>
+                    </li>
+                    <li class="leftNav"><a href="contractManage.html"><span class="contract navLeftIcon"><img
+                            src="images/contract.png" alt=""></span>合同管理<span class="navLeftIcon2"></span></a>
+                        <ul class="leftNavSubWrap">
+                            <li class="leftNav leftNavSub"><a href="addContract.html">新增 / 修改</a></li>
+                            <li class="leftNav leftNavSub"><a href="invitationDetail.html">邀请详情</a></li>
+                        </ul>
+                    </li>
+                    <li class="leftNav"><a href="batchManage.html"><span class="batch navLeftIcon"><img
+                            src="images/batch.png" alt=""></span>批次管理<span class="navLeftIcon2"></span></a>
+                        <ul class="leftNavSubWrap">
+                            <li class="leftNav leftNavSub"><a href="addBatch.html">新建批次</a></li>
+                        </ul>
+                    </li>
+                    <li class="leftNav"><a href="manageUser.html"><span class="batch navLeftIcon"><img
+                            src="images/user.png" alt=""></span>用户管理<span class="navLeftIcon2"></span></a>
+                    </li>
+                </ul>
+                <div class="exit"><span><img src="images/exit.png" alt=""></span><a href="">退出</a></div>
+            </nav>
+        </header>
+        <main>
+            <section class="mainContaier">
+                <div class="containerWrap">
+                    <div class="row overRow">
+                        <div class="col-lg-12">
+                            <h4 class="companyTitle">用户管理
+                                <!--<a href="addBatch.html">-->
+                                <!--<div class="fl addCompany addCompany0"><span><img src="images/add.png" alt=""></span>新建批次-->
+                                <!--</div>-->
+                                <!--</a>-->
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class=" manageBatchContent companyContent">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h4 class="companyBg batchBg"><span class="basicTitle"><img src="images/filter.png"
+                                                                                                alt=""></span>批次筛选
+                                    </h4>
+                                    <form class="batchFilter">
+                                        <div class="col-lg-3">
+                                            <div class="form-group">
+                                                <label for="list-company">公司名称</label>
+                                                <datalist id="list-company">
+                                                    <option value="1"></option>
+                                                    <option value="2"></option>
+                                                    <option value="3"></option>
+                                                </datalist>
+                                                <input type="text" class="help-block name batchContentBg"
+                                                       list="list-company"
+                                                       maxlength="50" minlength="5">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="userNumber">手机号码</label>
+                                                <input type="number" class="help-block date batchContentBg"
+                                                       id="userNumber">
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-lg-3">
+                                                    <label for="userNumber">公司状态</label>
+                                                </div>
+                                                <div class="col-lg-9">
+                                                    <div class="col-lg-4">
+                                                        <label class="titleStatus"> <input type="radio"
+                                                                                           class="companyStatus"
+                                                                                           name="status" value="已接受">已接受</label>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <label class="titleStatus"> <input type="radio"
+                                                                                           class="companyStatus"
+                                                                                           name="status" value="已拒绝">已拒绝</label>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <label class="titleStatus"> <input type="radio"
+                                                                                           class="companyStatus"
+                                                                                           name="status"
+                                                                                           value="未定">未定</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form-group">
+                                                <label for="contract">合同名称</label>
+                                                <datalist id="list-contract">
+                                                    <option value="1"></option>
+                                                    <option value="2"></option>
+                                                    <option value="3"></option>
+                                                </datalist>
+                                                <input type="text" class="help-block name batchContentBg"
+                                                       list="list-contract"
+                                                       maxlength="50" minlength="5" id="contract">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="userEmail2">邮箱号码</label>
+                                                <input type="text" class="help-block date batchContentBg"
+                                                       id="userEmail2">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form-group">
+                                                <label for="batchStatus">用户</label>
+                                                <input type="text" class="help-block state batchContentBg"
+                                                       id="batchStatus">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="btnFilter">
+                                                <button class="btn btn-success btn-filter">筛选</button>
+                                                <button class="btn btn-success btn-reset">重置</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h4 class="companyBg batchBg"><span class="basicTitle">
+                                        <img src="images/list.png" alt=""></span>搜索结果
+                                    </h4>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="manageList">
+                                                <table class="table table-bordered table-striped">
+                                                    <thead>
+                                                    <tr class="title">
+                                                        <td class="batchName">公司名称</td>
+                                                        <td class="batchState">合同名称</td>
+                                                        <td class="sendState">手机号码</td>
+                                                        <td class="sendTime">电子邮箱</td>
+                                                        <td class="allFile">用户名</td>
+                                                        <td class="sendSuc">邀请函发送时间</td>
+                                                        <td class="sendDef">邀请函接收时间</td>
+                                                        <td class="sendDef">拒接时间</td>
+                                                        <td class="operate">操作</td>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>元讯信息技术（深圳）有限责任公司</td>
+                                                        <td>水电费合同</td>
+                                                        <td>13248375892</td>
+                                                        <td>14303119134@qq.com</td>
+                                                        <td>Tomas</td>
+                                                        <td>2017-12-25 09：59</td>
+                                                        <td>--</td>
+                                                        <td>--</td>
+                                                        <td class="op">
+                                                            <a href="">取消</a>
+                                                            <a href="" class="send">重发</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>元讯信息技术（深圳）有限责任公司</td>
+                                                        <td>水电费合同</td>
+                                                        <td>13248375892</td>
+                                                        <td>14303119134@qq.com</td>
+                                                        <td>Tomas</td>
+                                                        <td>2017-12-25 09：59</td>
+                                                        <td>--</td>
+                                                        <td>--</td>
+                                                        <td class="op">
+                                                            <a href="">取消</a>
+                                                            <a href="" class="send">重发</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>元讯信息技术（深圳）有限责任公司</td>
+                                                        <td>水电费合同</td>
+                                                        <td>13248375892</td>
+                                                        <td>14303119134@qq.com</td>
+                                                        <td>Tomas</td>
+                                                        <td>2017-12-25 09：59</td>
+                                                        <td>--</td>
+                                                        <td>--</td>
+                                                        <td class="op">
+                                                            <a href="">取消</a>
+                                                            <a href="" class="send">重发</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>元讯信息技术（深圳）有限责任公司</td>
+                                                        <td>水电费合同</td>
+                                                        <td>13248375892</td>
+                                                        <td>14303119134@qq.com</td>
+                                                        <td>Tomas</td>
+                                                        <td>2017-12-25 09：59</td>
+                                                        <td>--</td>
+                                                        <td>--</td>
+                                                        <td class="op">
+                                                            <a href="">取消</a>
+                                                            <a href="" class="send">重发</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>元讯信息技术（深圳）有限责任公司</td>
+                                                        <td>水电费合同</td>
+                                                        <td>13248375892</td>
+                                                        <td>14303119134@qq.com</td>
+                                                        <td>Tomas</td>
+                                                        <td>2017-12-25 09：59</td>
+                                                        <td>--</td>
+                                                        <td>--</td>
+                                                        <td class="op">
+                                                            <a href="">取消</a>
+                                                            <a href="" class="send">重发</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>元讯信息技术（深圳）有限责任公司</td>
+                                                        <td>水电费合同</td>
+                                                        <td>13248375892</td>
+                                                        <td>14303119134@qq.com</td>
+                                                        <td>Tomas</td>
+                                                        <td>2017-12-25 09：59</td>
+                                                        <td>--</td>
+                                                        <td>--</td>
+                                                        <td class="op">
+                                                            <a href="">取消</a>
+                                                            <a href="" class="send">重发</a>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="row navbar-fixed-bottom overRow ">-->
+                <!--<div class=" form-company-bottom ">-->
+                <!--<button class="btn btn-default ">返回</button>-->
+                <!--</div>-->
+                <!--</div>-->
+            </section>
+        </main>
+    </div>
+</div>
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/Menujs.js"></script>
+<script>
+    $("#datapicker1").datepicker();
+    $("#datapicker2").datepicker();
+</script>
+
+</body>
+</html>
+

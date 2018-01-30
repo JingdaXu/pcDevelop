@@ -8,15 +8,14 @@ $(document).ready(function () {
             $(this).children(".leftNavSubWrap").slideUp(500);
             $(this).find('.navLeftIcon2').removeClass("hoverdown").addClass("hoverup");
             $(this).css({
-                "background-color": "#252a2e",
+                "background-color": "#252a2e"
             })
         }
         else {
             $(this).children(".leftNavSubWrap").slideDown(500).parent().siblings().children(".leftNavSubWrap").slideUp(500);
-            ;
             $(this).find('.navLeftIcon2').removeClass("hoverup").addClass("hoverdown").parents().siblings().find('.navLeftIcon2').removeClass("hoverdown").addClass("hoverup");
             $(this).css({
-                "background-color": "#30373f",
+                "background-color": "#30373f"
             })
             $(this).children(".leftNavSubWrap").parent().siblings().css({
                 "background-color": "#252a2e"
@@ -26,7 +25,7 @@ $(document).ready(function () {
             })
         }
         $(".leftNav").first().css({
-            "background-color": "#252a2e",
+            "background-color": "#252a2e"
         })
     })
 });
