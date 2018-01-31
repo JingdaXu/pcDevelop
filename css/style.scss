@@ -24,6 +24,7 @@
 /*2.1背景颜色*/
 .contentWrap,
 .batchContentBg,
+.batchContentBgModal,
 .contractContentBg,
 .manageBatchContent {
   background-color: #f7f7f7;
@@ -1440,11 +1441,20 @@ title {
 }
 
 .batchContentBg {
-  width: 100%;
   height: 48px;
-  margin-bottom: 34px;
   border: 1px solid #ebeced;
 }
+
+.batchContentBgModal {
+  border: 1px solid #e6e6e6;
+}
+
+.batchContentBg,
+.batchContentBgModal {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
 
 .dataUpload label,
 .batchContent label,
@@ -1925,7 +1935,7 @@ title {
 }
 
 .downloadTemplate {
-  float: right;
+  margin-left: 219px;
 }
 
 .contractFrequencyWrap {
@@ -1941,6 +1951,7 @@ title {
     margin-right: 5px;
   }
   .time {
+    float: right;
     margin: 0;
     padding: 0;
     margin-right: 14px;
@@ -2192,22 +2203,63 @@ title {
   border-bottom: 0;
 }
 
-.modal-body {
-  margin-top: 100px;
+.myModalLabel {
+  text-align: left;
+  font-weight: 500;
+  span:first-child {
+    background-image: url("../images/write.png");
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    margin-left: 20px;
+  }
+  span:last-child {
+    font-size: 14px;
+    color: #989898;
+  }
 }
 
 .modal-content {
   text-align: center;
-  background-image: url("../images/popStyle.png");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
+  textarea {
+    color: #989898;
+    padding: 15px;
+  }
+  p {
+    text-align: left;
+    color: #989898;
+  }
+  hr {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .modal-footer {
+    .confirmButton {
+      margin-right: 70px;
+    }
+  }
+}
+
+.modal-main {
+  background-image: url("../images/popStyle.png");
+  .modal-body {
+    margin-top: 100px;
+  }
 }
 
 .modal-footer {
   border-top: 0;
+  text-align: center;
 }
 
+#shortButton,
+#mailButton {
+  line-height: 32px;
+}
 /*上传文件样式优化*/
 .input-append span {
   margin-left: -85px;

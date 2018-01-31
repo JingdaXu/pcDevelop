@@ -1,5 +1,6 @@
 /**
  * Created by 王丫丫 on 2017/9/30.
+ * Update by Archer on 2018/01/31
  */
 $(document).ready(function () {
     $(".leftNav").click(function () {
@@ -16,10 +17,10 @@ $(document).ready(function () {
             $(this).find('.navLeftIcon2').removeClass("hoverup").addClass("hoverdown").parents().siblings().find('.navLeftIcon2').removeClass("hoverdown").addClass("hoverup");
             $(this).css({
                 "background-color": "#30373f"
-            })
+            });
             $(this).children(".leftNavSubWrap").parent().siblings().css({
                 "background-color": "#252a2e"
-            })
+            });
             $(this).children(".leftNavSubWrap").children(".leftNavSub").css({
                 "border-top": "1px solid #414447"
             })
@@ -29,4 +30,3 @@ $(document).ready(function () {
         })
     })
 });
-(jQuery);
